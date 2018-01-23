@@ -7,17 +7,17 @@ from flask import Flask
 from flask import jsonify
 from flask import request
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 # TODO: use OpenShift's s2i
 
 
-@app.route('/')
+@application.route('/')
 def index():
     return jsonify(['/v1/result', '/readiness', '/liveness'])
 
 
-@app.route('/v1/result', methods=['POST'])
+@application.route('/v1/result', methods=['POST'])
 def post_result():
     if not request.json:
         abort(400)
@@ -26,13 +26,17 @@ def post_result():
     return jsonify(None)
 
 
-@app.route('/readiness')
+@application.route('/readiness')
 def get_readiness():
     # TODO: extend - check database connection
     return jsonify(None)
 
 
-@app.route('/liveness')
+@application.route('/liveness')
 def get_liveness():
     # TODO: extend - check database connection
     return jsonify(None)
+
+
+if __name__ == '__main__':
+    application.run()
