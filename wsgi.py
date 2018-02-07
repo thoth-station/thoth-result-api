@@ -26,7 +26,6 @@ def post_result():
 
 @application.route('/readiness')
 def get_readiness():
-    # TODO: extend - check database connection
     return jsonify(None)
 
 
