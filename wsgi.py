@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 import json
+import os
+import uuid
 
 from flask import abort
 from flask import Flask
@@ -10,18 +12,22 @@ from flask import request
 application = Flask(__name__)
 
 
-@application.route('/')
+@application.route('/api/v1')
 def index():
-    return jsonify(['/v1/result', '/readiness', '/liveness'])
+    return jsonify(['/api/v1/result', '/readiness', '/liveness'])
 
 
-@application.route('/v1/result', methods=['POST'])
+@application.route('/api/v1/result', methods=['POST'])
 def post_result():
     if not request.json:
         abort(400)
-    # Print to console for now.
-    print(json.dumps(request.json))
-    return jsonify(None)
+
+    file_name = str(uuid.uuid4()) + '.json'
+    with open(os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], file_name), 'w') as output_file:
+        json.dump(request.json, output_file, sort_keys=True, indent=2)
+
+    application.logger.info("Result stored to file %r", file_name)
+    return jsonify({'id': file_name})
 
 
 @application.route('/readiness')
