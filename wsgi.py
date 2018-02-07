@@ -9,8 +9,6 @@ from flask import request
 
 application = Flask(__name__)
 
-# TODO: use OpenShift's s2i
-
 
 @application.route('/')
 def index():
