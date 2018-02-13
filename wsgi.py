@@ -19,7 +19,7 @@ def index():
     return jsonify(['/api/v1/result', '/readiness', '/liveness'])
 
 
-@application.route('/api/v1/analsis-result', methods=['POST'])
+@application.route('/api/v1/analysis-result', methods=['POST'])
 def post_analysis_result():
     if not request.json:
         abort(400)
