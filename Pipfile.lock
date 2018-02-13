@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "2a0bd9780324977c0042cf04a69d5220a051448bd047511d1e676c45ab5ca9d7"
+            "sha256": "addfab0e63a96744506f7a3866b93b8d25f2c07fa57b1a7645dc18f3fd88d250"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -27,6 +27,14 @@
         ]
     },
     "default": {
+        "aenum": {
+            "hashes": [
+                "sha256:f023f3f64daee7f38278f198c0676acb2ec15e2558088ef377377063fb891bda",
+                "sha256:a908ba14631d1088b756e21f448818206d6c2c921bbf4ac094d8999a88fbe148",
+                "sha256:9eb1c8f48ae13c56d22a7227db0e4b1717131b284c6c0db6e4ccca6f5894df95"
+            ],
+            "version": "==2.1.0"
+        },
         "click": {
             "hashes": [
                 "sha256:29f99fc6125fbc931b758dc053b3114e55c77a6e4c6c3a2674a2dc986016381d",
@@ -40,6 +48,13 @@
                 "sha256:49f44461237b69ecd901cc7ce66feea0319b9158743dd27a2899962ab214dac1"
             ],
             "version": "==0.12.2"
+        },
+        "gremlinpython": {
+            "hashes": [
+                "sha256:7a04c24ab1111cef7d3b41223d072c07ea5e6ceea5153765239ca25d3238880b",
+                "sha256:89b6c5f5d3b37d1a40d7895efde82219d266f2d0d339239dc4597b0a7efc3785"
+            ],
+            "version": "==3.3.1"
         },
         "gunicorn": {
             "hashes": [
@@ -66,6 +81,23 @@
                 "sha256:a6be69091dac236ea9c6bc7d012beab42010fa914c459791d627dad4910eb665"
             ],
             "version": "==1.0"
+        },
+        "six": {
+            "hashes": [
+                "sha256:832dc0e10feb1aa2c68dcc57dbb658f1c7e65b9b61af69048abc87a2db00a0eb",
+                "sha256:70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9"
+            ],
+            "version": "==1.11.0"
+        },
+        "tornado": {
+            "hashes": [
+                "sha256:92b7ca81e18ba9ec3031a7ee73d4577ac21d41a0c9b775a9182f43301c3b5f8e",
+                "sha256:b36298e9f63f18cad97378db2222c0e0ca6a55f6304e605515e05a25483ed51a",
+                "sha256:ab587996fe6fb9ce65abfda440f9b61e4f9f2cf921967723540679176915e4c3",
+                "sha256:5ef073ac6180038ccf99411fe05ae9aafb675952a2c8db60592d5daf8401f803",
+                "sha256:6d14e47eab0e15799cf3cdcc86b0b98279da68522caace2bd7ce644287685f0a"
+            ],
+            "version": "==4.5.3"
         },
         "werkzeug": {
             "hashes": [
