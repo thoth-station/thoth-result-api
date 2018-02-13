@@ -9,7 +9,7 @@ from flask import Flask
 from flask import jsonify
 from flask import request
 
-from .databases import GremlinServer
+from databases import GremlinServer
 
 application = Flask(__name__)
 
