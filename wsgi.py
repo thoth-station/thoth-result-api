@@ -27,6 +27,7 @@ def post_analysis_result():
         json.dump(request.json, output_file, sort_keys=True, indent=2)
 
     application.logger.info("Result stored to file %r", file_name)
+    # TODO: 202
     return jsonify({'id': file_name})
 
 
@@ -40,6 +41,7 @@ def post_solver_result():
         json.dump(request.json, output_file, sort_keys=True, indent=2)
 
     application.logger.info("Result stored to file %r", file_name)
+    # TODO: 202
     return jsonify({'id': file_name})
 
 
