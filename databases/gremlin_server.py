@@ -86,7 +86,7 @@ class GremlinServer(object):
                 dependency_id = self._get_or_create('pypi', dependency_name, dependency_version)
                 self.g.V(package_id).\
                     addE('depends_on').\
-                    property('version_range', dependency['required_version']).\
+                    property('version_range', dependency['required_version'] or '*').\
                     to(self.g.V(dependency_id)).\
                     iterate()
 
