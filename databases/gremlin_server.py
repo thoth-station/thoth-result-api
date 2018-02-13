@@ -84,6 +84,7 @@ class GremlinServer(object):
             dependency_name = dependency['package_name']
             for dependency_version in dependency['resolved_versions']:
                 dependency_id = self._get_or_create('pypi', dependency_name, dependency_version)
+                # TODO: check if the given edge does not exist
                 self.g.V(package_id).\
                     addE('depends_on').\
                     property('version_range', dependency['required_version'] or '*').\
