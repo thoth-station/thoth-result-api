@@ -5,6 +5,7 @@ import logging
 import os
 
 from gremlin_python.structure.graph import Graph
+from gremlin_python.process.graph_traversal import otherV
 from gremlin_python.driver import serializer
 from gremlin_python.driver.driver_remote_connection import DriverRemoteConnection
 
@@ -52,7 +53,7 @@ class GremlinServer(object):
             )
         )
 
-    def _get_or_create(self, ecosystem: str, package_name: str, package_version: str) -> int:
+    def _get_or_create(self, ecosystem: str, package_name: str, package_version: str) -> (int, bool):
         """Create a node if not exists, otherwise return id of an existing one."""
         nodes = self.g.V().hasLabel('package').\
             has('ecosystem', ecosystem).\
@@ -63,7 +64,7 @@ class GremlinServer(object):
             if len(nodes) > 1:
                 _LOGGER.error("Multiple nodes for same package found, package %r, version %r, nodes: %s",
                               package_name, package_version, nodes)
-            return nodes[0]
+            return nodes[0], True
 
         node_id = self.g.addV('package').\
             property('ecosystem', 'pypi').\
@@ -72,24 +73,39 @@ class GremlinServer(object):
             id().\
             toList()[0]
 
-        return node_id
+        return node_id, False
 
     @requires_connection
     def store_pypi_package(self, package_name: str, package_version: str, dependencies: list) -> None:
         """Store the given PyPI package into the graph database and construct dependency graph based on dependencies."""
         # TODO: we assume that all of these queries succeed
-        package_id = self._get_or_create('pypi', package_name, package_version)
+        package_id, package_existed = self._get_or_create('pypi', package_name, package_version)
 
         for dependency in dependencies:
             dependency_name = dependency['package_name']
             for dependency_version in dependency['resolved_versions']:
-                dependency_id = self._get_or_create('pypi', dependency_name, dependency_version)
-                # TODO: check if the given edge does not exist
-                self.g.V(package_id).\
-                    addE('depends_on').\
-                    property('version_range', dependency['required_version'] or '*').\
-                    to(self.g.V(dependency_id)).\
-                    iterate()
+                dependency_id, dependency_existed = self._get_or_create('pypi', dependency_name, dependency_version)
+
+                version_range = dependency['required_version'] or '*'
+                if not package_existed or not dependency_existed or \
+                        not self._edge_exists(package_id, dependency_id,
+                                              'depends_on', ('version_range', version_range)):
+                    self._create_edge(package_id, dependency_id, 'depends_on', ('version_range', version_range))
+
+    def _edge_exists(self, package_id, dependency_id, edge_name, edge_property):
+        """Check whether the given edge exists."""
+        result = self.g.V(package_id).outE(edge_name).\
+            has(edge_property[0], edge_property[1]).\
+            where(otherV().hasId(dependency_id)).toList()
+        return bool(result)
+
+    def _create_edge(self, from_node_id, to_node_id, edge_name, edge_property):
+        """Create the given edge."""
+        self.g.V(from_node_id).\
+            addE(edge_name).\
+            property(edge_property[0], edge_property[1]).\
+            to(self.g.V(to_node_id)).\
+            iterate()
 
     def store_pypi_solver_result(self, solver_result):
         """Store results of Thoth's PyPI dependency solver."""
