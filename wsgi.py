@@ -83,7 +83,7 @@ def get_readiness():
 
 @application.route('/liveness')
 def get_liveness():
-    os.path.isdir(os.environ['THOTH_PERSISTENT_VOLUME_PATH'])
+    assert os.path.isdir(os.environ['THOTH_PERSISTENT_VOLUME_PATH'])
     return jsonify(None)
 
 
