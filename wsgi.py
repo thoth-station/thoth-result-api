@@ -50,7 +50,7 @@ def post_solver_result():
     return jsonify({}), 201, {'ContentType': 'application/json'}
 
 
-@application.route('/api/v1/result/<file-id>', methods=['GET'])
+@application.route('/api/v1/result/<file_id>', methods=['GET'])
 def get_result(file_id):
     try:
         with open(os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], file_id), 'r') as input_file:
