@@ -9,8 +9,6 @@ from flask import Flask
 from flask import jsonify
 from flask import request
 
-from databases import GremlinServer
-
 application = Flask(__name__)
 
 
@@ -35,16 +33,15 @@ def post_analysis_result():
 
 @application.route('/api/v1/solver-result', methods=['POST'])
 def post_solver_result():
-    try:
-        result = request.json['result']
-    except Exception:
-        raise abort(400)
+    if not request.json:
+        abort(400)
 
-    # TODO: optimize for one connection per server
-    GremlinServer().store_pypi_solver_result(result)
+    file_name = str(uuid.uuid4()) + '.json'
+    with open(os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], 'solver-' + file_name), 'w') as output_file:
+        json.dump(request.json, output_file, sort_keys=True, indent=2)
 
-    # TODO: 202
-    return jsonify({})
+    application.logger.info("Solver result stored to file %r", file_name)
+    return jsonify({}), 201, {'ContentType': 'application/json'}
 
 
 @application.route('/readiness')
