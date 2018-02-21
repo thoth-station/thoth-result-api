@@ -26,9 +26,8 @@ def post_analysis_result():
     with open(os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], 'analysis-' + file_name), 'w') as output_file:
         json.dump(request.json, output_file, sort_keys=True, indent=2)
 
-    application.logger.info("Result stored to file %r", file_name)
-    # TODO: 202
-    return jsonify({'id': file_name})
+    application.logger.info("Analysis result stored to file %r", file_name)
+    return jsonify({'id': file_name}), 201, {'ContentType': 'application/json'}
 
 
 @application.route('/api/v1/solver-result', methods=['POST'])
