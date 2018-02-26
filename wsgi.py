@@ -29,8 +29,8 @@ def post_analysis_result():
     if not request.json:
         abort(400)
 
-    file_id = str(uuid.uuid4())
-    file_path = os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], 'analysis-{}.json'.format(file_id))
+    file_id = 'analysis-' + str(uuid.uuid4())
+    file_path = os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], '{}.json'.format(file_id))
     with open(file_path, 'w') as output_file:
         json.dump(request.json, output_file, sort_keys=True, indent=2)
 
@@ -43,8 +43,8 @@ def post_solver_result():
     if not request.json:
         abort(400)
 
-    file_id = str(uuid.uuid4())
-    file_path = os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], 'solver-{}.json'.format(file_id))
+    file_id = 'solver-' + str(uuid.uuid4())
+    file_path = os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], '{}.json'.format(file_id))
     with open(file_path, 'w') as output_file:
         json.dump(request.json, output_file, sort_keys=True, indent=2)
 
