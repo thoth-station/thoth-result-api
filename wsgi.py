@@ -17,7 +17,7 @@ def index():
     return jsonify([
         '/api/v1/analysis-result',
         '/api/v1/result',
-        '/api/v1/result/<file-id>',
+        '/api/v1/result/<document-id>',
         '/api/v1/solver-result',
         '/liveness',
         '/readiness',
