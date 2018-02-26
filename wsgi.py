@@ -8,12 +8,18 @@ from flask import abort
 from flask import Flask
 from flask import jsonify
 from flask import request
+from flask import redirect
 
 application = Flask(__name__)
 
 
-@application.route('/api/v1')
+@application.route('/')
 def index():
+    return redirect('/api/v1')
+
+
+@application.route('/api/v1')
+def api_v1():
     return jsonify([
         '/api/v1/analysis-result',
         '/api/v1/result',
