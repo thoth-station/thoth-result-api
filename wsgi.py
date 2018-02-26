@@ -43,7 +43,7 @@ def post_solver_result():
     if not request.json:
         abort(400)
 
-    file_id = str(uuid.uuid4()) + '.json'
+    file_id = str(uuid.uuid4())
     file_path = os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], 'solver-{}.json'.format(file_id))
     with open(file_path, 'w') as output_file:
         json.dump(request.json, output_file, sort_keys=True, indent=2)
@@ -75,6 +75,7 @@ def get_result_listing():
     if file_type:
         files = [file_name for file_name in files if file_name.startswith(file_type)]
 
+    files = [file_name[:-len('.json')] for file_name in files if file_name.endswith('.json')]
     return jsonify({'files': files}), 200, {'ContentType': 'application/json'}
 
 
