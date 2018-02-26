@@ -1,0 +1,3415 @@
+{
+  "metadata": {
+    "analyzer": "thoth_solver",
+    "analyzer_version": "1.0.0",
+    "arguments": {
+      "exclude_packages": null,
+      "index": null,
+      "no_pretty": false,
+      "no_transitive": true,
+      "output": "http://thoth-result-api/api/v1/solver-result",
+      "python_version": 3,
+      "requirements": [
+        "tensorflow"
+      ]
+    },
+    "datetime": "2018-02-23T10:47:22.310411",
+    "distribution": {
+      "codename": "Twenty Seven",
+      "id": "fedora",
+      "like": "",
+      "version": "27",
+      "version_parts": {
+        "build_number": "",
+        "major": "27",
+        "minor": ""
+      }
+    },
+    "hostname": "fridex-thoth-solver-fc27-thoth-solver-fc27-60rlx",
+    "python": {
+      "api_version": 1013,
+      "implementation_name": "cpython",
+      "major": 3,
+      "micro": 4,
+      "minor": 6,
+      "releaselevel": "final",
+      "serial": 0
+    }
+  },
+  "result": {
+    "environment": [
+      {
+        "dependencies": [],
+        "package_name": "virtualenv",
+        "package_version": "15.1.0"
+      },
+      {
+        "dependencies": [],
+        "package_name": "urllib3",
+        "package_version": "1.22"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "certifi",
+            "required_version": "==2018.1.18"
+          },
+          {
+            "package_name": "chardet",
+            "required_version": "==3.0.4"
+          },
+          {
+            "package_name": "click",
+            "required_version": "==6.7"
+          },
+          {
+            "package_name": "colorama",
+            "required_version": "==0.3.9"
+          },
+          {
+            "package_name": "daiquiri",
+            "required_version": "==1.3.0"
+          },
+          {
+            "package_name": "delegator.py",
+            "required_version": "==0.0.14"
+          },
+          {
+            "package_name": "distro",
+            "required_version": "==1.2.0"
+          },
+          {
+            "package_name": "hashin",
+            "required_version": "==0.11.5"
+          },
+          {
+            "package_name": "idna",
+            "required_version": "==2.6"
+          },
+          {
+            "package_name": "logutils",
+            "required_version": "==0.3.5"
+          },
+          {
+            "package_name": "pexpect",
+            "required_version": "==4.4.0"
+          },
+          {
+            "package_name": "pipdeptree",
+            "required_version": "==0.10.1"
+          },
+          {
+            "package_name": "ptyprocess",
+            "required_version": "==0.5.2"
+          },
+          {
+            "package_name": "rainbow-logging-handler",
+            "required_version": "==2.2.2"
+          },
+          {
+            "package_name": "requests",
+            "required_version": "==2.18.4"
+          },
+          {
+            "package_name": "urllib3",
+            "required_version": "==1.22"
+          },
+          {
+            "package_name": "virtualenv",
+            "required_version": "==15.1.0"
+          }
+        ],
+        "package_name": "thoth-solver",
+        "package_version": "0.0.0"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "idna",
+            "required_version": "<2.7,>=2.5"
+          },
+          {
+            "package_name": "chardet",
+            "required_version": "<3.1.0,>=3.0.2"
+          },
+          {
+            "package_name": "certifi",
+            "required_version": ">=2017.4.17"
+          },
+          {
+            "package_name": "urllib3",
+            "required_version": "<1.23,>=1.21.1"
+          }
+        ],
+        "package_name": "requests",
+        "package_version": "2.18.4"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "logutils",
+            "required_version": null
+          },
+          {
+            "package_name": "colorama",
+            "required_version": null
+          }
+        ],
+        "package_name": "rainbow-logging-handler",
+        "package_version": "2.2.2"
+      },
+      {
+        "dependencies": [],
+        "package_name": "ptyprocess",
+        "package_version": "0.5.2"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "pip",
+            "required_version": ">=6.0.0"
+          }
+        ],
+        "package_name": "pipdeptree",
+        "package_version": "0.10.1"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "ptyprocess",
+            "required_version": ">=0.5"
+          }
+        ],
+        "package_name": "pexpect",
+        "package_version": "4.4.0"
+      },
+      {
+        "dependencies": [],
+        "package_name": "logutils",
+        "package_version": "0.3.5"
+      },
+      {
+        "dependencies": [],
+        "package_name": "idna",
+        "package_version": "2.6"
+      },
+      {
+        "dependencies": [],
+        "package_name": "hashin",
+        "package_version": "0.11.5"
+      },
+      {
+        "dependencies": [],
+        "package_name": "distro",
+        "package_version": "1.2.0"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "pexpect",
+            "required_version": ">=4.1.0"
+          }
+        ],
+        "package_name": "delegator.py",
+        "package_version": "0.0.14"
+      },
+      {
+        "dependencies": [],
+        "package_name": "daiquiri",
+        "package_version": "1.3.0"
+      },
+      {
+        "dependencies": [],
+        "package_name": "colorama",
+        "package_version": "0.3.9"
+      },
+      {
+        "dependencies": [],
+        "package_name": "click",
+        "package_version": "6.7"
+      },
+      {
+        "dependencies": [],
+        "package_name": "chardet",
+        "package_version": "3.0.4"
+      },
+      {
+        "dependencies": [],
+        "package_name": "certifi",
+        "package_version": "2018.1.18"
+      },
+      {
+        "dependencies": [],
+        "package_name": "rpm",
+        "package_version": "4.14.1"
+      },
+      {
+        "dependencies": [],
+        "package_name": "gpg",
+        "package_version": "1.9.0"
+      },
+      {
+        "dependencies": [],
+        "package_name": "six",
+        "package_version": "1.11.0"
+      },
+      {
+        "dependencies": [],
+        "package_name": "setuptools",
+        "package_version": "37.0.0"
+      },
+      {
+        "dependencies": [],
+        "package_name": "pip",
+        "package_version": "9.0.1"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "six",
+            "required_version": null
+          }
+        ],
+        "package_name": "iniparse",
+        "package_version": "0.4"
+      }
+    ],
+    "errors": [
+      {
+        "details": {
+          "command": "python3 -m pip install --force-reinstall --user --no-cache-dir --no-deps tensorflow==1.6.0rc0",
+          "message": "(_CommandError(...), 'Failed to install requirement via pip: ')",
+          "return_code": -9,
+          "stderr": "",
+          "stdout": "Collecting tensorflow==1.6.0rc0\n  Downloading tensorflow-1.6.0rc0-cp36-cp36m-manylinux1_x86_64.whl (45.9MB)\nInstalling collected packages: tensorflow\n",
+          "timeout": 30
+        },
+        "package_name": "tensorflow",
+        "type": "command_error",
+        "version": "1.6.0rc0"
+      },
+      {
+        "details": {
+          "command": "python3 -m pip install --force-reinstall --user --no-cache-dir --no-deps tensorflow==1.0.0",
+          "message": "(_CommandError(...), 'Failed to install requirement via pip: Exception:\\nTraceback (most recent call last):\\n  File \"/usr/lib/python3.6/site-packages/pip/req/req_set.py\", line 784, in install\\n    **kwargs\\n  File \"/usr/lib/python3.6/site-packages/pip/req/req_install.py\", line 854, in install\\n    strip_file_prefix=strip_file_prefix\\n  File \"/usr/lib/python3.6/site-packages/pip/req/req_install.py\", line 1069, in move_wheel_files\\n    strip_file_prefix=strip_file_prefix,\\n  File \"/usr/lib/python3.6/site-packages/pip/wheel.py\", line 377, in move_wheel_files\\n    clobber(source, dest, False, fixer=fixer, filter=filter)\\n  File \"/usr/lib/python3.6/site-packages/pip/wheel.py\", line 323, in clobber\\n    shutil.copyfile(srcfile, destfile)\\n  File \"/usr/lib64/python3.6/shutil.py\", line 122, in copyfile\\n    copyfileobj(fsrc, fdst)\\n  File \"/usr/lib64/python3.6/shutil.py\", line 82, in copyfileobj\\n    fdst.write(buf)\\nOSError: [Errno 28] No space left on device\\n\\nDuring handling of the above exception, another exception occurred:\\n\\nTraceback (most recent call last):\\n  File \"/usr/lib/python3.6/site-packages/pip/basecommand.py\", line 215, in main\\n    status = self.run(options, args)\\n  File \"/usr/lib/python3.6/site-packages/pip/commands/install.py\", line 365, in run\\n    strip_file_prefix=options.strip_file_prefix,\\n  File \"/usr/lib/python3.6/site-packages/pip/req/req_set.py\", line 790, in install\\n    requirement.rollback_uninstall()\\n  File \"/usr/lib/python3.6/site-packages/pip/req/req_install.py\", line 759, in rollback_uninstall\\n    self.uninstalled.rollback()\\n  File \"/usr/lib/python3.6/site-packages/pip/req/req_uninstall.py\", line 135, in rollback\\n    renames(tmp_path, path)\\n  File \"/usr/lib/python3.6/site-packages/pip/utils/__init__.py\", line 265, in renames\\n    os.makedirs(head)\\n  File \"/usr/lib64/python3.6/os.py\", line 220, in makedirs\\n    mkdir(name, mode)\\nOSError: [Errno 28] No space left on device: \\'/.local/lib/python3.6/site-packages/external/aws/aws-cpp-sdk-core/include/aws/core/config\\'\\n')",
+          "return_code": 2,
+          "stderr": "Exception:\nTraceback (most recent call last):\n  File \"/usr/lib/python3.6/site-packages/pip/req/req_set.py\", line 784, in install\n    **kwargs\n  File \"/usr/lib/python3.6/site-packages/pip/req/req_install.py\", line 854, in install\n    strip_file_prefix=strip_file_prefix\n  File \"/usr/lib/python3.6/site-packages/pip/req/req_install.py\", line 1069, in move_wheel_files\n    strip_file_prefix=strip_file_prefix,\n  File \"/usr/lib/python3.6/site-packages/pip/wheel.py\", line 377, in move_wheel_files\n    clobber(source, dest, False, fixer=fixer, filter=filter)\n  File \"/usr/lib/python3.6/site-packages/pip/wheel.py\", line 323, in clobber\n    shutil.copyfile(srcfile, destfile)\n  File \"/usr/lib64/python3.6/shutil.py\", line 122, in copyfile\n    copyfileobj(fsrc, fdst)\n  File \"/usr/lib64/python3.6/shutil.py\", line 82, in copyfileobj\n    fdst.write(buf)\nOSError: [Errno 28] No space left on device\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/usr/lib/python3.6/site-packages/pip/basecommand.py\", line 215, in main\n    status = self.run(options, args)\n  File \"/usr/lib/python3.6/site-packages/pip/commands/install.py\", line 365, in run\n    strip_file_prefix=options.strip_file_prefix,\n  File \"/usr/lib/python3.6/site-packages/pip/req/req_set.py\", line 790, in install\n    requirement.rollback_uninstall()\n  File \"/usr/lib/python3.6/site-packages/pip/req/req_install.py\", line 759, in rollback_uninstall\n    self.uninstalled.rollback()\n  File \"/usr/lib/python3.6/site-packages/pip/req/req_uninstall.py\", line 135, in rollback\n    renames(tmp_path, path)\n  File \"/usr/lib/python3.6/site-packages/pip/utils/__init__.py\", line 265, in renames\n    os.makedirs(head)\n  File \"/usr/lib64/python3.6/os.py\", line 220, in makedirs\n    mkdir(name, mode)\nOSError: [Errno 28] No space left on device: '/.local/lib/python3.6/site-packages/external/aws/aws-cpp-sdk-core/include/aws/core/config'\n",
+          "stdout": "Collecting tensorflow==1.0.0\n  Downloading tensorflow-1.0.0-cp36-cp36m-manylinux1_x86_64.whl (44.5MB)\nInstalling collected packages: tensorflow\n  Found existing installation: tensorflow 1.6.0rc0\n    Uninstalling tensorflow-1.6.0rc0:\n      Successfully uninstalled tensorflow-1.6.0rc0\n  Rolling back uninstall of tensorflow\n",
+          "timeout": 30
+        },
+        "package_name": "tensorflow",
+        "type": "command_error",
+        "version": "1.0.0"
+      },
+      {
+        "details": {
+          "command": "python3 -m pip install --force-reinstall --user --no-cache-dir --no-deps tensorflow==0.12.1",
+          "message": "(_CommandError(...), 'Failed to install requirement via pip: Exception:\\nTraceback (most recent call last):\\n  File \"/usr/lib/python3.6/site-packages/pip/basecommand.py\", line 215, in main\\n    status = self.run(options, args)\\n  File \"/usr/lib/python3.6/site-packages/pip/commands/install.py\", line 346, in run\\n    requirement_set.prepare_files(finder)\\n  File \"/usr/lib/python3.6/site-packages/pip/req/req_set.py\", line 380, in prepare_files\\n    ignore_dependencies=self.ignore_dependencies))\\n  File \"/usr/lib/python3.6/site-packages/pip/req/req_set.py\", line 620, in _prepare_file\\n    session=self.session, hashes=hashes)\\n  File \"/usr/lib/python3.6/site-packages/pip/download.py\", line 821, in unpack_url\\n    hashes=hashes\\n  File \"/usr/lib/python3.6/site-packages/pip/download.py\", line 663, in unpack_http_url\\n    unpack_file(from_path, location, content_type, link)\\n  File \"/usr/lib/python3.6/site-packages/pip/utils/__init__.py\", line 599, in unpack_file\\n    flatten=not filename.endswith(\\'.whl\\')\\n  File \"/usr/lib/python3.6/site-packages/pip/utils/__init__.py\", line 501, in unzip_file\\n    fp.write(data)\\nOSError: [Errno 28] No space left on device\\n')",
+          "return_code": 2,
+          "stderr": "Exception:\nTraceback (most recent call last):\n  File \"/usr/lib/python3.6/site-packages/pip/basecommand.py\", line 215, in main\n    status = self.run(options, args)\n  File \"/usr/lib/python3.6/site-packages/pip/commands/install.py\", line 346, in run\n    requirement_set.prepare_files(finder)\n  File \"/usr/lib/python3.6/site-packages/pip/req/req_set.py\", line 380, in prepare_files\n    ignore_dependencies=self.ignore_dependencies))\n  File \"/usr/lib/python3.6/site-packages/pip/req/req_set.py\", line 620, in _prepare_file\n    session=self.session, hashes=hashes)\n  File \"/usr/lib/python3.6/site-packages/pip/download.py\", line 821, in unpack_url\n    hashes=hashes\n  File \"/usr/lib/python3.6/site-packages/pip/download.py\", line 663, in unpack_http_url\n    unpack_file(from_path, location, content_type, link)\n  File \"/usr/lib/python3.6/site-packages/pip/utils/__init__.py\", line 599, in unpack_file\n    flatten=not filename.endswith('.whl')\n  File \"/usr/lib/python3.6/site-packages/pip/utils/__init__.py\", line 501, in unzip_file\n    fp.write(data)\nOSError: [Errno 28] No space left on device\n",
+          "stdout": "Collecting tensorflow==0.12.1\n  Downloading tensorflow-0.12.1-cp36-cp36m-manylinux1_x86_64.whl (43.1MB)\n",
+          "timeout": 30
+        },
+        "package_name": "tensorflow",
+        "type": "command_error",
+        "version": "0.12.1"
+      },
+      {
+        "details": {
+          "command": "python3 -m pip install --force-reinstall --user --no-cache-dir --no-deps tensorflow==0.12.0",
+          "message": "(_CommandError(...), 'Failed to install requirement via pip:   Could not find a version that satisfies the requirement tensorflow==0.12.0 (from versions: 0.12.1, 1.0.0, 1.0.1, 1.1.0rc0, 1.1.0rc1, 1.1.0rc2, 1.1.0, 1.2.0rc0, 1.2.0rc1, 1.2.0rc2, 1.2.0, 1.2.1, 1.3.0rc0, 1.3.0rc1, 1.3.0rc2, 1.3.0, 1.4.0rc0, 1.4.0rc1, 1.4.0, 1.4.1, 1.5.0rc0, 1.5.0rc1, 1.5.0, 1.6.0rc0, 1.6.0rc1)\\nNo matching distribution found for tensorflow==0.12.0\\n')",
+          "return_code": 1,
+          "stderr": "  Could not find a version that satisfies the requirement tensorflow==0.12.0 (from versions: 0.12.1, 1.0.0, 1.0.1, 1.1.0rc0, 1.1.0rc1, 1.1.0rc2, 1.1.0, 1.2.0rc0, 1.2.0rc1, 1.2.0rc2, 1.2.0, 1.2.1, 1.3.0rc0, 1.3.0rc1, 1.3.0rc2, 1.3.0, 1.4.0rc0, 1.4.0rc1, 1.4.0, 1.4.1, 1.5.0rc0, 1.5.0rc1, 1.5.0, 1.6.0rc0, 1.6.0rc1)\nNo matching distribution found for tensorflow==0.12.0\n",
+          "stdout": "Collecting tensorflow==0.12.0\n",
+          "timeout": 30
+        },
+        "package_name": "tensorflow",
+        "type": "command_error",
+        "version": "0.12.0"
+      },
+      {
+        "details": {
+          "command": "python3 -m pip install --force-reinstall --user --no-cache-dir --no-deps tensorflow==0.12.0rc0",
+          "message": "(_CommandError(...), 'Failed to install requirement via pip:   Could not find a version that satisfies the requirement tensorflow==0.12.0rc0 (from versions: 0.12.1, 1.0.0, 1.0.1, 1.1.0rc0, 1.1.0rc1, 1.1.0rc2, 1.1.0, 1.2.0rc0, 1.2.0rc1, 1.2.0rc2, 1.2.0, 1.2.1, 1.3.0rc0, 1.3.0rc1, 1.3.0rc2, 1.3.0, 1.4.0rc0, 1.4.0rc1, 1.4.0, 1.4.1, 1.5.0rc0, 1.5.0rc1, 1.5.0, 1.6.0rc0, 1.6.0rc1)\\nNo matching distribution found for tensorflow==0.12.0rc0\\n')",
+          "return_code": 1,
+          "stderr": "  Could not find a version that satisfies the requirement tensorflow==0.12.0rc0 (from versions: 0.12.1, 1.0.0, 1.0.1, 1.1.0rc0, 1.1.0rc1, 1.1.0rc2, 1.1.0, 1.2.0rc0, 1.2.0rc1, 1.2.0rc2, 1.2.0, 1.2.1, 1.3.0rc0, 1.3.0rc1, 1.3.0rc2, 1.3.0, 1.4.0rc0, 1.4.0rc1, 1.4.0, 1.4.1, 1.5.0rc0, 1.5.0rc1, 1.5.0, 1.6.0rc0, 1.6.0rc1)\nNo matching distribution found for tensorflow==0.12.0rc0\n",
+          "stdout": "Collecting tensorflow==0.12.0rc0\n",
+          "timeout": 30
+        },
+        "package_name": "tensorflow",
+        "type": "command_error",
+        "version": "0.12.0rc0"
+      },
+      {
+        "details": {
+          "command": "python3 -m pip install --force-reinstall --user --no-cache-dir --no-deps tensorflow==0.12.0rc1",
+          "message": "(_CommandError(...), 'Failed to install requirement via pip:   Could not find a version that satisfies the requirement tensorflow==0.12.0rc1 (from versions: 0.12.1, 1.0.0, 1.0.1, 1.1.0rc0, 1.1.0rc1, 1.1.0rc2, 1.1.0, 1.2.0rc0, 1.2.0rc1, 1.2.0rc2, 1.2.0, 1.2.1, 1.3.0rc0, 1.3.0rc1, 1.3.0rc2, 1.3.0, 1.4.0rc0, 1.4.0rc1, 1.4.0, 1.4.1, 1.5.0rc0, 1.5.0rc1, 1.5.0, 1.6.0rc0, 1.6.0rc1)\\nNo matching distribution found for tensorflow==0.12.0rc1\\n')",
+          "return_code": 1,
+          "stderr": "  Could not find a version that satisfies the requirement tensorflow==0.12.0rc1 (from versions: 0.12.1, 1.0.0, 1.0.1, 1.1.0rc0, 1.1.0rc1, 1.1.0rc2, 1.1.0, 1.2.0rc0, 1.2.0rc1, 1.2.0rc2, 1.2.0, 1.2.1, 1.3.0rc0, 1.3.0rc1, 1.3.0rc2, 1.3.0, 1.4.0rc0, 1.4.0rc1, 1.4.0, 1.4.1, 1.5.0rc0, 1.5.0rc1, 1.5.0, 1.6.0rc0, 1.6.0rc1)\nNo matching distribution found for tensorflow==0.12.0rc1\n",
+          "stdout": "Collecting tensorflow==0.12.0rc1\n",
+          "timeout": 30
+        },
+        "package_name": "tensorflow",
+        "type": "command_error",
+        "version": "0.12.0rc1"
+      }
+    ],
+    "tree": [
+      {
+        "dependencies": [
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.13.3",
+            "resolved_versions": [
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          },
+          {
+            "package_name": "termcolor",
+            "required_version": ">=1.1.0",
+            "resolved_versions": [
+              "1.1.0"
+            ]
+          },
+          {
+            "package_name": "astor",
+            "required_version": ">=0.6.0",
+            "resolved_versions": [
+              "0.6",
+              "0.6.1",
+              "0.6.2"
+            ]
+          },
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          },
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.4.0",
+            "resolved_versions": [
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "tensorboard",
+            "required_version": "<1.7.0,>=1.6.0",
+            "resolved_versions": [
+              "1.0.0a6",
+              "1.0.0a5",
+              "1.0.0a4",
+              "1.0.0a3",
+              "1.0.0a2",
+              "1.0.0a1",
+              "1.0.0a0",
+              "1.6.0rc0",
+              "1.6.0"
+            ]
+          },
+          {
+            "package_name": "absl-py",
+            "required_version": ">=0.1.6",
+            "resolved_versions": [
+              "0.1.6",
+              "0.1.7",
+              "0.1.8",
+              "0.1.9",
+              "0.1.10"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          },
+          {
+            "package_name": "gast",
+            "required_version": ">=0.2.0",
+            "resolved_versions": [
+              "0.2.0"
+            ]
+          },
+          {
+            "package_name": "grpcio",
+            "required_version": ">=1.8.6",
+            "resolved_versions": [
+              "1.8.6",
+              "1.9.0rc3",
+              "1.9.0rc2",
+              "1.9.0rc1",
+              "1.9.0",
+              "1.9.1",
+              "1.10.0rc1"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "452347719d7e8abf8ca6a04ca83c723a31143d4fd6bab255c07228c518614b839fffcf884e25463165f35d4b7ead272ec71c35c0b01e34803b34b2cf194ab705",
+              "url": "https://pypi.python.org/packages/fe/ac/3685d7c1c9e83b76f8dd1bd6e4f2fc4c225a8361a08d47ac76fc10399c5e/tensorflow-1.6.0rc1-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "59f5404fe348f247fcd3e560aa5a2c09e0e213f0803db4a13314bdbc23ef428276de80509acf95445f6e0712c8b349237ce62996c23f065370cf441b4377a919",
+              "url": "https://pypi.python.org/packages/92/0e/8ac789f3a6b10d29611f7f662a4aa8f3ed9031daa4a14ae079ded56b6910/tensorflow-1.6.0rc1-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "383e10978c5a3660601efc5270498b382fa9e151e5ee1dd628284e078144dd4254af210fd0b76ef1fe95d32d5229ccf5ba9ac762d4cb8f35ef3496ed7c2cdbe5",
+              "url": "https://pypi.python.org/packages/0c/04/4edc04ef102226bfd1a3c5a375777ab4f4985ee55b276c09fc4df4fe9116/tensorflow-1.6.0rc1-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "1e8099aede3f6de8b09f77b7ebf4a21802bb52ed1d2e7cb592f42f65aba91b1c0fc88686752dbdc3ca780b6899f9214bc93c2c9b88cd434f80a556e31ed79768",
+              "url": "https://pypi.python.org/packages/ad/87/550c6f5ab1e6c2005368db0a470657ca53e684b477ae34838d560e95481e/tensorflow-1.6.0rc1-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "b238b0992ffe07550fcc96a6bb152dd9ba28f82d55522a9dc93e66a0876451835b642a17be428538c8fe1a9cd454d4cde78df5a50c9c16f35eb9988d2b9d4814",
+              "url": "https://pypi.python.org/packages/21/27/7ae18bfc8806a4c91bf4d5d5246d8f1ece207a44a6b594c2581e62041eb9/tensorflow-1.6.0rc1-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "180ccf75a8b97669641f317a02ed6558eac3902abc6228a7bee1ca50e44bacc14ebf2e4f098b0ef4f5e2c479a19142cea1414881c23bbfe41be75a37b1a1b7a7",
+              "url": "https://pypi.python.org/packages/f4/34/06cadd36b3288bcaf20d205855f7ad26f9e4d4c77b8007a9ac9647164994/tensorflow-1.6.0rc1-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "4c10dab1a5143c451a0cf1b17991503b86744b2ea9a5e957af66bbc97cbfd482afd1479862368e4889b4a8886e33994eb1d5d138abcccfb9a84b3ebb7ebf1cab",
+              "url": "https://pypi.python.org/packages/88/b7/f3b15ecf74d3c5b1f28bb05e4b51a4828b73a893364cb3bfd582f9afc6d1/tensorflow-1.6.0rc1-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "32eb78f46c6d5b79bbd1126f84b963dd49b1acb531224645fee2ecb70eed0ae4db98ae8478a4dd6836d2091a2cc4338108075a5ff69fd4b15557b2ac788558cb",
+              "url": "https://pypi.python.org/packages/64/52/9555050068f1f7a95a60ec8bc1fd0f4eb69c053b58d22e58714e3d0811b5/tensorflow-1.6.0rc1-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "eca1a56b2f2f870dfb5567286db1834cb5b79f63e5281b2ae5fcb786f7855b7a4859c097a74152c0f31fbbe298942da39dd433011ec490f0827cb194421824d3",
+              "url": "https://pypi.python.org/packages/7b/78/28f706570ca07208cf870487e40a08d16cc1ccca8b5eceee26b72f14fff9/tensorflow-1.6.0rc1-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "6d003890d5c107b311f6801c489d20a7c1c21cefb4be07e978638bfe661997a1d5b8e8ac2a7aea7d553684c456b8b634a8a0c7aff1485d370234ef49358aaa0d",
+              "url": "https://pypi.python.org/packages/f7/cb/a209cd9b6fcacca56be5db1f1be9a634c1c3fd83167c2b4bd7070dd0c9c9/tensorflow-1.6.0rc1-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "fd6d4350253dd5a0710718c93c981609356e4f3b92e579c49919ee1a2eaebd70fafa8d075f29f12a67312003a609402757844dba51725d7f3794cf6aa2cc7720",
+              "url": "https://pypi.python.org/packages/88/5e/165e33b3562a9c090ba16b54a596d83f4edffac4b0220a7ee1c97ac73913/tensorflow-1.6.0rc1-cp36-cp36m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "8cba586f7afe64b12a72b0076405c09017c5532b495317f3229a5343337c6d2ffe6ad4331105b371a10727acd3e84d314a15bbaf58966883ac77c36487465f5c",
+              "url": "https://pypi.python.org/packages/0e/c5/0b7b4ea9f6d1aa817377ebbab83eebb577cf96aa9f1dec00c153d6d65df9/tensorflow-1.6.0rc1-cp36-cp36m-win_amd64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.6.0rc1"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.6.0rc1"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          },
+          {
+            "package_name": "tensorflow-tensorboard",
+            "required_version": ">=1.5.0,<1.6.0",
+            "resolved_versions": [
+              "0.1.0",
+              "0.1.1",
+              "0.1.2",
+              "0.1.4",
+              "0.1.5",
+              "0.1.6",
+              "0.1.7",
+              "0.1.8",
+              "0.4.0rc3",
+              "0.4.0rc2",
+              "0.4.0rc1",
+              "0.4.0",
+              "1.5.0",
+              "1.5.1"
+            ]
+          },
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.4.0",
+            "resolved_versions": [
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          },
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.12.1",
+            "resolved_versions": [
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          },
+          {
+            "package_name": "absl-py",
+            "required_version": ">=0.1.6",
+            "resolved_versions": [
+              "0.1.6",
+              "0.1.7",
+              "0.1.8",
+              "0.1.9",
+              "0.1.10"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "07b5c57e7359fb70809d5d251898cfc4a16695012db0a3b37c35bc71d8e3d8bc4541da7cca08c375607fb07f09e20479bdc0af4b316079df3c6882bb40f5b91f",
+              "url": "https://pypi.python.org/packages/cb/b6/9d14601b551682d33bd39945d7621e378660191cb38a1b5a75d0d038af58/tensorflow-1.5.0-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "3360b495f6d3ffc2a67452f449af66ea567b1482fa7c9bdc77fc3054a58b7593e4533fd21b47db0195081c7de868c77d5b7084855800ec8a9b2ba28e4b7d82d9",
+              "url": "https://pypi.python.org/packages/69/6d/09d4fbeedbafbc6768a94901f14ace4153adba4c2e2c6e6f2080f4a5d1a7/tensorflow-1.5.0-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "5b091a6e1aa2d9fe4ee820e780cbe67126666c1ae682c83dd676d808c57adc26c2b9f73806217aa2a0ca2d413bd7664a7903e3f5854a34b30ef6f874b9b3b666",
+              "url": "https://pypi.python.org/packages/78/31/9cf2c712d50b0d3dbb102c4db33bb95aed3aabd140c36d55de7e0f0e0443/tensorflow-1.5.0-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "3f558e1ae68bfe64c73010255c83ad54eeaaaf9180d95f2f98dbe3ddcae9f7d18c84a47c47061e806cd92e78a1a58dd2752e8a9ce78b1bd6351e1e732732b10f",
+              "url": "https://pypi.python.org/packages/41/01/4419244d84e1880c45bb00aef5f1e1ef5dfd72d9522857f9f2fa50a1adf0/tensorflow-1.5.0-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "0460f27a5399d6b5464f64cf3ee9c84e7e1f087bd79c0c3823bca119236d3d6994d707f805979f3c59c233ae4e8f6037d2d006917d9b11bfe0f49027e9f2a170",
+              "url": "https://pypi.python.org/packages/be/3c/793a0fa756e0fab3faa80351a605a5e1edf4d6547e647189f39136fc8cc8/tensorflow-1.5.0-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "49e872a51b10992ead838a00ba085addcaef0f7afffb111a7d90943b25804fd4252134b7d7745980f14ed22a1c788f377041caedbd0220c73fc56a0ab1fe3c16",
+              "url": "https://pypi.python.org/packages/41/98/004ae514ead1e961d38983feccd79800f78575b9b139246fcffe7399917b/tensorflow-1.5.0-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "f3c428c18aeb7e5eb40727837f4fb64397920830179969a71c6adbd291fe90581f6ddedea616f3814f2294c3f6c53b0788327740af27d892558b261e640e9b13",
+              "url": "https://pypi.python.org/packages/b1/57/1d27695a4572d70b8cd365dd358b45a41ece811d675910e175254779885e/tensorflow-1.5.0-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "7bbcba0f2e98bd2faf7f200f687acfd5aa9d33f484156b6eea4d0b7bf236ce28ae98606754c38984b009b29b630ff8a3ce7491b6e12da25e3d39084df05573ac",
+              "url": "https://pypi.python.org/packages/43/aa/fe3e9d0b48db4adde9781658b9354814b6cdf6acbfeaa7b2677c7b8002d6/tensorflow-1.5.0-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "758d4463bcabdb18051c33e04ebc312099dad101de831c13e052572f1a97debce45099dc49d77435615c4cd07791fde063ee2cede5e910a9ace974aff31a88e9",
+              "url": "https://pypi.python.org/packages/dd/6e/c32ea02f33ee47b74f747961f2023c189bed523bbbfdb618c719b3ccb76d/tensorflow-1.5.0-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "7efc54e9970009cc1a26ea0e21be84e549936b208e5af2e196190c13167ec5f79c5960127a262739679035bf1e9f8d4ae27b2d4e6b386b9f6610d3766706f98c",
+              "url": "https://pypi.python.org/packages/f2/0b/da4f6379f12ca375b1155f542d0d36803ba2c6b406d39e6bde5eaa2f0abe/tensorflow-1.5.0-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "5659657498b50901d47eabd79a0bd4971dae2eeca9328d6f5fb4ffef2857fbe62a1b15faa26242ed531bb55e1507a377a96f34fdbbb978c0006057f9b1aa93a2",
+              "url": "https://pypi.python.org/packages/04/79/a37d0b373757b4d283c674a64127bd8864d69f881c639b1ee5953e2d9301/tensorflow-1.5.0-cp36-cp36m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "c26948f39de74805c6a3554d3a422505d5f341b4426bf8ac127d287ce27bf3f1543f0605cb076fb3900bfb53c5b522a9f4b9cd38f183c42489f5a8054973d5d5",
+              "url": "https://pypi.python.org/packages/34/96/11f048eca7b4d6da3084ca49c636b9e720e9dd1483c0c4e9ba3cf5037564/tensorflow-1.5.0-cp36-cp36m-win_amd64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.5.0"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.5.0"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.4.0",
+            "resolved_versions": [
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.12.1",
+            "resolved_versions": [
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          },
+          {
+            "package_name": "tensorflow-tensorboard",
+            "required_version": null,
+            "resolved_versions": [
+              "0.1.0",
+              "0.1.1",
+              "0.1.2",
+              "0.1.4",
+              "0.1.5",
+              "0.1.6",
+              "0.1.7",
+              "0.1.8",
+              "0.4.0rc3",
+              "0.4.0rc2",
+              "0.4.0rc1",
+              "0.4.0",
+              "1.5.0",
+              "1.5.1"
+            ]
+          },
+          {
+            "package_name": "absl-py",
+            "required_version": ">=0.1.6",
+            "resolved_versions": [
+              "0.1.6",
+              "0.1.7",
+              "0.1.8",
+              "0.1.9",
+              "0.1.10"
+            ]
+          },
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "4be2812d7358dab311ecc69b077ba8bd7b40c94ad4343c62af6e5d189b6b3d1d8343b44e90f058b516174484fc578f74f9ec1600b8e4a17fb990378fba6edf83",
+              "url": "https://pypi.python.org/packages/43/57/b5503037569b4230fa4032fdbfda9cd13c852a264d6c4763c902de67ebda/tensorflow-1.5.0rc0-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "0a48ee21a984b3465e2a0778052a54afce4d6c5f4155d68abdb45c78aee21e1b0875cde5f3d131837211c78da00ce81e3cdd524cd25dc77056fb9735d0aa9e65",
+              "url": "https://pypi.python.org/packages/aa/98/8d7cfa84282ef28fcafb29867c69773544d4668ddb943b1f626d35beacf6/tensorflow-1.5.0rc0-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "0d6bef7e9fa6e42f83d8c222af1651b66e0b3f65568731085d0ddaad15367f159f27f6358216a9db32602f98accf8758452cb802031750565c27b4953fbea62a",
+              "url": "https://pypi.python.org/packages/ca/58/076acbb0086c3679863c90085fada6e901f2d6d46ff07109ff9b75b340f2/tensorflow-1.5.0rc0-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "ffc89cecd1117ede347197b4101f084cfba868a9cc49557a8c3d3b850d55e0cd2fccef47224043b8e96b0af483f7ed949b1297d77ae2edc69d7a2aba2ef5e2ce",
+              "url": "https://pypi.python.org/packages/c5/94/1d7b4c25cf50ae01c8d59d8e9e382074b5a1687fba2943fb498285be8ac1/tensorflow-1.5.0rc0-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "7904cf36bfd8e0123e8e8c0101c98cff37353faa82e08e827aa39655dea7da4a29db74bb58bc188628733c8994608ad3eecf3ce63306d748759837580af5dfcc",
+              "url": "https://pypi.python.org/packages/4e/ee/15c234dd45a84c4cdc21240fd759325763749312ebca886e7c3c3ac18831/tensorflow-1.5.0rc0-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "99d20e0aefc12d643d86a64a7772943043b1d462b165136ed3f484c3f002b5ac20db6d38ee265b140d408b7958b8fe7b6600f6adc60df93bbc613641cd2e61ee",
+              "url": "https://pypi.python.org/packages/5d/f1/f5c2c1eb83d2ab5db1b6b5ecc0a78d9ffa11f3e276c91893991981a469ab/tensorflow-1.5.0rc0-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "ab0da988c9e553a68bfc98eebe54dc0ce3531d15af6bca8a56ff8b9e78bd098997dfde8d5001286ac6301ecce7710450ef32e87e688d1c76a185297f56a7d191",
+              "url": "https://pypi.python.org/packages/f3/5d/b761cb6cdd55d439d4cd9f5bce8c7d706c44d8fd6a97ff7a2e85e9da737f/tensorflow-1.5.0rc0-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "cb23ab9d6bef3aa15c1a030d59b8f832c37d326ebfb5a185ba6db0705ce8ec0ab6a4144fc9542f35c8bd795040a30356f780d396f71b5f9cb22f1d3c2e857b4e",
+              "url": "https://pypi.python.org/packages/69/f2/b6084337b718f435e839efee9cd8482d5e3e645ef64088390fef8ebec596/tensorflow-1.5.0rc0-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "03c8c8723c2b37f6c8385129b78d854d3327a5feee5421a2fd8769c5203d8629983d788947debba90e68846a83d3b04b20ca095600a6a88fe32e37e019a7dd60",
+              "url": "https://pypi.python.org/packages/a7/26/30decbd76e1b46b70a1a2687f32731bbbc9678eef71117b17851b3cfc26e/tensorflow-1.5.0rc0-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "da98914df4f3a22f05ebcc9d8a6ee191586c15478ed8ed08e9744af8f9ce82bcc0958913d0c599f3d6f183b5d7628864dee87cd5794638eb8c9b5aeaf71b12a5",
+              "url": "https://pypi.python.org/packages/17/7f/8df4a2a5ff9cb60ce9c63099f88eb72011b2a77ddeb31593ade466efad60/tensorflow-1.5.0rc0-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "6e612c7800cf138d37cda985241d92d2063a8eaad8ff85aa575b6d6c7dad7f9bddc59915d1e7b9ad8b3ac753196ca1c9e7f0120ff569623e26930ddfb52ccb90",
+              "url": "https://pypi.python.org/packages/fe/7d/01c588ba060e5e7dffe64ab968745d143530c84da30296f9593f661ca27d/tensorflow-1.5.0rc0-cp36-cp36m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "78e05fef5f16bb5c57d38b79a88becc70281f25b6f978edee507e4e37790d6ccd68a25e15467dd969073d4343300d7ff68d80df6d4887cbed75e8348273fa220",
+              "url": "https://pypi.python.org/packages/74/35/60335fc4aaaccdc00fc75d4dd0718b7038f972c021be2b8ce4bf9ad623aa/tensorflow-1.5.0rc0-cp36-cp36m-win_amd64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.5.0rc0"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.5.0rc0"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.4.0",
+            "resolved_versions": [
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          },
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.12.1",
+            "resolved_versions": [
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          },
+          {
+            "package_name": "tensorflow-tensorboard",
+            "required_version": null,
+            "resolved_versions": [
+              "0.1.0",
+              "0.1.1",
+              "0.1.2",
+              "0.1.4",
+              "0.1.5",
+              "0.1.6",
+              "0.1.7",
+              "0.1.8",
+              "0.4.0rc3",
+              "0.4.0rc2",
+              "0.4.0rc1",
+              "0.4.0",
+              "1.5.0",
+              "1.5.1"
+            ]
+          },
+          {
+            "package_name": "absl-py",
+            "required_version": ">=0.1.6",
+            "resolved_versions": [
+              "0.1.6",
+              "0.1.7",
+              "0.1.8",
+              "0.1.9",
+              "0.1.10"
+            ]
+          },
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "2903b37b63310fb8e511430c5be73fea4b8c5289de4df4451a0fdad15cce7eb4ab1ae7c3d5935d0fa1fa4ec14c7b520e8a6d83a83aa3b99733ed1b6da46b3bcf",
+              "url": "https://pypi.python.org/packages/91/cf/1e2b04e91fc7537667f8e9b59340e6a73c9da64de5433718b0897f58e8ae/tensorflow-1.5.0rc1-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "c4800bd573482e63a7cb665e313d891a72a4d4a935bfb43df711303040cdbbd2ae16058e8fea4d60d9bc710462740ceb6d1fef98a70ac7cde47494a2cb325434",
+              "url": "https://pypi.python.org/packages/58/35/77494e58355f9ba829a056f91ad285131531d56ace98d7f4dcdc9965a577/tensorflow-1.5.0rc1-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "16ccdea8e3ab905969a544c10932cbaffa7472764d78632f9437ce4eb1a3484b164fc714e794b2fdbaea3521c55225215f5555475dd0688c7178ced6ceb1089f",
+              "url": "https://pypi.python.org/packages/ac/91/89da6e448fbf047ecdae4ed2d7c244d0b3969636530a38ff9bd71ccc3efc/tensorflow-1.5.0rc1-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "949c47de1e0377bdd35e0e414830a328819165067656e43b44659427bd6732d4dd8a14dcebe13197c42489c3e014588d518698fb60bd22afd7d4be21c4fc719f",
+              "url": "https://pypi.python.org/packages/e1/be/49631aa136edb745fc56c06a443301f5b497dd5061f0d95968e4861ab745/tensorflow-1.5.0rc1-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "2d52c3818150150431a8cb5caf21b6957dd0f379416af849c356bef68a52294ee45588dc9aa458836632a383c9068c81d483d51a6de85556affdbcd014a904e0",
+              "url": "https://pypi.python.org/packages/0c/ea/8e6fbe77ea3291b8a10103ccdeaed7e174625343f00c43210e2c5f53a22a/tensorflow-1.5.0rc1-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "486c9d9b82a7c3ab7fbcd3052fd2523541f01210af2aa617358cfa25d9d2ce33fa0362bbbcc1e3503d657eacde38a3cb093b0ba73bcf590ed185f16638fff3f1",
+              "url": "https://pypi.python.org/packages/88/23/634fc7fe3b8d5b5a50ffb18310d5a698dde9e1d3665ddc55cd4c5fb6c248/tensorflow-1.5.0rc1-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "fee1430f3c6db892f597ddf329007333c68b368b36284ee423baed0aea94e79c6407a50f7d1d4d52831149862065256c38dc25fa97d3d3a257db4f63bc5a3536",
+              "url": "https://pypi.python.org/packages/28/92/cfb40bc855ac43f0b73190c3460cb5168efd4fdd06c343546c0f8f5de296/tensorflow-1.5.0rc1-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "e97e6d51461d586f76b39dc0137fad4fce843df33b4f9a8eea911b0dba1a085bb289f610b2659e526ee36421973dc6d7643e2e2d63a5b0902e2ca897d761ddd8",
+              "url": "https://pypi.python.org/packages/35/e0/4dfd2e69df6d533568cc82bc726677e1e89bc29a5df605232286f3fe1e10/tensorflow-1.5.0rc1-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "8cb494927be1f54c5a07184b760b205f2f95aa50499b73c7cc1880d0a5f828b23fc7c6c0d8fcb8340e2835010072652d1878d13067b3c0004f5ed8ac9deee6a4",
+              "url": "https://pypi.python.org/packages/62/0b/92759e4f0bb22e0043640d91a46f74d4f9a8caabae42e73ebcea0cd582bd/tensorflow-1.5.0rc1-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "ef70ba98274f3115426517265b2a6854c25a7becaabdf45f1a11a9c6c908debcb42ea95c39173c681ee328c1de5f0e8123f537528bb43c25f608ba2a65773f98",
+              "url": "https://pypi.python.org/packages/c6/ed/6f4b8c8b0e21ae6e0b3bd7ae4e62be10de2ccac09abc913c4bb6b4e09abd/tensorflow-1.5.0rc1-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "14e21ae0a72dde41f2af5f2b017c9c3cfefa326b4680a50eb22f8611ca7357d0d871f41e5f8f435072d4add309b1890ce6c0fa0eea349e6e7a6674fce1b32a24",
+              "url": "https://pypi.python.org/packages/4e/50/87e3c6861957413deb5ccd62aee6cea85cc2eedcf6391183595191d3c87d/tensorflow-1.5.0rc1-cp36-cp36m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "c76295a35f54f2368e6ef2106bfa287c80148e51e1056fdda7469e9d8c5817a9ed373b009f601f429714e5c6b5c862a173f4c1841b6ac25a4c3fd9e424a0a439",
+              "url": "https://pypi.python.org/packages/78/8f/2abd865c8e4fb43baa473a87418c268654c1a9027e1bf305fa19761b4056/tensorflow-1.5.0rc1-cp36-cp36m-win_amd64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.5.0rc1"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.5.0rc1"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.3.0",
+            "resolved_versions": [
+              "3.3.0",
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          },
+          {
+            "package_name": "tensorflow-tensorboard",
+            "required_version": "<0.5.0,>=0.4.0rc1",
+            "resolved_versions": [
+              "0.1.0",
+              "0.1.1",
+              "0.1.2",
+              "0.1.4",
+              "0.1.5",
+              "0.1.6",
+              "0.1.7",
+              "0.1.8",
+              "0.4.0rc3",
+              "0.4.0rc2",
+              "0.4.0rc1",
+              "0.4.0",
+              "1.5.0",
+              "1.5.1"
+            ]
+          },
+          {
+            "package_name": "enum34",
+            "required_version": ">=1.1.6",
+            "resolved_versions": [
+              "1.1.6"
+            ]
+          },
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.12.1",
+            "resolved_versions": [
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          },
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "a5c3b2a97dddbaca3a88ce8142c767914705a20b6eb27a5a69bfbe7ab48923888b1e7ff27cb9d6ca62718ba04a648784273a8254d77f6d7853913efe5810f7a1",
+              "url": "https://pypi.python.org/packages/eb/40/0c425a97870f0e95a9d79e4fd5c2f609ee89a7e69b4644579d3157ed5ea0/tensorflow-1.4.1-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "ac7444fbd9f9d5abf0a1d9c071bbebf5e28a3271a6a6a8d5abb3106c4d94b98398f9c5355a195c67851ecc52ed88139c362696174b56a7c1c95f988283dfa344",
+              "url": "https://pypi.python.org/packages/8a/de/1a8de6c1119cf595a38bedcb6072b5988ee92b0bf33b7b74b81aa7cffc49/tensorflow-1.4.1-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "60b0f30d8458d15e6ab11d6a062af815faf8dd6bf76ad5781774f97f3cc9fae41357d82c46d07e461b18b4919e661256f21df98818fc2db946371822b9e70bb5",
+              "url": "https://pypi.python.org/packages/c6/14/f0c140ae6612164407080a3ef2337da12d88b6369e6494fe87a7bab3dce2/tensorflow-1.4.1-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "ab24018460744605f3fc92049c71a59c3e069e9b5c5bdd2bc458ab72f15083f158b3f5bebf58cefd84230d86ee9af839d5f117b3f5bfee5f7bc97939c7e8248a",
+              "url": "https://pypi.python.org/packages/03/cc/b3ad4b3ecf169390ef9b74644fd818b86c565eb4166725040cb1e119a980/tensorflow-1.4.1-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "d3236ee69b40ed137b391c6a6456aab997d3393a3c995b7fc7a2df30c6b0404be557ec667fa878b423beb04351893f98b170b2efac5ce7c820f46e0348552a00",
+              "url": "https://pypi.python.org/packages/82/d0/450f0b5b3ba173ae428244b499b2897a837fdf37c474f80944f691a53d49/tensorflow-1.4.1-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "67120ca61c61d63adccc2e166d2f283b887fb4a9b032d2af162963f3d8e1dc0ef958a238368c26e3b5ef373919b310782b74fb6284afc034d34f721363c23a1b",
+              "url": "https://pypi.python.org/packages/f7/52/4f78cc674775bd36a28223fd63d98260eb7130128298f7c70edbdcb34075/tensorflow-1.4.1-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "907b87c6bb928298b7b4b70483536e60d68c07143cfa4a174543e26b5cf7c4f8ff74b740a006a435ddfe9ba6731721b8569662b058ae8ea1e7225b2e102361a1",
+              "url": "https://pypi.python.org/packages/11/fe/2d94cfa362ddb998470e2115c24a9f8cedcfb9a3756290906c5b7bed9a6c/tensorflow-1.4.1-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "206a9fbfdbdfee290edbd659a45a464217330f76f63e6f11a43b700012c53402cdacbe3faccafe5efed5ce992ab1a2d69a9a6ba0e691889e10d571917db292cf",
+              "url": "https://pypi.python.org/packages/dc/de/640ff90d9555d21400abac5bebd2cec8c30015d5247159708291206cef52/tensorflow-1.4.1-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "116586384e5e8e5ea5283941c3d32410f1aef560024988644d6c76b6c26bb2dc2bd06446ca71da1b9cfe19e5d7cc2ad0aa7d5e962389222581a73a496faabb88",
+              "url": "https://pypi.python.org/packages/74/fd/356ae3fcb46b6189b9a066323af3a766a0a9fa1d425e76ec2b83abbfee32/tensorflow-1.4.1-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "9abbad03187c8cb0265ee70e4c56a4177fec593093b4d0f02e463717f5f29a348697586a44b5f6ec989edc2402fd915fb6b833c6bbc47176d56d596ddd855147",
+              "url": "https://pypi.python.org/packages/8c/b3/dba1a3e681a56d5ad63d3a1aa02b52294bdb3c6373245a67c1492a90cb62/tensorflow-1.4.1-cp36-cp36m-manylinux1_x86_64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.4.1"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.4.1"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "tensorflow-tensorboard",
+            "required_version": ">=0.4.0rc1,<0.5.0",
+            "resolved_versions": [
+              "0.1.0",
+              "0.1.1",
+              "0.1.2",
+              "0.1.4",
+              "0.1.5",
+              "0.1.6",
+              "0.1.7",
+              "0.1.8",
+              "0.4.0rc3",
+              "0.4.0rc2",
+              "0.4.0rc1",
+              "0.4.0",
+              "1.5.0",
+              "1.5.1"
+            ]
+          },
+          {
+            "package_name": "enum34",
+            "required_version": ">=1.1.6",
+            "resolved_versions": [
+              "1.1.6"
+            ]
+          },
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.3.0",
+            "resolved_versions": [
+              "3.3.0",
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          },
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.12.1",
+            "resolved_versions": [
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          },
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "30e03b85a67e50a3e965a8436a32f825b9d45a9045f4cf675ee33c7ce546ed9b45601a5ab0b0f0614c9a18a0da891f19bdfa7b2feddd93f73930d6e2a54fa131",
+              "url": "https://pypi.python.org/packages/d6/1b/c0cabf27871cd71c3b02c8e94ee74703f6a240eaf7a139b0f0fcef85aa1c/tensorflow-1.4.0-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "390753d79ea4ea8f4dd51416fd1df6b67c7ccd404721ad8b52232b634bad46e3654bbecc157062758363aca5893c47dbf9b882bfe17524fe9a8332fce367e13c",
+              "url": "https://pypi.python.org/packages/99/72/a420e22dc93416d30981e87a2318823ec09a9b18631369df0e7d9d164073/tensorflow-1.4.0-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "cbc14e9e1ee6405616d97ec6c60b7548d2077918f63ce15b18ab7aa56ca2f38f6981d8283925f66bd3601d7264496cb4ed7ed35aea1619ad6844695a16d09d8b",
+              "url": "https://pypi.python.org/packages/15/5e/3443dc258daa74080801ec63922fdff2c1655a497a3d3ebd35b36568eebc/tensorflow-1.4.0-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "1445f1f15ae91b126f73fab62d3520e8567969d0e56a764f1593189fd01cf32c3d36bfee164f57fbc302c4ed31247f2d693dcf634fe730788e36ec5e85d4ea02",
+              "url": "https://pypi.python.org/packages/0c/64/6cf0518fc2661f825453e1be9c56a319440bdb3281756a2dd5f582203486/tensorflow-1.4.0-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "5ef6d36b863f853559274bf4a976ccd1623d66d1e2a7ae2f7403bbbee4b65c9d40fb96a9e1a3237a2b872b6f983cc949f66f62b1386cf0137b5a271614902d49",
+              "url": "https://pypi.python.org/packages/22/93/53b0d45ced26f00218c925275cf73e4bd327f0736f76aab667a9cf14cae3/tensorflow-1.4.0-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "3ebe15a6abf7f271b69eb87ce1915b6756bd67a8cc424453caf5f9c74cd7792f91d51f6e433acc3279596fb922859cb9f6d46c0f808527c139ab145c49f3f42d",
+              "url": "https://pypi.python.org/packages/05/f7/ccf4f218f448c1194df0d52743691bcd835e0fb665a3b7876d929f5218d4/tensorflow-1.4.0-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "34ce2b60e9b1269133c8e16279648fa6ae5d1871c01293181e9bec8950b94f0f9debd45ad01a01d83a5973244b30fba9d9729aa6725bd6a8c6b89e0e82ddd2f9",
+              "url": "https://pypi.python.org/packages/17/ce/30ddea1fd61acf0d9c7ee46c4f62edfb44cb4037f064dae86dc385018c94/tensorflow-1.4.0-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "44e5a4615201adf0907b9128125b1658bd93b501b65c728368de8cc596f1b3945d98063c1d8ba225aa092e921640b68f598291b6e8bfba6e7bcb33499662c202",
+              "url": "https://pypi.python.org/packages/a1/74/e2cff4dc2cd2ee7d407bb929ce828eeeb1a43503deae83f8f71f11311970/tensorflow-1.4.0-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "5e86381c5999a0e8a6d09d95a6250ac6c0e31ee9d73aa7ec253cbf28091d29c01c0411aac85e907199f7a245e6313ba07563746a1b9978592fd5a1eb0bf6d65e",
+              "url": "https://pypi.python.org/packages/ad/8b/acaf89cdccbbbeac798edc45bd8ca92b1ff97b9c49a976c9cc0540b81b74/tensorflow-1.4.0-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "d551945b98610f255904d7ec8cbe2b9d6da392a9992e6dd7f23c8999096d8cfa0e8864de78412869aac8729819ee58a1acfd26e7acdd72134ab3ef9cccf8a5e6",
+              "url": "https://pypi.python.org/packages/a9/72/4f573aa9d41e740e79594a0bd949288f2eb4286f453cf560799eaa29d024/tensorflow-1.4.0-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "3d5532ce60f9acc4ba882809fb827498873b3e5c61bd62a243f249acccb5d89c3fabe808f0829daa57b6fdceff1720e7146c694b6c16310584a894aa76602d9b",
+              "url": "https://pypi.python.org/packages/86/9f/be0165c6eefd841e6928e54d3d083fa174f92d640fdc52f73a33dc9c54d1/tensorflow-1.4.0-cp36-cp36m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "764f94278d4b374285a77f5f213b6543d15f926d49484c77bfb9b48aa5081a6861526804c835ecec6af111ef6934e99ac9e7f9168ce091c9512ca3f38459de6b",
+              "url": "https://pypi.python.org/packages/76/7b/2048b4ecd88395ac16ab938e8675ffeda2acb60bc34f5ef63500eafafaf5/tensorflow-1.4.0-cp36-cp36m-win_amd64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.4.0"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.4.0"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          },
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.12.1",
+            "resolved_versions": [
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          },
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.3.0",
+            "resolved_versions": [
+              "3.3.0",
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "enum34",
+            "required_version": ">=1.1.6",
+            "resolved_versions": [
+              "1.1.6"
+            ]
+          },
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          },
+          {
+            "package_name": "tensorflow-tensorboard",
+            "required_version": "<0.5.0,>=0.4.0rc1",
+            "resolved_versions": [
+              "0.1.0",
+              "0.1.1",
+              "0.1.2",
+              "0.1.4",
+              "0.1.5",
+              "0.1.6",
+              "0.1.7",
+              "0.1.8",
+              "0.4.0rc3",
+              "0.4.0rc2",
+              "0.4.0rc1",
+              "0.4.0",
+              "1.5.0",
+              "1.5.1"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "081de8ee476e8410e55a38e1116d78a167959c74e94da4cfbeb072375720021ba256c8513dfe8c1b382c30c576c08d38b15f26e56f5df0ce518dc995a2670120",
+              "url": "https://pypi.python.org/packages/d9/05/501bcde74431c1f65c8e92416aed35040048897041f597934fd66670af4a/tensorflow-1.4.0rc0-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "af34ecc45054c289c3026d161a530a082300e706ac009a8c618322c481531749b4d5340f833ba867c10f0ad93cb2557ad73b5d8094662c3cf3ffff49da97affc",
+              "url": "https://pypi.python.org/packages/2e/d9/8b238d92746cc9c4639bde8ef4ca1f70c93404c7424d450fba4864dc57e2/tensorflow-1.4.0rc0-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "0e724f74b5d5c52c1a0555e04f061273a95667bcf280d8236b536b5fd89412a652f8e204e58e77c5317fa6af7a767cc0ea6389aacdca159839172f41c070f532",
+              "url": "https://pypi.python.org/packages/fd/cb/21c20d0597cbf67e952f590355b2cdb93544b699cd6ee46a4dc9069d037d/tensorflow-1.4.0rc0-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "4f56bb0e6f3e46ac0b6371e780545bd17393d12500a28c000ec88ea8d1eb7c6cf69c6fc1981bd87b9cd758e7a8cb920045c7470d725eb8655e864b431fe47c08",
+              "url": "https://pypi.python.org/packages/b8/db/d1985453c87e2a2dfa7d920efca21a562ee90a2e8fdea2be1455196a33f1/tensorflow-1.4.0rc0-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "bbaa6ffc266c1b5045ff03bdb6a51227c36f7954a825919ddad22a94afa37aa216cff4dade3ac3a0fea52e0f4c4b1c9ff05e54fdcfd8f5b279502271c70edbeb",
+              "url": "https://pypi.python.org/packages/44/bb/fdd4572e73bbc591a6944f45cc651e0cdc09155916bcf42eaa781bf084e3/tensorflow-1.4.0rc0-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "a1edcc2e0b21396bb98390829998defe9e41a94d05b114f06b9f91825b242d4e83f754aada06b035b659a878458ec762b90c7bfcb1bcc17c965484bd98d75c2f",
+              "url": "https://pypi.python.org/packages/60/36/2d73d4da24cbd3a4913a4fdec8111e02af332975a8dc1c83557b5c47aa09/tensorflow-1.4.0rc0-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "c6ca9af2f0078d912ec52a9bd65b9ffc14e7f043c2a0aa08c528b5b2b20d23bd269377d8aae38faa50450b768415ef9282d269c4a9504d653675fc32eacd7a32",
+              "url": "https://pypi.python.org/packages/a6/1b/246a2a7169d943c3d1485da0756aab0dcf001a708acc3e059e7b639ff745/tensorflow-1.4.0rc0-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "a6badd156cbd2da0b32927acaee03e7f27b692949f3922fe0477f17255a6d2fc657671fb67eb1c61a058044d0b788cc2e3b16fc23d8b05e9dc21bed5613c9c1b",
+              "url": "https://pypi.python.org/packages/04/45/bf332980b5f41c1c2c46a466018372eb7b912053ec161e14231c200c57dd/tensorflow-1.4.0rc0-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "f197720cb3517cb913209fa81b6d00a58bc177151ecb276bc1f662d32cfcf27fcdea4d0b573aa9c3685e69c5cb8f4a0f8ef8977612e42112bdffcac59cfa4e53",
+              "url": "https://pypi.python.org/packages/0d/85/2ef58d48bb6e827149cbe6782b6d90fbde16edcfb97773900fe261cf62b4/tensorflow-1.4.0rc0-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "305ffce78b3f24227e66a6b59e3e74737e2973c66c0de3d47b69497a809cc10297d6452194317396e403ee38150af1c2593ded2e24b973a5ddec7ff033e108d7",
+              "url": "https://pypi.python.org/packages/c2/28/800083998ed3408b7da55ca67cb39e57e22c50716616e18d3e3d8a73bda9/tensorflow-1.4.0rc0-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "ead2b3af208b569f36cae2115944a01a7a69036438c9a8c3fc39afbe4b3148bb83e5e5325f21c69180bc3bf67c86ec43b487da0f84621d9dd56984cfa185cc89",
+              "url": "https://pypi.python.org/packages/2b/88/6113c113a5dd737ab7f64cf63dbcf502010ac14887c7aff89450d4bfa57c/tensorflow-1.4.0rc0-cp36-cp36m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "7f79ca06f492f755470a8cf181ac49eafdbbebd89017608e92adbb3398dab5f33c106ee29a7c17a6fa7b2c70c94c1cd52155a5c7fd90b036b685f59e2fd5913b",
+              "url": "https://pypi.python.org/packages/ee/a4/4108e7d0c3ed1c676d24f347a3ec04b9ce7ac0d8eab8d01251237a606457/tensorflow-1.4.0rc0-cp36-cp36m-win_amd64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.4.0rc0"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.4.0rc0"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.3.0",
+            "resolved_versions": [
+              "3.3.0",
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          },
+          {
+            "package_name": "tensorflow-tensorboard",
+            "required_version": "<0.5.0,>=0.4.0rc1",
+            "resolved_versions": [
+              "0.1.0",
+              "0.1.1",
+              "0.1.2",
+              "0.1.4",
+              "0.1.5",
+              "0.1.6",
+              "0.1.7",
+              "0.1.8",
+              "0.4.0rc3",
+              "0.4.0rc2",
+              "0.4.0rc1",
+              "0.4.0",
+              "1.5.0",
+              "1.5.1"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          },
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.12.1",
+            "resolved_versions": [
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          },
+          {
+            "package_name": "enum34",
+            "required_version": ">=1.1.6",
+            "resolved_versions": [
+              "1.1.6"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "7993cfb48857aa5cd3151b6f3684ac0faea396c7f7b7a1554fdb5ede906661d9a448c071605359638d8147bcf899c893b86980a0556f552fd90ef05a91538411",
+              "url": "https://pypi.python.org/packages/7f/f1/1cc218b6fd47728ff21214ec8993e67fd8a4d18d50ed938abef465f23603/tensorflow-1.4.0rc1-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "9402efe75013c3fba262e431d9662907a1421540f6abc6558efc83d1da4ffb403b63b08403c885805f1594bc970989775aea3d750e257c2ab2e762d6939bce61",
+              "url": "https://pypi.python.org/packages/d4/3f/15920200f17029ca164f58885a6579590ff2d805ed22c0abc2d1d2a0692a/tensorflow-1.4.0rc1-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "650b558f32aa009f98265d199bae1fb578d6b1a61e59b0432f84e816e45748078f6663727e62a7bce571e0e9c8eaa571fd478b563d77801517c7e247db77f0d5",
+              "url": "https://pypi.python.org/packages/4c/42/d2aa07f57be26332bde6d5793e84670dce328cda4765374ad00cc25c9054/tensorflow-1.4.0rc1-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "1a175ffa53bfb9e1226e6b82e84247d7da11472f0a9790559608379edbdc5050876afb9ca394e399b33f16e8e9ffb41e784e4022b5f5998f448f0e1395e78a04",
+              "url": "https://pypi.python.org/packages/26/cb/4a24a4db22a3fee3258b1214a1f94413b890b9e0db77a9b32ba040e9a53e/tensorflow-1.4.0rc1-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "0dd9109958dd2767f8564c6d1dde584b9f4039554963184d20532966599ea795fe68aa3779203e9b2c4274af65bdc4373d8353a826c586581d4410d2871387f9",
+              "url": "https://pypi.python.org/packages/01/a6/0534d0696baf2b2e843812c1e8cedb72d29db7a65b9cd1cc34fa64af8ce0/tensorflow-1.4.0rc1-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "1be8684b601c917b7a04d5a80b4f2fd5dad176cda6c7e67f911905a648dfd57dd0ae45992f7d95aa69132b3a54661e6a4c9568202cab508707b16308cf853a54",
+              "url": "https://pypi.python.org/packages/57/cf/35e35f550cb91a98e576021d277718597c4a28be07d70e1dd2014c424b93/tensorflow-1.4.0rc1-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "29e90df81fdb4e0f21cd52b911adc61af618372ebeaad887938f1a3ca446ad184564b0680d1703002063753a9de156412cce24190495393276c629c12c93b7da",
+              "url": "https://pypi.python.org/packages/ad/06/57a8453ad49976aa33b3ec46ba1b8e36e036b82eadb01b0b1e88acf2a6c9/tensorflow-1.4.0rc1-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "e9b461fe84c81ec05960c819615782a1c9c0995e90a5c952f78a94c7a2c454de27adaceffdada8833e3b1830a3f7608cffbc046ea773168d2d36655772f1d71d",
+              "url": "https://pypi.python.org/packages/ae/31/6805bbc0325677f7fa6883cb648dabcb56f76fd838447fd847f615ebf7f8/tensorflow-1.4.0rc1-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "db9e667ac8d4e0f438f1fec8b6812e22d8491c3d9b2fd32a2a81e20b2558df1176a23b58159fdf5aac2c1aa15af8fc4477c48ca792be6d969961af9f23d82c72",
+              "url": "https://pypi.python.org/packages/21/77/46c250a48c316e4924cd770db10175f65daeee4cfc3e017e1bbfee26f8d7/tensorflow-1.4.0rc1-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "d23eda7ebd14bcf62c0c0e92be333b0af23d4aaf3326063ff1b927245e4f1f6c2b09519c922fea75027babccc0f7501caeffbbbcff5bdeaa2d1e7f0623c9c695",
+              "url": "https://pypi.python.org/packages/ef/d7/351fa4cc8fe61aa144d2261ae35433c7a77ff81554e1ea79696f2379aa4e/tensorflow-1.4.0rc1-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "511df8141784e3c68094f45431fb61dd03f2107c47df06624b7833bf9ab7cab789d3a6ef2411b6aeeab29e356cae7368821b4dc09cb7acbc752c995b97a9c6e1",
+              "url": "https://pypi.python.org/packages/c1/78/2e2ddf9a7c5d703188b8b3d22e35313560cdf4f5190cda35a22badaf2814/tensorflow-1.4.0rc1-cp36-cp36m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "6a1b60687e8cce3bc3718c25368854af3b8fa362abb5a1c1615d3ce15fc6a1254c376af7179179f1ce86ac6810f670aacbde4c633efb0b92831944fbc7e2ca3a",
+              "url": "https://pypi.python.org/packages/9b/e1/162f9ab453ae02d5b700e6a6bcc07740c401803e728a74fff60fab1f1669/tensorflow-1.4.0rc1-cp36-cp36m-win_amd64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.4.0rc1"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.4.0rc1"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.3.0",
+            "resolved_versions": [
+              "3.3.0",
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "tensorflow-tensorboard",
+            "required_version": ">=0.1.0,<0.2.0",
+            "resolved_versions": [
+              "0.1.0",
+              "0.1.1",
+              "0.1.2",
+              "0.1.4",
+              "0.1.5",
+              "0.1.6",
+              "0.1.7",
+              "0.1.8",
+              "0.4.0rc3",
+              "0.4.0rc2",
+              "0.4.0rc1",
+              "0.4.0",
+              "1.5.0",
+              "1.5.1"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          },
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          },
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.11.0",
+            "resolved_versions": [
+              "1.11.0",
+              "1.11.1",
+              "1.11.2",
+              "1.11.3",
+              "1.12.1rc1",
+              "1.12.0rc2",
+              "1.12.0rc1",
+              "1.12.0b1",
+              "1.12.0",
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "14031190347fcbe06262fa517473b16903e8198e14e0fd7e9e0f6156828a9cfcb327d982639a10377639d2d8793342c3b560d91e5fea458df443cb19638f02a2",
+              "url": "https://pypi.python.org/packages/f0/6c/4f28decd18974c741b509acee8fc80dc3129911db827df41fd352310c0e2/tensorflow-1.3.0-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "b24789c26f66e9f69968c9d25a6300fac0b1b3d1c6d4da26ce647a3393da211c8427c4321219be7ad2f6065a4bd3b5fe2f9fea6b43476daaad5cdfa53b009179",
+              "url": "https://pypi.python.org/packages/fe/dd/8764ae59e8ff74421d615ddb9c86a1b404c27708dfde3caa8f17c183788d/tensorflow-1.3.0-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "70a68c23f8705c8d272f83161b56a7b00d74ed21f443c8155da10f527c510bd9dcedd552e126a25a3fd16f52316e023adaecddfe3c9391d1fa3f3a64ef0db8d4",
+              "url": "https://pypi.python.org/packages/fe/d0/49d9d8e6e781acde22b7bcbee693a1be86bcf8f6c21e915159ab61d12bd8/tensorflow-1.3.0-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "6f79f433a1c926e3b44c042d7489d9480ca0090501343b89c9a172cbc348c122e8f9fa6f7e13bf7c61cbb2c5846998c9d98120a18de15335b05183c83d736291",
+              "url": "https://pypi.python.org/packages/a9/ab/810a0dd64a9dbd2e4b5ffe0b98c062b317989ba72d42f98fdd951d3cedab/tensorflow-1.3.0-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "dad7b4feabde322cb6a44ea836ec32bdeebe3b435e732e27985ad15d1d5699b9c8d72ba6d7dd1e8c0bb40603dd77aa4ca05e445ef75ee954a273d8dfd2ae3b8d",
+              "url": "https://pypi.python.org/packages/e5/c9/dd29f9c82b4077b8813ddc63cfb0f4fb8033768f84df40a7cea7ed069bfb/tensorflow-1.3.0-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "ef8abaa5aaf30f09bda9381275ecf03f6fb4c1ca5aefd9a56de1624660dc4c9d581717a0ebb14b687d4e7d9cce43a3b81c82274d935e0cad79e30f85f6e7099b",
+              "url": "https://pypi.python.org/packages/f0/a6/0e96918b09081a5ef4224507463c7a2592c1dabbf858379bd1c47be5fc42/tensorflow-1.3.0-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "fe090f4644d55894bd65e1c122dae9759bbb805523bd0fa6aa48502e705ff82a0b2bb7d11799fc1c3fe576c380bfd03f3f574fc3621971285f48d9fe61cd8232",
+              "url": "https://pypi.python.org/packages/13/3b/89c4952511bd256fbc3badeed33d0a8cf6be7c561d33282f9e3561bdd4af/tensorflow-1.3.0-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "c31d841300a51167fa118d9618980cdf371b7bb7d410fd1db7d9ae5fee966c2e740d4bee6678471bf52ab19b896f6bcec07b90bbcdfa1f494d77d023e62de017",
+              "url": "https://pypi.python.org/packages/93/73/21358960650c4f86385d0f2afe98fcf99ac393176178b53a07890c195415/tensorflow-1.3.0-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "a652ce87e3955f7c566da95cfa456a9f0391901def68386a4dc5e3afcd0d82d011108a7b29220fe5c5e1a7eca73be28b56380bf874523ac013ce8cd5a5d894af",
+              "url": "https://pypi.python.org/packages/dc/80/c2cdd8afa7a7610b3d0f9e9799d1d3f2380ab7464e980171bb3e0d65cdb1/tensorflow-1.3.0-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "14e0d5b1130aa5c46d2a665a067313e56b4d9f2913517e44969002bba53cc326687f446c6b5755d1ac21085a635ab6d8483f9472bd2833d307c0ae420ca91a37",
+              "url": "https://pypi.python.org/packages/4f/8e/8f036b718c97b7a2a96f4e23fbaa55771686efaa97a56579df8d6826f7c5/tensorflow-1.3.0-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "af5aa9ac71fd0df2e00b8fd32efbc2f654bd6a02a96e22177c41a0b0665dfb569d0e485f1be1408b6d502bf216489e3ce4862d8e84a177040412640ea4548b65",
+              "url": "https://pypi.python.org/packages/7c/9f/57e1404fc9345759e4a732c4ab48ab4dd78fd1e60ee1270442b8850fa75f/tensorflow-1.3.0-cp36-cp36m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "d21e08974971eb790bc12f426a8aa5c0f0c761db91bdaf01e4d39ac637fd2c48ca3c390d7c1c3c1334c7187a3b42766940e047cf32feaf121e888646279c582f",
+              "url": "https://pypi.python.org/packages/bf/d4/80197f48f9fb90a17c47cdd834b2f13d5f714f26e8ed5c77069d57aa3ecb/tensorflow-1.3.0-cp36-cp36m-win_amd64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.3.0"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.3.0"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          },
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.2.0",
+            "resolved_versions": [
+              "3.2.0",
+              "3.3.0",
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.11.0",
+            "resolved_versions": [
+              "1.11.0",
+              "1.11.1",
+              "1.11.2",
+              "1.11.3",
+              "1.12.1rc1",
+              "1.12.0rc2",
+              "1.12.0rc1",
+              "1.12.0b1",
+              "1.12.0",
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          },
+          {
+            "package_name": "tensorflow-tensorboard",
+            "required_version": null,
+            "resolved_versions": [
+              "0.1.0",
+              "0.1.1",
+              "0.1.2",
+              "0.1.4",
+              "0.1.5",
+              "0.1.6",
+              "0.1.7",
+              "0.1.8",
+              "0.4.0rc3",
+              "0.4.0rc2",
+              "0.4.0rc1",
+              "0.4.0",
+              "1.5.0",
+              "1.5.1"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "aa578bd38d8604da6bc69e4039238de311bf90593ac1616216478b27227e26df5dbee3a167e0bb08a606a897afe21f67b275b5b449e3a2cd9dbee64e1ecc43c8",
+              "url": "https://pypi.python.org/packages/c3/e8/92bf8fdfd148ea87f254bcb031cabc8114597adde8a6227b9d905463595f/tensorflow-1.3.0rc0-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "3ee574cd68f4b06b5bd5c106c2dfbca700aeb58c9b2da0de2cc26dcd934e1c7583a8e096ea90ab2d2e3ae908db4862b974ca37977ba9866533d52f54b91f0383",
+              "url": "https://pypi.python.org/packages/b8/d6/af3d52dd52150ec4a6ceb7788bfeb2f62ecb6aa2d1172211c4db39b349a2/tensorflow-1.3.0rc0-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "07ae9303237e87d380a26ab3a3689b8a5eaf0d8858b4418a51a7525fe48e68033a92ea2f192ef606954039a0d1cbc144ffdf7a5c5b70eb4d7a270f6a980c3dd9",
+              "url": "https://pypi.python.org/packages/11/e3/0c302995e9a38e19dd1142af8c4343852c02ecbe56df63998c3840b367cb/tensorflow-1.3.0rc0-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "95f8a2289435cacc371ab88b91cfbd7ccfa85136844a04a0dc287167da358a4222e07ce9bb4d68a1b08e60577384214a02aab75a930b25b04046050a560491b8",
+              "url": "https://pypi.python.org/packages/90/de/570c6b58d4945eb5c3da3bf2dee1017aaf362f2a5c487fd5bbe5db08ff2f/tensorflow-1.3.0rc0-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "856c6077452d489f07e85885653fff1682612240cf0842daa29208c49e2abe5930e9fdbb48d86631bac1c5f864c8ea6f6908476906451756e80f7cc468ea14bd",
+              "url": "https://pypi.python.org/packages/93/02/653ac085318915bf3305e1226c86bea7747f1fb5d48deffb24271d94230e/tensorflow-1.3.0rc0-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "cd1e4124158d1f4a5812d930fc6e0a987b23b1e0daa55baa30fceba4ee3701cc9b188a907df0f8a558a82645e371bf1bd6af1ed40d287b0c562aa18ebb4457a8",
+              "url": "https://pypi.python.org/packages/1f/b5/814401990423da7047b9222bbeae9a544c067af081ec1017e7ec50fea47f/tensorflow-1.3.0rc0-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "d986797d0b6340073594a78a8a6ec406b909cd6f04f6e414f55785d4ee861d877b8d9533d63b0dd121982603176496db730a27a84b1fdbc47747151c91748a2c",
+              "url": "https://pypi.python.org/packages/66/f4/9414da1df0700fd4770706346a5a888e534c1f04f7587d67e412fc3c0ee7/tensorflow-1.3.0rc0-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "8ecf160c9bef4fbbb7b6a2ae58600bcd9cf4fe60018d2f49a1c7352139ce5794b1c191d97b6e48de956a150c4718b862ce21bf63347063cea2a278caf8293ccd",
+              "url": "https://pypi.python.org/packages/34/b6/62aa30649099b9890b9bbb32ebb92d4edd8395b3ca8bdc169a35b5478c80/tensorflow-1.3.0rc0-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "a08f02f9330bbb5f0f6470dff2295f55b164cf730b28b553363f0460f068385c0ecae6cdea5fd086eab0c865351a4bc51a16967de8a1dc24e2d9b2434bfe8493",
+              "url": "https://pypi.python.org/packages/04/3d/d85707628fe6914054b18c1c493b59ed16e3aefa628565e6d19cd27db698/tensorflow-1.3.0rc0-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "a5299ec7cf4d58b662d4cf36265ae9a08189d8d81342be5fc809edef453d93c411d233b274616f746bdbb4182dde03b43394492a3bd4c3e29f76f66819a88302",
+              "url": "https://pypi.python.org/packages/6b/9b/1bc795481831bd10ce62fac48bfd30875b3755b84289afbd7d779554ac7e/tensorflow-1.3.0rc0-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "b497fa1f2b39cd931400b1a5d18492e5a74189cce08a07330d217b656f07127280463b41023665825309196745381894ba6044eb9c48889b5d3761c9f4c828b8",
+              "url": "https://pypi.python.org/packages/47/ca/80865b583e72904cea03954edadeedb2840d9c3e30c5abbb9d8565d46c1b/tensorflow-1.3.0rc0-cp36-cp36m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "d7fa9eac7f01aa86098b66a54aab116b8f7018d3afceb114f93bec5f3256524c2d8183f5cec4313ee3d0e5c6469c138f19892a67e8658b932f9cf0a6fd03f58f",
+              "url": "https://pypi.python.org/packages/57/07/89ec462bc1a3cde11ea64267c1aecd87fdc59eb93454c94fc8bbe13d109c/tensorflow-1.3.0rc0-cp36-cp36m-win_amd64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.3.0rc0"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.3.0rc0"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.3.0",
+            "resolved_versions": [
+              "3.3.0",
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "tensorflow-tensorboard",
+            "required_version": null,
+            "resolved_versions": [
+              "0.1.0",
+              "0.1.1",
+              "0.1.2",
+              "0.1.4",
+              "0.1.5",
+              "0.1.6",
+              "0.1.7",
+              "0.1.8",
+              "0.4.0rc3",
+              "0.4.0rc2",
+              "0.4.0rc1",
+              "0.4.0",
+              "1.5.0",
+              "1.5.1"
+            ]
+          },
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.11.0",
+            "resolved_versions": [
+              "1.11.0",
+              "1.11.1",
+              "1.11.2",
+              "1.11.3",
+              "1.12.1rc1",
+              "1.12.0rc2",
+              "1.12.0rc1",
+              "1.12.0b1",
+              "1.12.0",
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          },
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "ccbdb65d1bf45a4eda56fac6badd7ce846257b8cc7d99e68d60168dfb161c2eed7d5802565b97ae1977dabff4adf4fe7015d23514a709259a7aa9d5d64d2b599",
+              "url": "https://pypi.python.org/packages/71/53/edd66285c10716b4f0debdce4f62629c81d5acc04ed8cd1a853ce4061073/tensorflow-1.3.0rc1-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "82afd2e1016256fc8dec807e0fc90adafa6b780beb97c6f0806eaf6f1c77f8cf2b7296d2aff7b26e96204ec1931899965da403e78af2a26ab8fab8c6414704d6",
+              "url": "https://pypi.python.org/packages/05/9a/0e8c4f7748b7fb363e48eddfe28d80b5b5c60d15b6446edba81e0eeb93fb/tensorflow-1.3.0rc1-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "a7c520388586736e2f606772f6a92724d9dc2fe518d3766de1a4dc2dd4ee066ee1b8a678dd7c167deab0eb2d4980192fffdeb5f9a7b78d50fc13ee12e46646ac",
+              "url": "https://pypi.python.org/packages/82/09/8d2bacefae67f95daa58a01eeb94d2380738b35abd1afd3cee87ffd8713d/tensorflow-1.3.0rc1-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "08bae8b610dd0806ead4f0f0386f2e5224f3da85365b2b1641aab0f68b9e7e9cf1d7d3c6047a2060913ba376fd2cc1657495d071f799ef93d3b9f5fa969954e7",
+              "url": "https://pypi.python.org/packages/a8/81/8a4f29f8fc7377b6bda912c717d9112f58ea129ed50fc337fa2278b0f40c/tensorflow-1.3.0rc1-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "4d7bd35b4b02557ae70b49595ce1b7b7c96bd737e25c9e5f31abaada58fe3f53b892c0d7c2f970e4acc67932bb59787040a11b4fad36efa7b69c49d4ef9a48e8",
+              "url": "https://pypi.python.org/packages/62/1c/2274b55c7ac7449aab2507313d9f1850cc33114888b9ab60526787b30aa0/tensorflow-1.3.0rc1-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "18b0516bcd455e65572b742c8d1be346166e0183c0b2db29ca53aacfc587ea7dd00e9b4e6ef4c7738d697927afc8504d81722bec91634d5580a83ec9b7860bf1",
+              "url": "https://pypi.python.org/packages/d8/7f/f870b04d52f695e1894c0ae90dfbe2a21b05b523649ca69bd5027bc309d9/tensorflow-1.3.0rc1-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "1e56b6ad9c02c1061f459f9c6bb441664d40a9bdae3f5ea5ba6384a8fcd7e722186acd62aa2c1203d9770c339c4cc2fa02c355bc8ca8e9b0875a785f6c155f2c",
+              "url": "https://pypi.python.org/packages/fb/53/7e3c60081f80eb0e761071ac0bd40c840b2188dd7f7bc432f544f84124a2/tensorflow-1.3.0rc1-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "47ae71df29fb20bbc682831a5c5f8ab36533a710b8de9252ae3b22893c98d845693fd5bb593cc3becd4bbf99c20b331a7a11726f305820b0aa06bd093ba0ba57",
+              "url": "https://pypi.python.org/packages/55/af/fc28492b52793bfe175777d08ceea2dc9d8be91d4a338f7579094718676c/tensorflow-1.3.0rc1-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "93338a5b45b7005b33fead061d28e61dcdde2f1e97217feca9e9606d60be6c9438afd439e44b83edd5cb8065413c7d29b9af1814034b75cabeadbbf3a2b5fdbe",
+              "url": "https://pypi.python.org/packages/44/43/bcacb6d0a1b63bb0e000a5301079dc66f4da842923878b371a63645ee188/tensorflow-1.3.0rc1-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "55aca508a3ee3f6d169c510409fc571d3f7e7d4f5816d3c869500dff5eebd98122fbd467c58b5c3dfaa280486748330d8710624f5ff17fa81813ac067697f36d",
+              "url": "https://pypi.python.org/packages/e7/46/d5eb5e5540ddc8c5de0659739fcc15c8caf07e7864aefb6f2bb61303dc6c/tensorflow-1.3.0rc1-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "84008a6eaa9e1ffc4222c5c2b8e8618543fd1260c576b69036859a4f1f2b932bde74093174018e37b4821585c6b8b2a149395a7f39094b2573d238f93d50789c",
+              "url": "https://pypi.python.org/packages/76/71/c64c64f093b6fb2652e7eefa7ee76f642468d96c48bc897d282646b03a5d/tensorflow-1.3.0rc1-cp36-cp36m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "11ad9d689fffb03160cb84284975fc6528782be08d688df75c7f4a3a88c427585091a9f5b0b1e77aec22f6f98cc8502f34a71879559356ef338677059e6c986b",
+              "url": "https://pypi.python.org/packages/8b/a6/f091c0edf4752e84e2765c834711711349011a9f1016245eb1f6ab5fe7de/tensorflow-1.3.0rc1-cp36-cp36m-win_amd64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.3.0rc1"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.3.0rc1"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "tensorflow-tensorboard",
+            "required_version": ">=0.1.0,<0.2.0",
+            "resolved_versions": [
+              "0.1.0",
+              "0.1.1",
+              "0.1.2",
+              "0.1.4",
+              "0.1.5",
+              "0.1.6",
+              "0.1.7",
+              "0.1.8",
+              "0.4.0rc3",
+              "0.4.0rc2",
+              "0.4.0rc1",
+              "0.4.0",
+              "1.5.0",
+              "1.5.1"
+            ]
+          },
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.3.0",
+            "resolved_versions": [
+              "3.3.0",
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          },
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.11.0",
+            "resolved_versions": [
+              "1.11.0",
+              "1.11.1",
+              "1.11.2",
+              "1.11.3",
+              "1.12.1rc1",
+              "1.12.0rc2",
+              "1.12.0rc1",
+              "1.12.0b1",
+              "1.12.0",
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          },
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "445eb9557546b6a57dbf05fa07f6527675700bed16a834a998c2ee23ab779e4d11b55d37cb7634abc30ef18f2b6f71baf69d2de9d150c31ae2b3e8f22af231b9",
+              "url": "https://pypi.python.org/packages/24/d6/1cfc629456ca70180ee316ebc8e96ff4ad4aaeaf4d23a33b20eb2e95588d/tensorflow-1.3.0rc2-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "c1006981f0a4992c15f7438a2ebb3f6be9ac6bbe6df977e83348db837f003ef4ffa49983a78e20180321fcd0e515ef1c5f164b46b491f0ea2b522278a498f936",
+              "url": "https://pypi.python.org/packages/ed/f5/49e754ac2d5d0c513fdf8049987ee0fd3a5dfcbea17f495bccc2e36d836a/tensorflow-1.3.0rc2-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "34d302b8cba8498cc229506ebce3750489619b6017aa9d611e32cac3835e58915753ebb5b4cbf0c02c054bc126518059fc0222bd71a6cf98ea4d7c2358cc0272",
+              "url": "https://pypi.python.org/packages/eb/ba/d2446a32b966cb2438634cb570bff755de6f64ce7a03470d9716c9adbccd/tensorflow-1.3.0rc2-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "d71fbd20da01040be4037225deffe84b66b452c5349eedea6a7e7133b1f8046596e3ca7c80747e5d9f346bbeaf54b446d9d2927e40efabd9219cfd9465c2e291",
+              "url": "https://pypi.python.org/packages/11/6c/9f9a283e795e7dfab99302b9fca96829a7c600f72f723f9ae81f3bf447f5/tensorflow-1.3.0rc2-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "47d0f63a009f5bc95a0240197d28b40ec537f7c69c72b579cc395bf45ece44f51c6665604cbf5f22678565752084af78d2a9bf8d6f991a209b3ef6204c66255a",
+              "url": "https://pypi.python.org/packages/ea/c8/d177e7b7d94af703584e5db942af3a43ab88975e6a01a025074f9d7f7c54/tensorflow-1.3.0rc2-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "0887833a2f204d4c004f2f1ed19ad2fc796786cbcc59fcabd6ca398cf6caf18167ea101588ef212b4c1d2daf3951a7f4c5a53e5703fb20da62112d8be856e11f",
+              "url": "https://pypi.python.org/packages/42/4e/ca2f65c7230e9808e04b0494a01f88236a20aeff93102afe3d47c8d5442e/tensorflow-1.3.0rc2-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "e0279ae185bf10196590b594998c35197847cb1474792c11ad6b1343d76d52d66a7fc695367c8649777266ad273b492726667fc612e6c14d49b683a243bfe731",
+              "url": "https://pypi.python.org/packages/6e/0b/f8f735298ec35deae62664cd5dcfc3cb74b4cd85bb10e09048e6796c8ba8/tensorflow-1.3.0rc2-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "c92af92ccb4bae12b7d7bad1cea5d132aa3a59bc1acad040ceabd0ed0d2652f42b3d6de5b35631b0d8e5acd02ab8b5bfd90ce9b4d0a8511dbfa61e26c49e52c3",
+              "url": "https://pypi.python.org/packages/cc/00/c44869972e206010b90df35a40a960eef8d5965f2439bf6c6dba26e46105/tensorflow-1.3.0rc2-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "bf7c469d310e702b98bca8aa4016199545193456bbaaf0969933759ee60b84af4a2f2a9a3d972c5044b76c492a4376fd97886e3029656a2291d4598fd35ca704",
+              "url": "https://pypi.python.org/packages/59/91/f854c2f37aad9a315a6fb7e5d3440cce18f09357c8c04132f5499bb54dd4/tensorflow-1.3.0rc2-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "f07d95f3b14d59edc9c301d99a6640047178cd44d445439b85f1da1802ae08367d53a920feaa9e17d66fa358e289bb1accef82491bf5916778c0e117c954cb1c",
+              "url": "https://pypi.python.org/packages/ed/41/34301d408ab90725b62576e882920ddb045a69c1a204b6a6f3a7771701df/tensorflow-1.3.0rc2-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "5c67b3b755a5e8323916c48f3edf032ff420554cbb8fdc4a476362325e95ec0dec79baf8afa8d4756db0f8e81d1053fa03a3fd06008255f2a2440be6f6a68b57",
+              "url": "https://pypi.python.org/packages/de/95/039764a5449dc39d9e7ff48587f04ccd358c2234e97a9b37766c2d81e0d3/tensorflow-1.3.0rc2-cp36-cp36m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "cca9e6d9a051335c34e4a49eaee6ce5cbfcdffef0df8ef918b2f893743cd07ac8ff32bc52c77babf28644b0ed4ce7cda44e639c464126318537d5b5ec9e93a1a",
+              "url": "https://pypi.python.org/packages/1b/8f/8f9c81b70f16e18cb2d7ce07d4fc67b1d40e88b132bddb77713cc2978cbd/tensorflow-1.3.0rc2-cp36-cp36m-win_amd64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.3.0rc2"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.3.0rc2"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "bleach",
+            "required_version": "==1.5.0",
+            "resolved_versions": [
+              "1.5.0"
+            ]
+          },
+          {
+            "package_name": "markdown",
+            "required_version": ">=2.6.8",
+            "resolved_versions": [
+              "2.6.8",
+              "2.6.9",
+              "2.6.10",
+              "2.6.11"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          },
+          {
+            "package_name": "werkzeug",
+            "required_version": ">=0.11.10",
+            "resolved_versions": [
+              "0.11.10",
+              "0.11.11",
+              "0.11.12",
+              "0.11.13",
+              "0.11.14",
+              "0.11.15",
+              "0.12",
+              "0.12.1",
+              "0.12.2",
+              "0.13",
+              "0.14",
+              "0.14.1"
+            ]
+          },
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          },
+          {
+            "package_name": "backports.weakref",
+            "required_version": "==1.0rc1",
+            "resolved_versions": [
+              "1.0rc1"
+            ]
+          },
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.2.0",
+            "resolved_versions": [
+              "3.2.0",
+              "3.3.0",
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.11.0",
+            "resolved_versions": [
+              "1.11.0",
+              "1.11.1",
+              "1.11.2",
+              "1.11.3",
+              "1.12.1rc1",
+              "1.12.0rc2",
+              "1.12.0rc1",
+              "1.12.0b1",
+              "1.12.0",
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          },
+          {
+            "package_name": "html5lib",
+            "required_version": "==0.9999999",
+            "resolved_versions": [
+              "0.9999999"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "ae8a41b5dcc3caacc21296f8e2a22987f6c4db838891774ae85501ebc2ef9e5a69aee425010c2b110b37ceba9d606da7915287585201db92e53d16de42cd2df6",
+              "url": "https://pypi.python.org/packages/67/98/05903246daa258c637e9f07b7392e59038d0abb2fc60184e97cf26256735/tensorflow-1.2.1-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "b85fa8ad33adb3875b2fff6093612ab4b86b74d37609d5a69e0af75403e96c358ba380fa87f6a34b45e8578f777b566e1598a1439136da07451255642e36a6c9",
+              "url": "https://pypi.python.org/packages/35/9c/1c353f584f90769e7fa41fe5c45ffc8a3032221945e142938e74f5498cb9/tensorflow-1.2.1-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "d53259fc0789eefaa8956c0fe6b6f29392c60e83849de121bce75349d8480c0fc6f7c75a105479d519f43cb49431962c0608647329219f700af4b2f41ba1c00b",
+              "url": "https://pypi.python.org/packages/02/b6/82d9783057aada9bd8fdd27233b03354a87d459ae7177b697d0cfc812fed/tensorflow-1.2.1-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "16e97c429fdf28fcaf95cb0447e421131de889cbf85a49337292a2e465b26927c21ee5a500effed57727b78d14f884ca9a40d8bbb7bf35802d5d47395836abbd",
+              "url": "https://pypi.python.org/packages/c4/43/3b967637d904be97e90940508ec7e81c6b7d3fc336fa8abeb5d7a2b41a51/tensorflow-1.2.1-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "4dc38945fe2e16455152e29883e0ac3ed9d2faa7ab32f342f22ee16de9c6f3a205a954e7c1199fd94ca151a3d80b6ee271207a61184c7062eee60a56b6355d77",
+              "url": "https://pypi.python.org/packages/99/c1/228ac24b8dea34353d310bbf5b575594d9fac478e595238d197413002e0e/tensorflow-1.2.1-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "e508125b69ad1bb36ff5f06276b125f7767a520cd6309a1a7363d300919ed4e1ce4ce575eb5ccf27aa41cdebdb5bad9caa47252a4a963c4da0a2d8c2f221b3cc",
+              "url": "https://pypi.python.org/packages/33/a0/3067c3e3e315edb70ce2285e1fad25d5a0d610bebdb5c5cb0ea5aeea19bd/tensorflow-1.2.1-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "66d47d3446ccafd9d0c4efd62d2000f7d1d1ff1fa5e5e06890f382bede26dca481d313e021a65014c0c8604d48981024c12933f7b53f8759c7853ce06faa8149",
+              "url": "https://pypi.python.org/packages/4f/43/3a57574bcfae2318235ca9412deb402ee947aa61420a56adb5597a1f9aef/tensorflow-1.2.1-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "a8cc7857918239c536e2949a9f11e1339d9eea0b399b7f495992677951fc525272925460f7388ea416a7d1e58f8c70846fc10c502e2fdf249ead77ca41375ed6",
+              "url": "https://pypi.python.org/packages/26/fe/62ce8c45c13831582998da21590b2fc1c305fdd2f0c9d2ced110f9874256/tensorflow-1.2.1-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "bfaa855a18ea71c7286e5027ec1f3cf6e1031cc10205882d6d5b9f1fbc5b89be5250e96cd613b9562d823e1503cb050f9c4be921f189b97e0ba388fbbeed85d3",
+              "url": "https://pypi.python.org/packages/a5/7a/c3250d3c065032f0a0cf2b6c777913a69c075635512e9283cbf1f83684ae/tensorflow-1.2.1-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "2890f06af348104411d94dc8bfcb8669f2ea0e3fb34c644bf7b266d9f5c07332b4118a286a57132b67946434215048fbcc5c1d0219af908296cf9751b6253978",
+              "url": "https://pypi.python.org/packages/0b/d1/9273c20c2e3662f3e1c6157ff8dfbccf906928f3796c5d099447607dbeb6/tensorflow-1.2.1-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "37fcd57c0b8bf0f0918f7c48fa2f0ec9827475b952fa4a01504aeab532cc4398cd9a6b8c82d0d361a28557b5374ce4f4963c99412df6221f7fedf8252afb90c4",
+              "url": "https://pypi.python.org/packages/7d/d0/96269b9ecfcc55cb38779831595e0521c34ef4ecdeba08b1ba4194cc4813/tensorflow-1.2.1-cp36-cp36m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "3ea2653b250fe7a492bdc633f748f2dd70194e35d94feced39926f12013863d01d452ec0c0a8d1421cf071aa868c449c74f4bfe816075124e1343b31160d1409",
+              "url": "https://pypi.python.org/packages/e1/18/23a447f822daba3101d84f981d10f5eacd0ccd9a541bd4d2525eec0cba81/tensorflow-1.2.1-cp36-cp36m-win_amd64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.2.1"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.2.1"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "backports.weakref",
+            "required_version": "==1.0rc1",
+            "resolved_versions": [
+              "1.0rc1"
+            ]
+          },
+          {
+            "package_name": "markdown",
+            "required_version": "==2.2.0",
+            "resolved_versions": [
+              "2.2.0"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          },
+          {
+            "package_name": "werkzeug",
+            "required_version": ">=0.11.10",
+            "resolved_versions": [
+              "0.11.10",
+              "0.11.11",
+              "0.11.12",
+              "0.11.13",
+              "0.11.14",
+              "0.11.15",
+              "0.12",
+              "0.12.1",
+              "0.12.2",
+              "0.13",
+              "0.14",
+              "0.14.1"
+            ]
+          },
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          },
+          {
+            "package_name": "html5lib",
+            "required_version": "==0.9999999",
+            "resolved_versions": [
+              "0.9999999"
+            ]
+          },
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.11.0",
+            "resolved_versions": [
+              "1.11.0",
+              "1.11.1",
+              "1.11.2",
+              "1.11.3",
+              "1.12.1rc1",
+              "1.12.0rc2",
+              "1.12.0rc1",
+              "1.12.0b1",
+              "1.12.0",
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          },
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.2.0",
+            "resolved_versions": [
+              "3.2.0",
+              "3.3.0",
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "bleach",
+            "required_version": "==1.5.0",
+            "resolved_versions": [
+              "1.5.0"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "af039815769b5fa8521daf656893450cefa8433eda0da0711043a2d452103cbae0604c865915d59c5cf0ae70b6913272f9967c1a80f54af1dcbc6b1bbf0c1743",
+              "url": "https://pypi.python.org/packages/bf/a8/e98871dc5bfbe590ed41a38058fab1391647dc0553d5034f5fd6746f0a37/tensorflow-1.2.0-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "30282f25707d9ce0c1450b741a694ddee4d673f7563988fed95313a7473434b033a543c2a8b3da03216270a63c18fc8d54701088fb55b56e557775217f74fa58",
+              "url": "https://pypi.python.org/packages/4b/d3/d4fe94f4f370fbb3790444b8f0a007298a795c447e195d88a066de04930d/tensorflow-1.2.0-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "cbbd9e17a45096ead3ab664348a68f9f695c3fa0fab57d1a9d9352621244a1c474aff03bde58d922b6993adba7e738d72351ce50bcac651066728c2ec7b0936e",
+              "url": "https://pypi.python.org/packages/05/57/ad298f2358c90c0ac8c635d53d6011dad552d65993a955a470778b553cd3/tensorflow-1.2.0-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "a0a5b1a0956c92ca59b8f4ed6c521eb85d9c6828dfe6a764038cac4a445d0072b77ecb7342c4836c80c2eb95cde749f39d4ae158408a3aba7b481569997a59bd",
+              "url": "https://pypi.python.org/packages/98/27/f0020a11175f58479a970e632dfe6a51761714e7dad8381b804a61cfc4a6/tensorflow-1.2.0-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "cf553fe53d0ee1a9be09c6ec2d7413c38aa3478a1a6da6d70c4a169954eef7d0b460b8fc839c3165242df5d6f13a404098b04e7a5564704dbcf97d93b582d883",
+              "url": "https://pypi.python.org/packages/9f/ff/42db553db03334f266f46f4afdc0fbdb32dc3a4ecc52ea54f03a68244a47/tensorflow-1.2.0-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "9f102c1a37745f0df2a7a8a3dde06f89c5bf2a52fe806b903a3473dca2b9742d8fd20a4885ca02eca4b1873cbc2d0c2dedec71e9d86a1c7f14681fdcc771236e",
+              "url": "https://pypi.python.org/packages/40/90/34fe9521299fe53d08b3fb4639ebd5d0cde315fa3a7d045c3b110832b09b/tensorflow-1.2.0-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "041af2f0a1a1ac760476f5a4d796e2970ceeaccab154d76c7d34825357f8cce2404df6267f683ec577c3159ef36c3fe859561f80a5b887c6f479cf33b115923c",
+              "url": "https://pypi.python.org/packages/6b/16/7bc3d78b8d6fe03928f4beea3cdd49adc90be6ebfd6976976b599dd0a74b/tensorflow-1.2.0-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "adebec69a7a66e9cbfe0c6676cb39c46285bf0e3cf4b8cd7ea4db4c59978a5aa20ff6b85190457f5758c28821ca01ce62ca7ff86c7dcb668a1e8f6302380bb11",
+              "url": "https://pypi.python.org/packages/f0/2e/49c8cf629dfd4bc4932e1a721ea2790869a32dcf9752f322f3301b99e852/tensorflow-1.2.0-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "89349561d739cc03ff59084b460937f7a89665f2bc7497fdda74c24c7ff25863b8451594ba63b1c50d4cd28e15d7c8998276cba20ff839f7d07c15f92c4f6443",
+              "url": "https://pypi.python.org/packages/7d/4c/662226171f27efb7a7934af1d8b52d253df2e157baac375d4ab2843074ff/tensorflow-1.2.0-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "c7cdf66f6f400b5c317f74b002f2541551c5bbcf5e60ef484edd94c245f34c36f0bc897e8cd3c98444e7d5fe92e5e7ac40eec03ccad619e8b99005f13401e4e0",
+              "url": "https://pypi.python.org/packages/69/06/4a5a547937944cdd7b3ad3c70eb320872d318f2e840fbcadc80f13300a75/tensorflow-1.2.0-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "53314a691efecec6d166eb6f38c2cd6584ab216208131e0e512e665f07f2f3a945e210d48ae8f4d3309a23b34c356b15a894a7f2e35ff329e033a6e8129aab23",
+              "url": "https://pypi.python.org/packages/5e/55/7995cc1e9e60fa37ea90e6777d832e75026fde5c6109215d892aaff2e9b7/tensorflow-1.2.0-cp36-cp36m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "de3b8f13f1ed58be06c17cca6eb7e24ec0992a9d30f4436dec5cee144253b9c80cb13c75a044e417e55150e342cd83811985337550f1dd2a6a3443386e8d2397",
+              "url": "https://pypi.python.org/packages/8e/4b/764e86b8b6a61ca49c9f6fb55b4193063f7021e2c1c51cde7bbf228158b4/tensorflow-1.2.0-cp36-cp36m-win_amd64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.2.0"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.2.0"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          },
+          {
+            "package_name": "html5lib",
+            "required_version": "==0.9999999",
+            "resolved_versions": [
+              "0.9999999"
+            ]
+          },
+          {
+            "package_name": "markdown",
+            "required_version": "==2.2.0",
+            "resolved_versions": [
+              "2.2.0"
+            ]
+          },
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.2.0",
+            "resolved_versions": [
+              "3.2.0",
+              "3.3.0",
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          },
+          {
+            "package_name": "werkzeug",
+            "required_version": ">=0.11.10",
+            "resolved_versions": [
+              "0.11.10",
+              "0.11.11",
+              "0.11.12",
+              "0.11.13",
+              "0.11.14",
+              "0.11.15",
+              "0.12",
+              "0.12.1",
+              "0.12.2",
+              "0.13",
+              "0.14",
+              "0.14.1"
+            ]
+          },
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.11.0",
+            "resolved_versions": [
+              "1.11.0",
+              "1.11.1",
+              "1.11.2",
+              "1.11.3",
+              "1.12.1rc1",
+              "1.12.0rc2",
+              "1.12.0rc1",
+              "1.12.0b1",
+              "1.12.0",
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          },
+          {
+            "package_name": "bleach",
+            "required_version": "==1.5.0",
+            "resolved_versions": [
+              "1.5.0"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "02247905eafd0c4159299a46f9f13c295ded72047ff77e9d6571817ad7e63ed5bd2ac49935b0d1b152e78976da8699cd2700765e6245097bf513a97a7be20aae",
+              "url": "https://pypi.python.org/packages/b1/35/62fdae318152cc1860cd7e4155165cbda6944b5727f09b6fc5a53c96d486/tensorflow-1.2.0rc0-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "93b8b33319e3b55d609f52456df4f4e04eeca28c71c9d6ee560895c432bffb1a19a7a25b5deeb884bba83d60b707f04f37b8885ce79d4b4792e955024f7656e2",
+              "url": "https://pypi.python.org/packages/d3/7f/9d7a7f3642888fd2360bc38b3d820347d315fa6492485895bf51e794c3ff/tensorflow-1.2.0rc0-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "6fa45cf91d7dc9b9a085a4e3be5341ca71d076bd93b98702421858f072e24723f1f5f47ed216468d50f147bf79a7649d7769c10f12286ac4379788410860f10e",
+              "url": "https://pypi.python.org/packages/21/a8/259eeb9671dba70bc7da26c67933dae50171a571fd8e7483eb5e580f3212/tensorflow-1.2.0rc0-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "f6a9e6b9329345a91c52ae4e59bdb2f98052b57e3d8923e714ab8744f84d4d9e8538538168e2fb9f6143ace5b82d9f8682f84c5a39f6621bbb79ef4575fb33ec",
+              "url": "https://pypi.python.org/packages/a6/cd/47c52340f90c9e1d360a2559d6c229faa8741280b7f70e8d6feb891e3a80/tensorflow-1.2.0rc0-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "15b127838a3770ea407855134b58ebcb92fbb4de6e88cee93876190e6d0a9c43829cda3ca2edb63e60f0a56b9b998c187c6ef43dfe9153f3d0acd963160bcf6b",
+              "url": "https://pypi.python.org/packages/43/68/fb7e62881a56b43e35d4021a5ef0cf76e8d615df899a3265b2dbd949c54c/tensorflow-1.2.0rc0-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "2f694d5f1c64d1fc42dd43ef09b3ef1fd408d7b5726f892d465a9db6f939a5c9101485b65b5e3c93fc0698e99a22cd0ed73a1f7c654aba07a5e36f2c5666e59d",
+              "url": "https://pypi.python.org/packages/de/ef/ad89f3fbf08adf7c906d17d2a2188c84119e701fcb0fe127e9de9fa116a6/tensorflow-1.2.0rc0-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "80e57d6377c36a4908362d9bdae6af2deda51b8b0dec55525dd42247e54fae914c47549e4a80cdbb42d39f7074eb0d8f267b23e75d7965365987ab9d2b4d82c9",
+              "url": "https://pypi.python.org/packages/01/4b/46b6208bddd2ff076ba2ade287394a293be2ae3344917c2c69393bfeffb6/tensorflow-1.2.0rc0-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "c0cf6d8f5faf36cbcbf444dd5b888ba82731955234278caa5e18e1b68fe1ea7c092916c1915e84a97c73c55b146b195fd2e7d609cfef52389d152fbe162d790e",
+              "url": "https://pypi.python.org/packages/8f/98/19174a08927c31db4cb2f551c08d09f7895e7a6db01717da3aba33215f4c/tensorflow-1.2.0rc0-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "2000c2dd0af952a103ce1dbbc934380311c46bfece0e5029061a18097525fa398e6d01c91c6ca8c3614d9c6ceed8d1db87d83b620e314276410b619f00821411",
+              "url": "https://pypi.python.org/packages/9a/f6/b4ec4402902f788768e6f8a223a70f8743a4aeda5e27d5bb3e16f814f834/tensorflow-1.2.0rc0-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "fe7e2110c89e0323216f8f818d5087381bc564d385888e6cb6b5275af4fe6c8590e9d6b578dbd5e634e3d9aa8c07640414d4b03a9756a340f739cbb3bf2060c8",
+              "url": "https://pypi.python.org/packages/fa/9f/771d4aa888b6633a2883ed0e1712c24276503500385aeee9116ea7a5404c/tensorflow-1.2.0rc0-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "9432b6445eaf1fb3fdbe0bb0743e7ec235f42a5f4d9a1baeaa6f88b4422e96591d616ccd2581134544a49ab148aa37e2d49b5d3dda96d4b7dedb552ee2470925",
+              "url": "https://pypi.python.org/packages/c6/1c/d64f9367cc3a50194e911ab9da865c2515cbc1fefa5e210ddebf85a61bac/tensorflow-1.2.0rc0-cp36-cp36m-manylinux1_x86_64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.2.0rc0"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.2.0rc0"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "bleach",
+            "required_version": "==1.5.0",
+            "resolved_versions": [
+              "1.5.0"
+            ]
+          },
+          {
+            "package_name": "markdown",
+            "required_version": "==2.2.0",
+            "resolved_versions": [
+              "2.2.0"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          },
+          {
+            "package_name": "html5lib",
+            "required_version": "==0.9999999",
+            "resolved_versions": [
+              "0.9999999"
+            ]
+          },
+          {
+            "package_name": "werkzeug",
+            "required_version": ">=0.11.10",
+            "resolved_versions": [
+              "0.11.10",
+              "0.11.11",
+              "0.11.12",
+              "0.11.13",
+              "0.11.14",
+              "0.11.15",
+              "0.12",
+              "0.12.1",
+              "0.12.2",
+              "0.13",
+              "0.14",
+              "0.14.1"
+            ]
+          },
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.2.0",
+            "resolved_versions": [
+              "3.2.0",
+              "3.3.0",
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          },
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.11.0",
+            "resolved_versions": [
+              "1.11.0",
+              "1.11.1",
+              "1.11.2",
+              "1.11.3",
+              "1.12.1rc1",
+              "1.12.0rc2",
+              "1.12.0rc1",
+              "1.12.0b1",
+              "1.12.0",
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "105f90ce3eefd6a3118b1b4a887fe5f040fa5a22be365c061f846bc9ab7fb6fd63828e648c0408bc979dded0b31c854dfa314a24f597daf66031a4f76f2a36e1",
+              "url": "https://pypi.python.org/packages/ec/ce/cca348661ff6fe1e50fa2d392c010278cee0ae3ca157fe29f9a2453cae1c/tensorflow-1.2.0rc1-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "338227f974e65d7987e574816dff7f09b5aa451ee9eaee1fbbe633ac08fa6690393ade4c64dfce1727673b97a9715181d6f781942b9ee308a1e04ed3e5338ce6",
+              "url": "https://pypi.python.org/packages/1e/b2/75c1ca60a9b4b97500aee98e81dbfe1d541d46a9d5315ea0723d0f45701d/tensorflow-1.2.0rc1-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "8e82cf807b186938cd5645e2027fa006b18431592300847bdb49d13761d67d26847c5ece0a86bf0ecce5b968ba71b71ae84c2aa1f78e3d6784d71b7f8226b7be",
+              "url": "https://pypi.python.org/packages/8c/d3/f2760350638703a23eb12e126b8280573cbeae2aa1aae7420fda1f5bceaa/tensorflow-1.2.0rc1-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "7cae74be9f5d5c8de927ecd2cdffd805ac376f47b886e39a9e04cedc24cae3623c1a2ac252c696ce34298ec9a5dcda1b5d47fdbc83d5bbd63cc8115a976634d8",
+              "url": "https://pypi.python.org/packages/fc/40/98c67495a18d7025171ac169521b90bbf04a3dcfc95b77d56544df9bcda0/tensorflow-1.2.0rc1-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "a051690cb61a16da2bf2fc7c3b7eb8d66371b89480fb46969a6990ada53d3d838b120d7b7f2a46e6eb4b0e5659b20eec706c556adcc62b743da207a3ad048073",
+              "url": "https://pypi.python.org/packages/1d/f6/e3a050fd4871abdbedfa082f19def123d5b68f0ebf53faa313959d641e5c/tensorflow-1.2.0rc1-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "4271cc9a9e3667db3452f17b72387c993868026a336472f45a7ea7daddec8f8685b84c2f25672753e8842a1b11aecbcbf26ce58dbae839d1efe1ce4a00b09a36",
+              "url": "https://pypi.python.org/packages/3f/0e/08452bed4d31df9b2b7a49721e4015d8a63910071aac8a47a81daf70ead2/tensorflow-1.2.0rc1-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "e2aa025a293bc23e928bc57b0ad82af84d6ba103c5b9519902a5df4a1a9ca07ce178c13de051123d5cfd6f0109b7e5624e07802252416bc0ab7759b2504d2b4e",
+              "url": "https://pypi.python.org/packages/67/0a/c81adfcd0b028693167dddcbe32108707cf4a83ef065c1382b77d3248cb2/tensorflow-1.2.0rc1-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "80af3db179378b387ba034ad7f6fcbf72064707288cc3045d5232d0a6de3282b5364f1f8e54df6b3146727b2734b38d94f8caa37d4b333541ea7463c173867a8",
+              "url": "https://pypi.python.org/packages/35/e7/ce850806192974b135eda6ea4d67a7839d6e202d7bacb7bcc94a08d933ae/tensorflow-1.2.0rc1-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "ab26b9525b5901d876e83cfc9e156e8628049b52227d43a4c440589008426ced1bb2989a4b03c473f4fd94507aa8e5b572058570d811c029e528d3e07624b8ae",
+              "url": "https://pypi.python.org/packages/30/86/267265365aa7f3ae366d4b3bd4cb02176fab0a527a153b5cfe626ca6ffc8/tensorflow-1.2.0rc1-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "10f86f1c259f84be06f8c28fc937e6c7036b0f02d1e6bfae86949bdfae23b0e5526d684f487a62758603f3417def6ec6be2ae72eead3dbfb906a688ad1ca72fe",
+              "url": "https://pypi.python.org/packages/99/02/15db7312c4a166a9cf2ed2507464fad381de00a094a518174403830bbfd1/tensorflow-1.2.0rc1-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "7547a8b7f4c6e913340ae2114001403fdb114562b44ea52653d1ec33c687d829210d7b0238b6a6979f75dd277ea84376545c0abb4049e5b48e6cb58f23500525",
+              "url": "https://pypi.python.org/packages/9c/9b/c20aab2499ad42b4f473bb17749bbb42dc797a2b083c86dce6abb90111f3/tensorflow-1.2.0rc1-cp36-cp36m-manylinux1_x86_64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.2.0rc1"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.2.0rc1"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.11.0",
+            "resolved_versions": [
+              "1.11.0",
+              "1.11.1",
+              "1.11.2",
+              "1.11.3",
+              "1.12.1rc1",
+              "1.12.0rc2",
+              "1.12.0rc1",
+              "1.12.0b1",
+              "1.12.0",
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          },
+          {
+            "package_name": "markdown",
+            "required_version": "==2.2.0",
+            "resolved_versions": [
+              "2.2.0"
+            ]
+          },
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.2.0",
+            "resolved_versions": [
+              "3.2.0",
+              "3.3.0",
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "backports.weakref",
+            "required_version": "==1.0rc1",
+            "resolved_versions": [
+              "1.0rc1"
+            ]
+          },
+          {
+            "package_name": "bleach",
+            "required_version": "==1.5.0",
+            "resolved_versions": [
+              "1.5.0"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          },
+          {
+            "package_name": "werkzeug",
+            "required_version": ">=0.11.10",
+            "resolved_versions": [
+              "0.11.10",
+              "0.11.11",
+              "0.11.12",
+              "0.11.13",
+              "0.11.14",
+              "0.11.15",
+              "0.12",
+              "0.12.1",
+              "0.12.2",
+              "0.13",
+              "0.14",
+              "0.14.1"
+            ]
+          },
+          {
+            "package_name": "html5lib",
+            "required_version": "==0.9999999",
+            "resolved_versions": [
+              "0.9999999"
+            ]
+          },
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "9954f278d2f79d0244890f10c4df17cdeb08db96fd30d2094491cba771fd54ade527179a2da4370ab79067c6aa928b5e91e09b5149c6fef901cdb2601f82463a",
+              "url": "https://pypi.python.org/packages/93/4c/bae64f4dcf16f9dc6a579d6cd636fbaea291df76b968c43b68b83673993a/tensorflow-1.2.0rc2-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "cd867f0a2d1fefb4248a2ad3c0e177a14e7af72e8eccae3d3f6b38560714e5490fa454893b147ae2415556613baba31fca47c8e31d2ae6385edc7019333ebbcd",
+              "url": "https://pypi.python.org/packages/d8/63/ea321c41402edf3e0b21cc4e997a3f1d6534f282c98bc02123fda63eddaf/tensorflow-1.2.0rc2-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "3e873550408eefe356d71709d422af8566df3177e0a1682efd776d10153353cb9aa88f16b4b071aa2206789a23064060a847ba692ee3dd845b20795589d9cc51",
+              "url": "https://pypi.python.org/packages/8b/b2/8beff0b30b0fbf72a6001040d983d2cf2e91ee5453eef002bc62c39058a2/tensorflow-1.2.0rc2-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "81d10639715734f113ff06098c9949338ea6f0541c8667f96e5fb1ec78cad9b2e64a9f9cf5fd98a4c3c9c7e46ece3df7936f7ed5aa359042ab180fbb74626a00",
+              "url": "https://pypi.python.org/packages/69/f7/f428b491aff48ba617294239887992a577f6df8babb3fe927dd9a6470d7f/tensorflow-1.2.0rc2-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "70626becd4b2fb0690fd09d832c969b49a3810fb8ebd03b4288847ecc931c35deaee860a22e49ae6d1adbfd702b737bd792df6f3b36cf679592a235d495b279c",
+              "url": "https://pypi.python.org/packages/45/24/fa2554e869148867851b10e7349bf25a818c1e9de24a5e25058495fe3562/tensorflow-1.2.0rc2-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "3fa739614e432d91bdd711f4314ea99f9617c0471097f9c3b26aeef5574ac57662d927fd5d7b42ddd54a118e9e396eba473a83974028a5243667eb82a1781e4a",
+              "url": "https://pypi.python.org/packages/3b/c9/39d826459d088ed9531c8e2279b41bed0d83bfcfe3b3749b61a531af8254/tensorflow-1.2.0rc2-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "2abde36491966c0e9be5a11025c97f35ad517a6530d8de7bc00c3dfc84d6e7980f38052ebe07946b034242db4d2eee4d9603daeda608afce521c8d1b2ff78b6c",
+              "url": "https://pypi.python.org/packages/75/5e/42b9c8dcc64cea6b41e010888546ef1193817c94b615659a28edde7bdc67/tensorflow-1.2.0rc2-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "4b520f6d291d590070586adbbe3f7f6b86d31f705e6379457d1b0c2f53a417e74d0f6062fc20ebe224ae192ef57f8a8d89e43bc327fa0c1d3c17394ca9b06c99",
+              "url": "https://pypi.python.org/packages/db/d6/08dd85ad02a26291ff761e0580b967b3183b2abf720789fffddb2c04c339/tensorflow-1.2.0rc2-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "999279a358ce77d2f32fc7a0313b0465c2b436a4f112e069097e41dadf7a490ecebcd981ce68142743e746e8126350512f98f1b9cc645a160043827e54e81ff7",
+              "url": "https://pypi.python.org/packages/d9/9c/9444a11edabb038782b3156e3210e694e8f3aa803b9dd454b4faf470c1a8/tensorflow-1.2.0rc2-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "87b208af12f62d5b0df45d6959656cfe5864fd2dd0c89ab5aa313eb781eba2fa81fb69efb14856ba00e098cc9a3454313f5af423df2b81eeb7c438526779befa",
+              "url": "https://pypi.python.org/packages/80/cf/bc90ea443774cb0fe64e0462b118e49af3aad016401e186dc753a64d2367/tensorflow-1.2.0rc2-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "2dee8e4f6269daa2a65bfc38e42f19e28f5cde094b7807f85264e05e4f1bd417c2e963b6159bb40db1bf87ad11299f5e9b4a09293417ba6c6df3e7e3f04ae70f",
+              "url": "https://pypi.python.org/packages/15/ee/3d082f296b2bc3b9d7fbe21f8522dd9682aef477cf873f099ddb04121168/tensorflow-1.2.0rc2-cp36-cp36m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "1ba6994dc17f08120b4e54ba5ce03c400c8ade0a6a8ee4a021df7e8160767d86c07b52624e75d71f6f1a868191b83cab41336b9dfef85ae07625350d378d399d",
+              "url": "https://pypi.python.org/packages/4e/6f/8c5d83629951904f6155f3c46e8dc4cb0224331af614387dd80143fb682d/tensorflow-1.2.0rc2-cp36-cp36m-win_amd64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.2.0rc2"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.2.0rc2"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          },
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.11.0",
+            "resolved_versions": [
+              "1.11.0",
+              "1.11.1",
+              "1.11.2",
+              "1.11.3",
+              "1.12.1rc1",
+              "1.12.0rc2",
+              "1.12.0rc1",
+              "1.12.0b1",
+              "1.12.0",
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          },
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.2.0",
+            "resolved_versions": [
+              "3.2.0",
+              "3.3.0",
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "werkzeug",
+            "required_version": ">=0.11.10",
+            "resolved_versions": [
+              "0.11.10",
+              "0.11.11",
+              "0.11.12",
+              "0.11.13",
+              "0.11.14",
+              "0.11.15",
+              "0.12",
+              "0.12.1",
+              "0.12.2",
+              "0.13",
+              "0.14",
+              "0.14.1"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "ebb771d80db77d72c49187a0c8a15ea5d0661b748f1aff1812e76364c63fe551b40b24070acdee62dfec2dbe265d9023ea89e501afecb8927823b712c9c4151b",
+              "url": "https://pypi.python.org/packages/0b/0e/7d7d8e042ce8a0760309bd1594d6a95596c4d8166bdf77ee5cb64da100b3/tensorflow-1.1.0-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "9e65df4eeb302a5589e67285f295c056689c0e68167ebd887dbc34b44b052ac2822939769b26e727e7822806ee1b9e8576f5a3fc33057e994a9231c967341d45",
+              "url": "https://pypi.python.org/packages/8a/73/74c610decd5e0a1fd7f441a32e3561d21c28ced98fd6d3d9d5c70dbf92ce/tensorflow-1.1.0-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "ac20b069ebb5619c195b6fb1c660a36982c00781480c146cd0eaecce39c283a2a770c5cc0b48560219c4de89017b9df77027ab592e04302d59bb7691ed118fcf",
+              "url": "https://pypi.python.org/packages/02/4b/9df813c98148d718641ab734fc2e78f1405c59bbeaac2f8b8a4fc781ab25/tensorflow-1.1.0-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "39bfab883fb3d4251448e0b3d13c5933f031ad4886f1d3cfc8ffbf62ca7b7023c849974fc49aee5c7acdc25bf8e3bd3b0fdf5ca0f7f52b3f5e49e6781c71c783",
+              "url": "https://pypi.python.org/packages/d5/65/ed87b7d37d24e3fa1eb340dcd16927d6194c660b4549490bccf9709706ae/tensorflow-1.1.0-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "deda07f4ec0c232004586975a5d27e4eef05578ca413d2590fb4dc50f23042645472ba4ee57f1a15992df2c0188a8ccd81da1945ff71a451ed2029f18494726f",
+              "url": "https://pypi.python.org/packages/ae/fa/aa54451e5f67ed30942fcf63d06472a48be465c9e542c4705eba0cc9e8f7/tensorflow-1.1.0-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "328ff377afd68265132fe8f8336d91c55fffbe79e62d19ee9ef894456cbf4dbd7af0aea747a96a65c147af29a5f30e23a7fdea4e41461575226517fa3cdb94ee",
+              "url": "https://pypi.python.org/packages/8e/8a/a51afecfe761314da24747c2d23e26b6fc3df02733e96c4551cc52556982/tensorflow-1.1.0-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "6e368798304f44e51b86619fd3f76d45752dd301841446078cf805e5e36ccfdeb8598ea164e55b9f86276feee8e15fe612baaedbd97375709a91e7cfc2ad3e56",
+              "url": "https://pypi.python.org/packages/f9/be/304118f113cb66599ed425ecb7c2d41200f49e612fceacd9c516c4f80048/tensorflow-1.1.0-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "8c106007a801890cfc377b0ff362762867a208cbe579156d401042bddbd446e6a089fdacef83a841722e6e9befec71dd7b2f63e503609f919b6ec27e1fc46a3a",
+              "url": "https://pypi.python.org/packages/fd/1a/b6e78223c8e05a8bdee8f9bb20d4926f81db50e583632a1cde6e5b5ec2f0/tensorflow-1.1.0-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "aa753be34543797e0968124c5d132b391f7f2bbf8697a9270555681f156de2062b9ab93ca85ce404995b85c54cf6113dd0010ff7d0589862637bbc248091c60e",
+              "url": "https://pypi.python.org/packages/39/c2/3f5118e953da8a5ace8df2331176ff9b5cddaf5043b8821cd161fc909b8b/tensorflow-1.1.0-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "bd1dd27dd60dea3519dfba814f361b62774a87b923d92d142676a58d191ec8798d1fe22a7e8fe46c1dc54796cb76990ffbbe4e9a345b6f4a21e303bef108fc0e",
+              "url": "https://pypi.python.org/packages/73/9f/22a5381e58d3ee2bb93956c8b901273e2d90b67c87d8b7c55c54d14d4404/tensorflow-1.1.0-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "44ee13a3557053089c2c62685dd7ebe9f73a4cd4df9809c680c390efa291f21b41fd559991a5586432205c4b974c37996e5305622638263780dc91887c18fff1",
+              "url": "https://pypi.python.org/packages/cd/e4/b2a8bcd1fa689489050386ec70c5c547e4a75d06f2cc2b55f45463cd092c/tensorflow-1.1.0-cp36-cp36m-manylinux1_x86_64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.1.0"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.1.0"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "werkzeug",
+            "required_version": ">=0.11.10",
+            "resolved_versions": [
+              "0.11.10",
+              "0.11.11",
+              "0.11.12",
+              "0.11.13",
+              "0.11.14",
+              "0.11.15",
+              "0.12",
+              "0.12.1",
+              "0.12.2",
+              "0.13",
+              "0.14",
+              "0.14.1"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          },
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.2.0",
+            "resolved_versions": [
+              "3.2.0",
+              "3.3.0",
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.11.0",
+            "resolved_versions": [
+              "1.11.0",
+              "1.11.1",
+              "1.11.2",
+              "1.11.3",
+              "1.12.1rc1",
+              "1.12.0rc2",
+              "1.12.0rc1",
+              "1.12.0b1",
+              "1.12.0",
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          },
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "a79bf3dd26e4661809ba5c8ad4d0253ab7f39e27058bf3fb1c05e66cadb72e6fe1b277888e5b12dbadf6d6dc641e8903a61b86bd07d81b64c14cd22e3b35d075",
+              "url": "https://pypi.python.org/packages/24/2d/05b4d0731608e7c827f6571b805b671d110b936e95debbfb21bc1fe7c351/tensorflow-1.1.0rc0-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "bcc55673d7b66b0aa2783ce2db4beea9a42c1af101707f715731c08174a385f357c67aa7c09bc54be1958f92ea24f9dd25056e0f3309b0977c30caa4971b3dea",
+              "url": "https://pypi.python.org/packages/1a/82/4df568bd75b2356b41fcd11d05e651b0333512bc8e836ebc51be6e2e18fe/tensorflow-1.1.0rc0-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "85f53d25bf451069c7e1300de1e88629d65a0b89c5c9cf6586384f0cd2fc422370bca90f6d43c1b3f04ee651f34fa48995ecc9fe0ae9b82521f5ba48f8289fe1",
+              "url": "https://pypi.python.org/packages/60/c6/39705205a6a3379150f5383c2dfe6c4a97c63432b60a11f4f4c453e86137/tensorflow-1.1.0rc0-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "3c03ab807753208b31a5d38a8f04a567fedfd0bb9b7fbcd2517dcef6ec26b888177b9cfe9e5c8245465179ded06ada302da3b5a41b8da5f04aed48c30fcd2624",
+              "url": "https://pypi.python.org/packages/97/af/e877735670b8cde1f8f086f4f8e49290091b2261eadb6b145e5680ad0d94/tensorflow-1.1.0rc0-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "496e1a5fca2671a1160e6e2fddf7c2bf3666e83e91c239e88831e8db352c6a4377fc52b7d585ee63d061ec0abcfde2ab01e928821d21c5995b3e2a987748227e",
+              "url": "https://pypi.python.org/packages/b2/86/a894c317e1dbff6c4452f10dfb0029419597f6214ca258bae55996101257/tensorflow-1.1.0rc0-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "50ffdec11a5a90cd925394d7dab3d19d0bab006a08dbb9be68a65e94d49734c3f247754d0d11787d1cc7ee997858ecd1d719b15176853513a759acd7e1a17960",
+              "url": "https://pypi.python.org/packages/ba/69/8cc9d6005397501c777fc79a549adf975933544e4a175bd31bae543ceb53/tensorflow-1.1.0rc0-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "09855744fc43e7f3ae8998eaa744587b1c8ad43d92161c8341513e7f2b37f49a473e680b478e7b39ba99cb0acd9a611a487e9d3ab63ae3092fafe27166e371cc",
+              "url": "https://pypi.python.org/packages/2a/1e/6daa6c848a7ecbe7244c05542e33b68034adb03f60b0245f2606f0fa8334/tensorflow-1.1.0rc0-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "e3a52673e7fda2d6e8806a1b424004f6ba2fa7f078c40b0126f6f7b63f727925aab8612df11bdba959b3233f562876f685ad9731e6257aef66e3cbc384072334",
+              "url": "https://pypi.python.org/packages/42/9d/a7206899758b1c3b8a502f7c272d31a7893a344c72c09a00c8c1080bbf3e/tensorflow-1.1.0rc0-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "f23e51538387c3eb1a4f1ffeed6bdb4cf0436f2f0b66153dc74c99384775a4eb46e05293f5e661fbb4a3c27bb48415b6f6bb81240299cfa459ffe2e573d284c6",
+              "url": "https://pypi.python.org/packages/cf/ff/df6a7605a2c979eaf3372ac2b47df39578c63a8bc4e45492417d4af34966/tensorflow-1.1.0rc0-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "9b637dfb6356b6e632210ea343bb306cfd79abf717e04e3c6064aa40aa7f86409aa066ff2d3701b282d4a3f1e494607c6980c316f1403dc5f7bdea754c78e34a",
+              "url": "https://pypi.python.org/packages/72/76/9f13a400ad42b30fbe2fc822a81f09abd97c3d4b187e2f5deef6291c8304/tensorflow-1.1.0rc0-cp36-cp36m-manylinux1_x86_64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.1.0rc0"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.1.0rc0"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "werkzeug",
+            "required_version": ">=0.11.10",
+            "resolved_versions": [
+              "0.11.10",
+              "0.11.11",
+              "0.11.12",
+              "0.11.13",
+              "0.11.14",
+              "0.11.15",
+              "0.12",
+              "0.12.1",
+              "0.12.2",
+              "0.13",
+              "0.14",
+              "0.14.1"
+            ]
+          },
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.2.0",
+            "resolved_versions": [
+              "3.2.0",
+              "3.3.0",
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          },
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.11.0",
+            "resolved_versions": [
+              "1.11.0",
+              "1.11.1",
+              "1.11.2",
+              "1.11.3",
+              "1.12.1rc1",
+              "1.12.0rc2",
+              "1.12.0rc1",
+              "1.12.0b1",
+              "1.12.0",
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          },
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "67a1c69db476b796553b5c6c91816e7ee3d9f000e8811b256cc03f281cc9e7832a954717b5de0cad533024797c3ef58b63026fa9fafe10fb345fca2aef9329ed",
+              "url": "https://pypi.python.org/packages/89/01/55a7a3c0e19bbd5cf60967a48da82a50af26ddba48b795c6cb072a0fff16/tensorflow-1.1.0rc1-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "3c1f71e502872193e907a588944244b91226361458dc016ba501eb60e220d70bb1e7465901f5d1f0dc2ee33564bbd7af66207a56b5e32a21bfba37c4bc762ea6",
+              "url": "https://pypi.python.org/packages/bb/d5/162c7a0f32b9ad820c2ad728a26b8f8a7785e49b767625f17a310ef51ae3/tensorflow-1.1.0rc1-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "09cb984e64ff7a7dc0fcacd5d7d37821ead93fff1240c2f2ac8c9682f1902cda2b026bb6a3c9c287f039e207ecfcd9dd20dd5065e321d7f2315ac88f5757065c",
+              "url": "https://pypi.python.org/packages/d2/6c/b9979b9bfea101a062d058a3b965a2013984af7ef4a10f6296eec186e09d/tensorflow-1.1.0rc1-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "310c5f4df49698493ccea21717ace24c125032f0404074e0e5ea679940b52ec9261443d60a5071a62dc2cb219486a753c767c5f9bdbd3d20ffa8e31e2b63ab81",
+              "url": "https://pypi.python.org/packages/be/b3/9951e9a06c957032686a9eab1aa18683cfbcf9f89f6fd402b0d8d4616525/tensorflow-1.1.0rc1-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "289719ae25ec6f1b32080688468549f0abe26ee70f94b4a8df1ab0d44d212fc7a5f79692582d6ee9048c563cd6a236871ac7012e3c6b0c5d97e7e0c4908d3eb1",
+              "url": "https://pypi.python.org/packages/93/ed/ef08c9ddbc346782748ef2ffa9a8f3b59a78cffb8980cf1c187d8c4eb6cf/tensorflow-1.1.0rc1-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "5ab45c5228aebb8d5f00fdf78fa7e9e5ba5e4d148054bfc0c13769044b1542b6f1fda6ac9d46d39c3522aa3b9d44978c38836c8708a0d9eedb946949ca194f82",
+              "url": "https://pypi.python.org/packages/81/3d/7d8a9cfd7a27526db5c6155c5ce2222fb354aa369f1d812d08cec88ab86e/tensorflow-1.1.0rc1-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "0ecf54b11dea9a5f2577368f39921b5b98f294c568c8e76fdb482438bc002413cf6b495acd4167aa5a734b62661d5e00bc17078c40c065cc58b2b3b2bcc67797",
+              "url": "https://pypi.python.org/packages/c9/13/924badaa0fc7e5858f69084e36677d2b87b9df69c2b007e17450cfc6b393/tensorflow-1.1.0rc1-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "1f6f09ccb15c0b36ebbeb806fa2fb6a460f9098227cfd477318f67f5e6912d950541da884e1376f9c8b0c02d9837a7d8cd489c1027dc59cd407bf2b6304f8e41",
+              "url": "https://pypi.python.org/packages/c4/6e/1dfced905f0aaae5e2daf6590e3777b6ddc3c64f068adf9d530bb63d30e6/tensorflow-1.1.0rc1-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "2c60f2497d87b93fb8d513acb9a247c88de473635dafc30e88fec87bddb5fdd220d9671c2ed367836ec9d74648441c0bd0cad0db0190c2c40597fb8b1f59fb0b",
+              "url": "https://pypi.python.org/packages/f0/45/b5ca4c6336d2ca47f2c2232d33bc57bd1b48752ddb100dcd49e376104368/tensorflow-1.1.0rc1-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "6d665d7b2d89bf87c08d9f6ede739c9250fce5d95ce59d92682f7e670c51a5b8c0b692d3bd2989979be99a46dc886f3b9a48ab01035500d7c4237829ee7a215c",
+              "url": "https://pypi.python.org/packages/a6/02/66067e566e46ffa5351776605b1764e2398357306f120612457809e90c88/tensorflow-1.1.0rc1-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "dfc4425581d8c59e2682bb302849df80101520299e83f799f0ab23c5e6741155d9159b37b346ce8ae55079d8cd772755e1ddb2ca5c91ce494b2c17dde6bd9f3b",
+              "url": "https://pypi.python.org/packages/64/01/2abdb46c8c6f34365f8e0212e017ece12ea293e718bd6e5dba8a0d45d1fd/tensorflow-1.1.0rc1-cp36-cp36m-manylinux1_x86_64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.1.0rc1"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.1.0rc1"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.11.0",
+            "resolved_versions": [
+              "1.11.0",
+              "1.11.1",
+              "1.11.2",
+              "1.11.3",
+              "1.12.1rc1",
+              "1.12.0rc2",
+              "1.12.0rc1",
+              "1.12.0b1",
+              "1.12.0",
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          },
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          },
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.2.0",
+            "resolved_versions": [
+              "3.2.0",
+              "3.3.0",
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          },
+          {
+            "package_name": "werkzeug",
+            "required_version": ">=0.11.10",
+            "resolved_versions": [
+              "0.11.10",
+              "0.11.11",
+              "0.11.12",
+              "0.11.13",
+              "0.11.14",
+              "0.11.15",
+              "0.12",
+              "0.12.1",
+              "0.12.2",
+              "0.13",
+              "0.14",
+              "0.14.1"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "5030aa2464d945ed2ec864c4cc6106bbdd5884a362973efc3b185b08982664686ec4becc07bf7f0b6c07dc96f7bb17feaff28f9177d88c5a6bb64cfe384bb9d6",
+              "url": "https://pypi.python.org/packages/09/a2/b5cd18474f13f2734843160dea0c578a709ea3cf1d3ce35bf0ff5d370f44/tensorflow-1.1.0rc2-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "a848b46cd43258dca84257aa044070ffd80a2c83149c98c9addf8370de80515487417c5af6f3dbd1ab086f558d61796fae333766d87e5b8d3911def4653b47f2",
+              "url": "https://pypi.python.org/packages/df/d7/0526ed0b717dd3473d0f2e2de803222a5c87b2c74a2a4736e474988509e3/tensorflow-1.1.0rc2-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "f0b4982960ec24a1987e38b185d321a24c47c8a27bf93cbe5f2d0ffe89ffc5d3a9e7ae67703d67f44837ed2f91dd90abd5eb7cd6e081124f6885d314e29d3944",
+              "url": "https://pypi.python.org/packages/a3/8e/b648b81b9f2d2d3145f75368ebf7490dc73f7d0709ba4c583a0e3d13fb8d/tensorflow-1.1.0rc2-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "e983789ac4c39bf18a3e4fa835baf8be4cf0b4f4d05737fcf17c94b5647cd9efca965c091a33420651d7608f36c3a9c3807a336b1ba2bb4ee08ba628e96625fe",
+              "url": "https://pypi.python.org/packages/5b/fb/fa578261431929e00864713131b8e97070b6b09623313350fa62f225a7f9/tensorflow-1.1.0rc2-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "0147af1796945e7399a0b5d88ada0a8deb26e59c55749c9683025a1cbaae2e4bfa16d692eec7e8d59d2ccce748c60db76ba047a6c18c51b6e6276d9f81461ded",
+              "url": "https://pypi.python.org/packages/28/43/4b9218d7e72fda1a78d23bf22ace8726e62a80e58638999aa550eb18f2f5/tensorflow-1.1.0rc2-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "34b3e6a928dcc3047779b5d484dcfb8d5f85c78101cf63c20edccb148744ebd0f964a50755c38255450200c47b12324113009cba6220f8351ccf5ebebcca1529",
+              "url": "https://pypi.python.org/packages/0d/1f/8ee2d389a59c78f1d9d9c5c098650a6b567d99b7c9a3100198de5d2bdbfc/tensorflow-1.1.0rc2-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "12e3b51818ede4b16a514fa62442deefebdb83ea53ba1e7e66909eeb36e1041b395283a963351d700ef237c87247e06061600615596d9f0414979ad4993184b7",
+              "url": "https://pypi.python.org/packages/7a/ef/96311cb230a52026367b7f0aff8549f0ffd81559a105339828537a99ea8c/tensorflow-1.1.0rc2-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "69d76b352094a3d08f4b906ae63df21de15455678c25b852f8a4f4d6df1d73d3207989a63fdf84260e3f2f5bd68f8285fcf552a10d022cefe4fd902b2682507b",
+              "url": "https://pypi.python.org/packages/8e/d8/3e17671b419760bfd353c8f55c0bea7e3bb716d224eaaf0cf0a63a570dff/tensorflow-1.1.0rc2-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "be730f0ba91351ab7ebd3114e1b420da9cefb903b03afad2159d1384d3208d9f426f66cdedfb2b9ae7117b76fe9f2476e7c7928e634cd560f5a0d0b85e223b7c",
+              "url": "https://pypi.python.org/packages/65/f8/1176d018adba831b3f659db63028b74535d6c4f1bb9ee3a35e940c9f556b/tensorflow-1.1.0rc2-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "e1b66159b61bf150cde9f14d9156de276e626f74a1f1d0596397040ae2d9bdab6a7b6b6de0877efe1f1094e914d1f79e97677f07a4ace1ae9b90ff519d3fd784",
+              "url": "https://pypi.python.org/packages/b1/74/873a5fc04f1aa8d275ef1349b25c75dd87cbd7fb84fe41fc8c0a1d9afbe9/tensorflow-1.1.0rc2-cp36-cp36m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "4f80175133634ea8d5f012f3f58523f9392c25ca0eb1bff90fe25dc25c42691a7784506a5a26c09c4ad80cc367b57968df23978985bd97a143159f3f8487d3dd",
+              "url": "https://pypi.python.org/packages/2b/39/3a1c3e13788977954dde249445881f5bf551c7cec4f743b265e7dc88eb45/tensorflow-1.1.0rc2-cp36-cp36m-manylinux1_x86_64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.1.0rc2"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.1.0rc2"
+      },
+      {
+        "dependencies": [
+          {
+            "package_name": "numpy",
+            "required_version": ">=1.11.0",
+            "resolved_versions": [
+              "1.11.0",
+              "1.11.1",
+              "1.11.2",
+              "1.11.3",
+              "1.12.1rc1",
+              "1.12.0rc2",
+              "1.12.0rc1",
+              "1.12.0b1",
+              "1.12.0",
+              "1.12.1",
+              "1.13.0rc2",
+              "1.13.0rc1",
+              "1.13.0",
+              "1.13.1",
+              "1.13.3",
+              "1.14.0rc1",
+              "1.14.0",
+              "1.14.1"
+            ]
+          },
+          {
+            "package_name": "protobuf",
+            "required_version": ">=3.1.0",
+            "resolved_versions": [
+              "3.1.0",
+              "3.2.0rc1.post1",
+              "3.2.0rc2",
+              "3.2.0rc1",
+              "3.2.0",
+              "3.3.0",
+              "3.4.0",
+              "3.5.0.post1",
+              "3.5.1"
+            ]
+          },
+          {
+            "package_name": "six",
+            "required_version": ">=1.10.0",
+            "resolved_versions": [
+              "1.10.0",
+              "1.11.0"
+            ]
+          },
+          {
+            "package_name": "wheel",
+            "required_version": ">=0.26",
+            "resolved_versions": [
+              "0.26.0",
+              "0.27.0",
+              "0.28.0",
+              "0.29.0",
+              "0.30.0a0",
+              "0.30.0"
+            ]
+          }
+        ],
+        "hash_type": "sha512",
+        "hashes": {
+          "hashes": [
+            {
+              "hash": "fa3b6862a131121a68e9d9878c14de85f86232bd26f8dd97f68a0088cc59f945f793b3e7f80b80e157d7eb7016326b999237988a86e08a3e73edc8fcc74a7016",
+              "url": "https://pypi.python.org/packages/db/0b/8ca3299122cb22f763df7076938b12d7f9e8a814d3ab7a80df6a41ef81f7/tensorflow-1.0.1-cp27-cp27m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "f90a4570f4fd5d82742acee631207cdcec124b27edb3ba427479075f3a1ed73f18e9f9d999c8971f52ca002ce63958a6765d30886e024434514b73f392a84313",
+              "url": "https://pypi.python.org/packages/7e/7c/f398393beab1647be0a5e6974b8a34e4ea2d3cb7bd9e38bd43a657ed27d1/tensorflow-1.0.1-cp27-cp27mu-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "f41113aefb62c3846d9e9ddd6b29fc676ce368f0c5c87bdcbf1c6e3c1a26ad4d0d4ad520432a0a9e420e274bd588e66e76cbb3a032538f6dd6d64453451db5ea",
+              "url": "https://pypi.python.org/packages/2b/ab/a98d81aa673f174e002cf4639475b4ad338758cdbe94c6e95f03b1951b67/tensorflow-1.0.1-cp33-cp33m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "1fd82f5ffdc23795f1195eb50ba188b2ad3a777a0e7bcadd4ede412988724225f30d178751da5e0cb3dbf8df8ce3937f35240d78bef0d397a4f6cdfa5d820984",
+              "url": "https://pypi.python.org/packages/7d/4b/48cfb8f954b65791a698923cafa6c80992022d585eab0b9dd5c4a623cde0/tensorflow-1.0.1-cp33-cp33m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "bd33acb98b86fc741b6ccdb4259989b34dc263a99d677b162c3e1fc3864517b424296b5ac75dca8afd41682bce835aac4d9a7043eb820c16aeefd8472ad4df4b",
+              "url": "https://pypi.python.org/packages/73/b1/1019bb98987e2a99574e5e48c9fd5ee2313b0208585530662534c22a52a7/tensorflow-1.0.1-cp34-cp34m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "46cee673391bb3a8515a001f8116ad6b2a78eacbcd834e4765c09eabe983630f8f9e0afe92698fc95c49df8d884968b708b938dc2c021848b9e60c638c9c7128",
+              "url": "https://pypi.python.org/packages/cb/b5/9b2eb1385e7003f4da939f7f7fbd4ba4d563e203bfc8ea734a3480089ed8/tensorflow-1.0.1-cp34-cp34m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "6e0f985348ea143119b16c24486c07393a70f31f13acc7548e8b10731b67fb8d856633d7b64a1d62c83e33326a107b91ae96788d22c36c35369d0a408ddf88b8",
+              "url": "https://pypi.python.org/packages/b9/dd/18e6b098ecf7934a9ed16bd589d7ce239b3c57341a3153b93010bca8f63e/tensorflow-1.0.1-cp35-cp35m-macosx_10_11_x86_64.whl"
+            },
+            {
+              "hash": "33aca3c21f73e95ca9b1a81261c5c37a110a3ee4a6c46af7e5440cf63426e34b2530c936c8454b4d4417d6f01a06b3dea23f8843ca5533ac6a42de175bd7fd69",
+              "url": "https://pypi.python.org/packages/1f/38/c255432f18005362dd2459e3bff2b2411eb7d02ca09fa20ee1dd1311f69f/tensorflow-1.0.1-cp35-cp35m-manylinux1_x86_64.whl"
+            },
+            {
+              "hash": "26a6f70c703bd500a5f4215f4680968cf3c5a5435ca7b66ef785f7595d345c2e7716f13932304f3027b7f51d21e2935537337de92c36a88b5772da3d4cadc74f",
+              "url": "https://pypi.python.org/packages/8b/6a/5a60b82200233805fa7505fb52eacf9e7f5f71246497b417d0063a600c93/tensorflow-1.0.1-cp35-cp35m-win_amd64.whl"
+            },
+            {
+              "hash": "0804d0020714286ba49f17233d649c00571f2a43259a39015491e52dbf5c01bd1e6d3217912875a846a27d3ab6c9266dc2931dc5607e10f241aaf9fe733cb35c",
+              "url": "https://pypi.python.org/packages/fd/1a/7935eb82b9a9b89a3a8ef7e54f7d538698c85d248d8bedb533eab5afd293/tensorflow-1.0.1-cp36-cp36m-manylinux1_x86_64.whl"
+            }
+          ],
+          "package": "tensorflow",
+          "version": "1.0.1"
+        },
+        "package_name": "tensorflow",
+        "package_version": "1.0.1"
+      }
+    ],
+    "unresolved": []
+  }
+}
