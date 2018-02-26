@@ -29,13 +29,13 @@ def post_analysis_result():
     if not request.json:
         abort(400)
 
-    file_id = 'analysis-' + str(uuid.uuid4())
-    file_path = os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], '{}.json'.format(file_id))
+    document_id = 'analysis-' + str(uuid.uuid4())
+    file_path = os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], '{}.json'.format(document_id))
     with open(file_path, 'w') as output_file:
         json.dump(request.json, output_file, sort_keys=True, indent=2)
 
     application.logger.info("Analysis result stored to file %r", file_path)
-    return jsonify({'document_id': file_id}), 201, {'ContentType': 'application/json'}
+    return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
 
 
 @application.route('/api/v1/solver-result', methods=['POST'])
@@ -43,22 +43,23 @@ def post_solver_result():
     if not request.json:
         abort(400)
 
-    file_id = 'solver-' + str(uuid.uuid4())
-    file_path = os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], '{}.json'.format(file_id))
+    document_id = 'solver-' + str(uuid.uuid4())
+    file_path = os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], '{}.json'.format(document_id))
     with open(file_path, 'w') as output_file:
         json.dump(request.json, output_file, sort_keys=True, indent=2)
 
     application.logger.info("Solver result stored to file %r", file_path)
-    return jsonify({'document_id': file_id}), 201, {'ContentType': 'application/json'}
+    return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
 
 
-@application.route('/api/v1/result/<file_id>', methods=['GET'])
-def get_result(file_id):
+@application.route('/api/v1/result/<document_id>', methods=['GET'])
+def get_result(document_id):
     try:
-        with open(os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], file_id + '.json'), 'r') as input_file:
+        with open(os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], document_id + '.json'), 'r') as input_file:
             content = input_file.read()
     except FileNotFoundError:
-        return jsonify({'error': "File with id %r was not found" % file_id}), 404, {'ContentType': 'application/json'}
+        return jsonify({'error': "File with id %r was not found" % document_id}),\
+               404, {'ContentType': 'application/json'}
 
     return content, 200, {'ContentType': 'application/json'}
 
