@@ -15,6 +15,7 @@ itsdangerous = "==0.24"
 markupsafe = "==1.0"
 werkzeug = "==0.14.1"
 gremlinpython = "*"
+voluptuous = "*"
 
 
 [dev-packages]
