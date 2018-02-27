@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import functools
 import json
 import os
 import uuid
@@ -10,7 +11,30 @@ from flask import jsonify
 from flask import request
 from flask import redirect
 
+from voluptuous import Error as SchemaError
+
+from result_schema import RESULT_SCHEMA
+
+
 application = Flask(__name__)
+
+
+def validate_result_schema(func):
+    """Helper for validating result schemas posted to result endpoints."""
+    @functools.wraps(func)
+    def wrapped(*args, **kwargs):
+        if not request.json:
+            abort(400)
+
+        try:
+            RESULT_SCHEMA(request.json)
+        except SchemaError as exc:
+            application.logger.exception("Invalid result schema")
+            return jsonify({'error': str(exc)}), 400, {'ContentType': 'application/json'}
+
+        return func(*args, *kwargs)
+
+    return wrapped
 
 
 @application.route('/')
@@ -31,10 +55,8 @@ def api_v1():
 
 
 @application.route('/api/v1/analysis-result', methods=['POST'])
+@validate_result_schema
 def post_analysis_result():
-    if not request.json:
-        abort(400)
-
     document_id = 'analysis-' + str(uuid.uuid4())
     file_path = os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], '{}.json'.format(document_id))
     with open(file_path, 'w') as output_file:
@@ -45,10 +67,8 @@ def post_analysis_result():
 
 
 @application.route('/api/v1/solver-result', methods=['POST'])
+@validate_result_schema
 def post_solver_result():
-    if not request.json:
-        abort(400)
-
     document_id = 'solver-' + str(uuid.uuid4())
     file_path = os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], '{}.json'.format(document_id))
     with open(file_path, 'w') as output_file:
