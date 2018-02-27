@@ -11,9 +11,7 @@ from flask import jsonify
 from flask import request
 from flask import redirect
 
-from voluptuous import Error as SchemaError
-
-from result_schema import RESULT_SCHEMA
+from thoth.storages import RESULT_SCHEMA
 
 
 application = Flask(__name__)
@@ -28,7 +26,7 @@ def validate_result_schema(func):
 
         try:
             RESULT_SCHEMA(request.json)
-        except SchemaError as exc:
+        except Exception as exc:
             application.logger.exception("Invalid result schema")
             return jsonify({'error': str(exc)}), 400, {'ContentType': 'application/json'}
 
