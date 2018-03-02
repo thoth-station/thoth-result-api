@@ -43,6 +43,7 @@ def index():
 @application.route('/api/v1')
 def api_v1():
     return jsonify([
+        '/api/v1/adviser-result',
         '/api/v1/analysis-result',
         '/api/v1/result',
         '/api/v1/result/<document-id>',
@@ -76,6 +77,18 @@ def post_solver_result():
     return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
 
 
+@application.route('/api/v1/adviser-result', methods=['POST'])
+@validate_result_schema
+def post_adviser_result():
+    document_id = 'adviser-' + str(uuid.uuid4())
+    file_path = os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], '{}.json'.format(document_id))
+    with open(file_path, 'w') as output_file:
+        json.dump(request.json, output_file, sort_keys=True, indent=2)
+
+    application.logger.info("Adviser result stored to file %r", file_path)
+    return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
+
+
 @application.route('/api/v1/result/<document_id>', methods=['GET'])
 def get_result(document_id):
     try:
@@ -92,8 +105,9 @@ def get_result(document_id):
 def get_result_listing():
     file_type = request.args.get('type', None)
 
-    if file_type not in ('solver', 'analysis', None):
-        return jsonify({'error': "Unknown file type listing requested %r, should be one of (solver, analysis)"}),\
+    if file_type not in ('solver', 'analysis', 'adviser', None):
+        return jsonify({'error': "Unknown file type listing requested %r, "
+                                 "should be one of (solver, analysis, adviser)"}),\
                400, {'ContentType': 'application/json'}
 
     files = os.listdir(os.environ['THOTH_PERSISTENT_VOLUME_PATH'])
