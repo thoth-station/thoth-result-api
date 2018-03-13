@@ -11,7 +11,9 @@ from flask import jsonify
 from flask import request
 from flask import redirect
 
+from thoth.storages import AnalysisResultsStore
 from thoth.storages import RESULT_SCHEMA
+from thoth.storages import SolverResultsStore
 
 
 application = Flask(__name__)
@@ -62,6 +64,13 @@ def post_analysis_result():
         json.dump(request.json, output_file, sort_keys=True, indent=2)
 
     application.logger.info("Analysis result stored to file %r", file_path)
+
+    # For now duplicate storing to Ceph
+    adapter = AnalysisResultsStore()
+    adapter.connect()
+    adapter.store_document(request.json)
+
+    # TODO: unify document_id with the one stored on Ceph
     return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
 
 
@@ -74,6 +83,13 @@ def post_solver_result():
         json.dump(request.json, output_file, sort_keys=True, indent=2)
 
     application.logger.info("Solver result stored to file %r", file_path)
+
+    # For now duplicate storing to Ceph
+    adapter = SolverResultsStore()
+    adapter.connect()
+    adapter.store_document(request.json)
+
+    # TODO: unify document_id with the one stored on Ceph
     return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
 
 
