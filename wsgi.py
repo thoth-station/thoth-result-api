@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
+"""API service abstracting storage used in Thoth."""
 
-import functools
 import json
 import os
 import uuid
@@ -37,37 +37,35 @@ def api_v1():
 
 @application.route('/api/v1/analysis-result', methods=['POST'])
 def post_analysis_result():
-    document_id = 'analysis-' + str(uuid.uuid4())
+    adapter = AnalysisResultsStore()
+    adapter.connect()
+    adapter.store_document(request.json)
+
+    # For now duplicate storing onto PV
+    document_id = AnalysisResultsStore.get_document_id(request.json)
     file_path = os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], '{}.json'.format(document_id))
     with open(file_path, 'w') as output_file:
         json.dump(request.json, output_file, sort_keys=True, indent=2)
 
     application.logger.info("Analysis result stored to file %r", file_path)
 
-    # For now duplicate storing to Ceph
-    adapter = AnalysisResultsStore()
-    adapter.connect()
-    adapter.store_document(request.json)
-
-    # TODO: unify document_id with the one stored on Ceph
     return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
 
 
 @application.route('/api/v1/solver-result', methods=['POST'])
 def post_solver_result():
-    document_id = 'solver-' + str(uuid.uuid4())
+    adapter = SolverResultsStore()
+    adapter.connect()
+    adapter.store_document(request.json)
+
+    # For now duplicate storing onto PV
+    document_id = SolverResultsStore.get_document_id(request.json)
     file_path = os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], '{}.json'.format(document_id))
     with open(file_path, 'w') as output_file:
         json.dump(request.json, output_file, sort_keys=True, indent=2)
 
     application.logger.info("Solver result stored to file %r", file_path)
 
-    # For now duplicate storing to Ceph
-    adapter = SolverResultsStore()
-    adapter.connect()
-    adapter.store_document(request.json)
-
-    # TODO: unify document_id with the one stored on Ceph
     return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
 
 
