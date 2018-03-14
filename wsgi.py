@@ -5,36 +5,16 @@ import json
 import os
 import uuid
 
-from flask import abort
 from flask import Flask
 from flask import jsonify
 from flask import request
 from flask import redirect
 
 from thoth.storages import AnalysisResultsStore
-from thoth.storages import RESULT_SCHEMA
 from thoth.storages import SolverResultsStore
 
 
 application = Flask(__name__)
-
-
-def validate_result_schema(func):
-    """Helper for validating result schemas posted to result endpoints."""
-    @functools.wraps(func)
-    def wrapped(*args, **kwargs):
-        if not request.json:
-            abort(400)
-
-        try:
-            RESULT_SCHEMA(request.json)
-        except Exception as exc:
-            application.logger.exception("Invalid result schema")
-            return jsonify({'error': str(exc)}), 400, {'ContentType': 'application/json'}
-
-        return func(*args, *kwargs)
-
-    return wrapped
 
 
 @application.route('/')
@@ -56,7 +36,6 @@ def api_v1():
 
 
 @application.route('/api/v1/analysis-result', methods=['POST'])
-@validate_result_schema
 def post_analysis_result():
     document_id = 'analysis-' + str(uuid.uuid4())
     file_path = os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], '{}.json'.format(document_id))
@@ -75,7 +54,6 @@ def post_analysis_result():
 
 
 @application.route('/api/v1/solver-result', methods=['POST'])
-@validate_result_schema
 def post_solver_result():
     document_id = 'solver-' + str(uuid.uuid4())
     file_path = os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], '{}.json'.format(document_id))
@@ -94,7 +72,6 @@ def post_solver_result():
 
 
 @application.route('/api/v1/adviser-result', methods=['POST'])
-@validate_result_schema
 def post_adviser_result():
     document_id = 'adviser-' + str(uuid.uuid4())
     file_path = os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], '{}.json'.format(document_id))
