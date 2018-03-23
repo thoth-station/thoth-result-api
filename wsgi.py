@@ -20,16 +20,8 @@ application = Flask(__name__)
 def post_analysis_result():
     adapter = AnalysisResultsStore()
     adapter.connect()
-    adapter.store_document(request.json)
-
-    # For now duplicate storing onto PV
-    document_id = AnalysisResultsStore.get_document_id(request.json)
-    file_path = os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], '{}.json'.format(document_id))
-    with open(file_path, 'w') as output_file:
-        json.dump(request.json, output_file, sort_keys=True, indent=2)
-
-    application.logger.info("Analysis result stored to file %r", file_path)
-
+    document_id = adapter.store_document(request.json)
+    application.logger.info("Analyzer result stored with document_id %r", document_id)
     return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
 
 
@@ -37,29 +29,14 @@ def post_analysis_result():
 def post_solver_result():
     adapter = SolverResultsStore()
     adapter.connect()
-    adapter.store_document(request.json)
-
-    # For now duplicate storing onto PV
-    document_id = SolverResultsStore.get_document_id(request.json)
-    file_path = os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], '{}.json'.format(document_id))
-    with open(file_path, 'w') as output_file:
-        json.dump(request.json, output_file, sort_keys=True, indent=2)
-
-    application.logger.info("Solver result stored to file %r", file_path)
-
+    document_id = adapter.store_document(request.json)
+    application.logger.info("Solver result stored with document_id %r", document_id)
     return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
 
 
 @application.route('/api/v1/adviser-result', methods=['POST'])
 def post_adviser_result():
-    # TODO: create an adapter
-    document_id = 'adviser-' + str(uuid.uuid4())
-    file_path = os.path.join(os.environ['THOTH_PERSISTENT_VOLUME_PATH'], '{}.json'.format(document_id))
-    with open(file_path, 'w') as output_file:
-        json.dump(request.json, output_file, sort_keys=True, indent=2)
-
-    application.logger.info("Adviser result stored to file %r", file_path)
-    return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
+    return jsonify({'error': 'Not implemented yet'}), 500, {'ContentType': 'application/json'}
 
 
 @application.route('/readiness')
@@ -69,7 +46,11 @@ def get_readiness():
 
 @application.route('/liveness')
 def get_liveness():
-    assert os.path.isdir(os.environ['THOTH_PERSISTENT_VOLUME_PATH'])
+    adapter = SolverResultsStore()
+    adapter.connect()
+    if not adapter.is_connected():
+        raise RuntimeError("Unable to connect to the remote solver result store")
+
     return jsonify(None)
 
 
