@@ -17,6 +17,7 @@ werkzeug = "==0.14.1"
 gremlinpython = "*"
 voluptuous = "*"
 thoth-storages = ">=0.0.6"
+thoth-common = ">=0.0.1"
 
 
 [dev-packages]
