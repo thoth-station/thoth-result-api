@@ -10,7 +10,10 @@ from flask import request
 from thoth.common import init_logging
 from thoth.storages import AnalysisResultsStore
 from thoth.storages import SolverResultsStore
+from thoth.storages import __version__ as thoth_storages_version
 
+
+__version__ = thoth_storages_version + '-results_api+dev'
 
 init_logging()
 application = Flask(__name__)
@@ -43,7 +46,7 @@ def post_adviser_result():
 
 @application.route('/readiness')
 def get_readiness():
-    return jsonify(None)
+    return jsonify({'status': 'ready', 'version': __version__}), 200
 
 
 @application.route('/liveness')
@@ -53,8 +56,7 @@ def get_liveness():
     if not adapter.is_connected():
         raise RuntimeError("Unable to connect to the remote solver result store")
 
-    return jsonify(None)
-
+    return jsonify({'status': 'ready', 'version': __version__}), 200
 
 if __name__ == '__main__':
     application.run()
