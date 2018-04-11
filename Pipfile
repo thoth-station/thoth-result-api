@@ -22,3 +22,5 @@ thoth-common = ">=0.0.1"
 
 [dev-packages]
 
+pylint = "*"
+"autopep8" = "*"
