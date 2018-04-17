@@ -1,0 +1,75 @@
+apiVersion: v1
+kind: Template
+labels:
+  template: thoth-result-api-buildconfig
+  thoth: 0.1.0
+metadata:
+  name: thoth-result-api-buildconfig
+  annotations:
+    description: This is Thoth Core - Results API BuildConfig
+    openshift.io/display-name: 'Thoth Core: Result API BuildConfig'
+    version: 0.1.0
+    tags: poc,thoth,result-api,ai-stacks
+    template.openshift.io/documentation-url: https://github.com/Thoth-Station/
+    template.openshift.io/long-description: This is Thoth Result API BuildConfig, this template is meant to be used by Jenkins, but could also be used by humans...
+    template.openshift.io/provider-display-name: Red Hat, Inc.
+
+objects:
+- kind: BuildConfig
+  apiVersion: v1
+  metadata:
+    name: result-api
+    namespace: '${THOTH_MIDDLETIER_NAMESPACE}'
+    labels:
+      app: thoth-core
+      thoth-component: result-api
+  spec:
+    output:
+      to:
+        kind: ImageStreamTag
+        name: 'result-api:${IMAGE_STREAM_TAG}'
+    source:
+      type: Git
+      git:
+        uri: '${GITHUB_URL}'
+        ref: '${GITHUB_REF}'
+    strategy:
+      sourceStrategy:
+        from:
+          kind: ImageStreamTag
+          name: python-36-centos7:latest
+          namespace: '${THOTH_BACKEND_NAMESPACE}'
+      type: Source
+    triggers:
+    - type: ConfigChange
+    - type: ImageChange
+      imageChange: {}
+
+parameters:
+- displayName: Thoth Backend Namespace
+  description: Name of the Thoth Backend Namespace
+  required: true
+  name: THOTH_BACKEND_NAMESPACE
+
+- displayName: Thoth Middle Tier Namespace
+  description: Name of the Thoth Middle Tier Namespace
+  required: true
+  name: THOTH_MIDDLETIER_NAMESPACE
+
+- description: Name of the github repository for Thoth's Result API
+  displayName: Git Repository
+  required: true
+  name: GITHUB_URL
+  value: 'https://github.com/thoth-station/result-api'
+
+- description: Git reference to be used for Thoth's Result API
+  displayName: Git Reference
+  required: true
+  name: GITHUB_REF
+  value: 'master'
+
+- description: Tag of the output ImageStream the resulting container image should go to
+  displayName: ImageStream Tag
+  required: true
+  name: IMAGE_STREAM_TAG
+  value: 'latest'
