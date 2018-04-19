@@ -46,7 +46,7 @@ def post_adviser_result():
 
 @application.route('/readiness')
 def get_readiness():
-    return jsonify({'status': 'ready', 'version': __version__}), 200
+    return jsonify({'status': 'ready', 'version': __version__}), 200, {'ContentType': 'application/json'}
 
 
 @application.route('/liveness')
@@ -54,9 +54,13 @@ def get_liveness():
     adapter = SolverResultsStore()
     adapter.connect()
     if not adapter.is_connected():
-        raise RuntimeError("Unable to connect to the remote solver result store")
+        raise RuntimeError(
+            "Unable to connect to the remote solver result store")
 
-    return jsonify({'status': 'ready', 'version': __version__}), 200
+    return jsonify({'status': 'ready', 'version': __version__}), 200, {'ContentType': 'application/json'}
+
 
 if __name__ == '__main__':
-    application.run()
+    _LOGGER.info(f"Results API v{__version__} starting...")
+
+    application.run(port=8080)
