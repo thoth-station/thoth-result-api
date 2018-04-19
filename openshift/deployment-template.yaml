@@ -8,7 +8,7 @@ metadata:
   annotations:
     description: This is Thoth Core - Results API
     openshift.io/display-name: Thoth Core
-    version: 0.1.0
+    version: 0.2.0
     tags: poc,thoth,result-api,ai-stacks
     template.openshift.io/documentation-url: https://github.com/Thoth-Station/
     template.openshift.io/long-description: This template defines resources needed to deploy Thoth Core Services as a Proof-of-Concept to OpenShift.
@@ -23,7 +23,6 @@ objects:
       app: thoth-core
       component: result-api
     name: result-api
-    namespace: ${THOTH_MIDDLETIER_NAMESPACE}
   spec:
     ports:
     - port: 80
@@ -40,7 +39,6 @@ objects:
       app: thoth-core
       component: result-api
     name: result-api
-    namespace: ${THOTH_MIDDLETIER_NAMESPACE}
   spec:
     replicas: 1
     selector:
@@ -132,12 +130,5 @@ objects:
     labels:
       app: thoth-core
     name: result-api
-    namespace: ${THOTH_MIDDLETIER_NAMESPACE}
   spec:
     name: latest
-
-parameters:
-- displayName: Thoth Middle Tier Namespace
-  description: Name of the Thoth Middle Tier Namespace
-  required: true
-  name: THOTH_MIDDLETIER_NAMESPACE

@@ -8,7 +8,7 @@ metadata:
   annotations:
     description: This is Thoth Core - Results API BuildConfig
     openshift.io/display-name: 'Thoth Core: Result API BuildConfig'
-    version: 0.1.0
+    version: 0.2.0
     tags: poc,thoth,result-api,ai-stacks
     template.openshift.io/documentation-url: https://github.com/Thoth-Station/
     template.openshift.io/long-description: This is Thoth Result API BuildConfig, this template is meant to be used by Jenkins, but could also be used by humans...
@@ -19,7 +19,6 @@ objects:
   apiVersion: v1
   metadata:
     name: result-api
-    namespace: '${THOTH_MIDDLETIER_NAMESPACE}'
     labels:
       app: thoth-core
       thoth-component: result-api
@@ -34,28 +33,24 @@ objects:
         uri: '${GITHUB_URL}'
         ref: '${GITHUB_REF}'
     strategy:
+      type: Source
       sourceStrategy:
         from:
           kind: ImageStreamTag
           name: python-36-centos7:latest
-          namespace: '${THOTH_BACKEND_NAMESPACE}'
-      type: Source
+        env:
+          - name: ENABLE_PIPENV
+            value: '1'
+          - name: UPGRADE_PIP_TO_LATEST
+            value: ''
+          - name: WEB_CONCURRENCY
+            value: '4'
     triggers:
     - type: ConfigChange
     - type: ImageChange
       imageChange: {}
 
 parameters:
-- displayName: Thoth Backend Namespace
-  description: Name of the Thoth Backend Namespace
-  required: true
-  name: THOTH_BACKEND_NAMESPACE
-
-- displayName: Thoth Middle Tier Namespace
-  description: Name of the Thoth Middle Tier Namespace
-  required: true
-  name: THOTH_MIDDLETIER_NAMESPACE
-
 - description: Name of the github repository for Thoth's Result API
   displayName: Git Repository
   required: true
