@@ -103,9 +103,7 @@ pipeline {
                                     "-p", 
                                     "IMAGE_STREAM_TAG=${env.TAG}",
                                     "GITHUB_URL=https://github.com/${org}/${repo}",
-                                    "GITHUB_REF=${env.REF}",
-                                    "THOTH_BACKEND_NAMESPACE=${CI_TEST_NAMESPACE}",
-                                    "THOTH_MIDDLETIER_NAMESPACE=${CI_TEST_NAMESPACE}")
+                                    "GITHUB_REF=${env.REF}")
 
                             echo "BuildConfig Model from Template"
                             echo "${model}"
