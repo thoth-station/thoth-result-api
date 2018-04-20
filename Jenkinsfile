@@ -103,9 +103,7 @@ pipeline {
                                     "-p", 
                                     "IMAGE_STREAM_TAG=${env.TAG}",
                                     "GITHUB_URL=https://github.com/${org}/${repo}",
-                                    "GITHUB_REF=${env.REF}",
-                                    "THOTH_BACKEND_NAMESPACE=${CI_TEST_NAMESPACE}",
-                                    "THOTH_MIDDLETIER_NAMESPACE=${CI_TEST_NAMESPACE}")
+                                    "GITHUB_REF=${env.REF}")
 
                             echo "BuildConfig Model from Template"
                             echo "${model}"
@@ -131,9 +129,9 @@ pipeline {
         } // stage
         stage("Build Container Images") {
             parallel {
-                stage("User API") {
+                stage("Result API") {
                     steps {
-                        echo "Building Thoth User API container image..."
+                        echo "Building Thoth Result API container image..."
                         script {
                             tagMap['result-api'] = aIStacksPipelineUtils.buildImageWithTag(CI_TEST_NAMESPACE, "result-api", "${env.TAG}")
                         }
@@ -163,6 +161,8 @@ pipeline {
                             }
 
                             if (result.status != 0) {
+                                openshift.tag("${CI_TEST_NAMESPACE}/result-api:stable", "${CI_TEST_NAMESPACE}/result-api:test")
+
                                 error(result.err)
                             }
                         }
@@ -222,15 +222,6 @@ pipeline {
         }
         success {
             echo "All Systems GO!"
-        }
-        failure {
-            script {
-                mattermostSend channel: "#thoth-station", 
-                    icon: 'https://avatars1.githubusercontent.com/u/33906690', 
-                    message: "${JOB_NAME} #${BUILD_NUMBER}: ${currentBuild.currentResult}: ${BUILD_URL}"
-
-                error "BREAK BREAK BREAK - build failed!"
-            }
         }
     }
 }
