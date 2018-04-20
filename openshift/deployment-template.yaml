@@ -51,8 +51,6 @@ objects:
         containers:
         - name: result-api
           env:
-          - name: APP_FILE
-            value: wsgi.py
           - name: THOTH_DEPLOYMENT_NAME
             valueFrom:
               configMapKeyRef:
