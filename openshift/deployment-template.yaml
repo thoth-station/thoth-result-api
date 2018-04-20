@@ -23,6 +23,7 @@ objects:
       app: thoth-core
       component: result-api
     name: result-api
+    namespace: ${THOTH_MIDDLETIER_NAMESPACE}
   spec:
     ports:
     - port: 80
@@ -39,6 +40,7 @@ objects:
       app: thoth-core
       component: result-api
     name: result-api
+    namespace: ${THOTH_MIDDLETIER_NAMESPACE}
   spec:
     replicas: 1
     selector:
@@ -130,5 +132,12 @@ objects:
     labels:
       app: thoth-core
     name: result-api
+    namespace: ${THOTH_MIDDLETIER_NAMESPACE}
   spec:
     name: latest
+
+parameters:
+- displayName: Thoth Middletier Namespace
+  description: Name of the Thoth Middletier Namespace
+  required: true
+  name: THOTH_MIDDLETIER_NAMESPACE
