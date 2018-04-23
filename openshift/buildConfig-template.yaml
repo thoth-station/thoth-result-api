@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Template
 labels:
-  template: thoth-result-api-buildconfig
+  template: result-api-buildconfig
   thoth: 0.1.0
 metadata:
-  name: thoth-result-api-buildconfig
+  name: result-api-buildconfig
   annotations:
     description: This is Thoth Core - Results API BuildConfig
     openshift.io/display-name: 'Thoth Core: Result API BuildConfig'
