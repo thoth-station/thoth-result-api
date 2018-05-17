@@ -70,10 +70,7 @@ def get_readiness():
 def get_liveness():
     adapter = SolverResultsStore()
     adapter.connect()
-    if not adapter.is_connected():
-        raise RuntimeError(
-            "Unable to connect to the remote solver result store")
-
+    adapter.ceph.check_connection()
     return jsonify({'status': 'ready', 'version': __version__}), 200, {'ContentType': 'application/json'}
 
 
