@@ -1,19 +1,14 @@
 [[source]]
-
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
-
 [packages]
-
 flask = "*"
-thoth-storages = ">=0.0.13"
+thoth-storages = ">=0.0.26"
 thoth-common = ">=0.0.1"
 gunicorn = "*"
 
-
 [dev-packages]
-
 pylint = "*"
 "autopep8" = "*"
