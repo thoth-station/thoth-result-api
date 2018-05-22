@@ -86,6 +86,16 @@ objects:
               secretKeyRef:
                 name: thoth
                 key: ceph-secret-key
+          - name: RSYSLOG_HOST
+            valueFrom:
+             configMapKeyRef:
+               key: rsyslog-host
+               name: thoth
+          - name: RSYSLOG_PORT
+            valueFrom:
+             configMapKeyRef:
+               key: rsyslog-port
+               name: thoth
           ports:
             - containerPort: 8080
               protocol: TCP
