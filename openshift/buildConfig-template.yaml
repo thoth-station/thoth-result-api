@@ -8,7 +8,7 @@ metadata:
   annotations:
     description: This is Thoth Core - Results API BuildConfig
     openshift.io/display-name: 'Thoth Core: Result API BuildConfig'
-    version: 0.2.0
+    version: 0.3.0
     tags: poc,thoth,result-api,ai-stacks
     template.openshift.io/documentation-url: https://github.com/Thoth-Station/
     template.openshift.io/long-description: This is Thoth Result API BuildConfig, this template is meant to be used by Jenkins, but could also be used by humans...
@@ -23,6 +23,13 @@ objects:
       app: thoth-core
       thoth-component: result-api
   spec:
+    resources:
+      limits:
+        cpu: 500m
+        memory: 512Mi
+      requests:
+        cpu: 500m
+        memory: 512Mi
     output:
       to:
         kind: ImageStreamTag

@@ -9,7 +9,7 @@ STABLE_LABEL = "stable"
 tagMap = [:]
 
 // Initialize
-tagMap['result-api'] = '0.1.0'
+tagMap['result-api'] = '0.3.0'
 
 // IRC properties
 IRC_NICK = "sesheta"
