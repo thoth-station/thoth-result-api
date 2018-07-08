@@ -1,0 +1,12 @@
+- project:
+    check:
+      jobs:
+        - linters
+    gate:
+      queue: core
+      jobs:
+        - linters
+    kebechet-auto-gate:
+      queue: core
+      jobs:
+        - linters

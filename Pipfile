@@ -12,3 +12,7 @@ gunicorn = "*"
 [dev-packages]
 pylint = "*"
 "autopep8" = "*"
+pytest = "*"
+pytest-timeout = "*"
+pytest-cov = "*"
+coala-bears = "*"
