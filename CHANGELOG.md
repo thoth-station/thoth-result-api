@@ -1,4 +1,4 @@
-# Changelog for Thoth's Storage Module
+# Changelog for Thoth's Result API
 
 ## [0.4.0] - 2018-Jul-08 - goern
 
