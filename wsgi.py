@@ -39,7 +39,7 @@ _LOGGER = logging.getLogger('thoth.result_api')
 
 
 @application.route('/api/v1/analysis-result', methods=['POST'])
-def post_analysis_result():
+def post_analysis_result():  # Ignore PyDocStyleBear
     adapter = AnalysisResultsStore()
     adapter.connect()
     document_id = adapter.store_document(request.json)
@@ -48,7 +48,7 @@ def post_analysis_result():
 
 
 @application.route('/api/v1/solver-result', methods=['POST'])
-def post_solver_result():
+def post_solver_result():  # Ignore PyDocStyleBear
     adapter = SolverResultsStore()
     adapter.connect()
     document_id = adapter.store_document(request.json)
@@ -57,17 +57,17 @@ def post_solver_result():
 
 
 @application.route('/api/v1/adviser-result', methods=['POST'])
-def post_adviser_result():
+def post_adviser_result():  # Ignore PyDocStyleBear
     return jsonify({'error': 'Not implemented yet'}), 500, {'ContentType': 'application/json'}
 
 
 @application.route('/readiness')
-def get_readiness():
+def get_readiness():  # Ignore PyDocStyleBear
     return jsonify({'status': 'ready', 'version': __version__}), 200, {'ContentType': 'application/json'}
 
 
 @application.route('/liveness')
-def get_liveness():
+def get_liveness():  # Ignore PyDocStyleBear
     adapter = SolverResultsStore()
     adapter.connect()
     adapter.ceph.check_connection()

@@ -1,9 +1,9 @@
-# Changelog for Thoth's Result API Service
+# Changelog for Thoth's Result API
 
-## [0.3.1] - 2018-Jun-12 - goern
+## [0.4.0] - 2018-Jul-08 - goern
 
 ### Added
 
-Set resource limits of BuildConfig and Deployment to reasonable values, this will prevent unpredicted behavior on UpShift.
+Starting with this release we have a Zuul-CI pipeline that:
 
-Rename Template used by Jenkinsfile to `result-api-buildconfig`.
+- lints on Pull Requrest and gate/merge
