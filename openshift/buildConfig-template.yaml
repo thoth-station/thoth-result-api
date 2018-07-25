@@ -64,7 +64,7 @@ objects:
     kind: ImageStream
     metadata:
       labels:
-        app: thoth-core
+        app: thoth
       name: result-api
     spec:
       name: latest
