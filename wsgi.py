@@ -28,6 +28,7 @@ from thoth.common import init_logging
 from thoth.common import logger_setup
 from thoth.storages import AnalysisResultsStore
 from thoth.storages import SolverResultsStore
+from thoth.storages import AdvisersResultsStore
 from thoth.storages import __version__ as thoth_storages_version
 
 
@@ -59,7 +60,11 @@ def post_solver_result():  # Ignore PyDocStyleBear
 
 @application.route('/api/v1/adviser-result', methods=['POST'])
 def post_adviser_result():  # Ignore PyDocStyleBear
-    return jsonify({'error': 'Not implemented yet'}), 500, {'ContentType': 'application/json'}
+    adapter = AdvisersResultsStore()
+    adapter.connect()
+    document_id = adapter.store_document(request.json)
+    _LOGGER.info("Adviser result stored with document_id %r", document_id)
+    return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
 
 
 @logger_setup('werkzeug', logging.WARNING)
