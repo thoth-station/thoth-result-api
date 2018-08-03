@@ -25,6 +25,7 @@ from flask import jsonify
 from flask import request
 
 from thoth.common import init_logging
+from thoth.common import logger_setup
 from thoth.storages import AnalysisResultsStore
 from thoth.storages import SolverResultsStore
 from thoth.storages import __version__ as thoth_storages_version
@@ -61,11 +62,15 @@ def post_adviser_result():  # Ignore PyDocStyleBear
     return jsonify({'error': 'Not implemented yet'}), 500, {'ContentType': 'application/json'}
 
 
+@logger_setup('werkzeug', logging.WARNING)
+@logger_setup('botocore.vendored.requests.packages.urllib3.connectionpool', logging.WARNING)
 @application.route('/readiness')
 def get_readiness():  # Ignore PyDocStyleBear
     return jsonify({'status': 'ready', 'version': __version__}), 200, {'ContentType': 'application/json'}
 
 
+@logger_setup('werkzeug', logging.WARNING)
+@logger_setup('botocore.vendored.requests.packages.urllib3.connectionpool', logging.WARNING)
 @application.route('/liveness')
 def get_liveness():  # Ignore PyDocStyleBear
     adapter = SolverResultsStore()
@@ -76,5 +81,4 @@ def get_liveness():  # Ignore PyDocStyleBear
 
 if __name__ == '__main__':
     _LOGGER.info(f"Results API v{__version__} starting...")
-
     application.run(port=8080)
