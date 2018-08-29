@@ -3,10 +3,15 @@
       jobs:
         - linters
     gate:
-      queue: core
+      queue: thoth-station/core
       jobs:
         - linters
     kebechet-auto-gate:
-      queue: core
+      queue: thoth-station/core
       jobs:
         - linters
+    post:
+      jobs:
+        - trigger-build:
+            vars:
+              webhook_url: "https://paas.upshift.redhat.com/oapi/v1/namespaces/thoth-test-core/buildconfigs/result-api/webhooks/"
