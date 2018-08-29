@@ -10,7 +10,6 @@ thoth-common = "*"
 gunicorn = "*"
 
 [dev-packages]
-pylint = "*"
 "autopep8" = "*"
 pytest = "*"
 pytest-timeout = "*"
