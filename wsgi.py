@@ -26,9 +26,10 @@ from flask import request
 
 from thoth.common import init_logging
 from thoth.common import logger_setup
-from thoth.storages import AnalysisResultsStore
-from thoth.storages import SolverResultsStore
 from thoth.storages import AdvisersResultsStore
+from thoth.storages import AnalysisResultsStore
+from thoth.storages import ProvenanceResultsStore
+from thoth.storages import SolverResultsStore
 from thoth.storages import __version__ as thoth_storages_version
 
 
@@ -64,6 +65,15 @@ def post_adviser_result():  # Ignore PyDocStyleBear
     adapter.connect()
     document_id = adapter.store_document(request.json)
     _LOGGER.info("Adviser result stored with document_id %r", document_id)
+    return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
+
+
+@application.route('/api/v1/provenance-result', methods=['POST'])
+def post_provenance_result():  # Ignore PyDocStyleBear
+    adapter = ProvenanceResultsStore()
+    adapter.connect()
+    document_id = adapter.store_document(request.json)
+    _LOGGER.info("Provenance result stored with document_id %r", document_id)
     return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
 
 
