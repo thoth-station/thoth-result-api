@@ -68,7 +68,7 @@ def post_adviser_result():  # Ignore PyDocStyleBear
     return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
 
 
-@application.route('/api/v1/provenance-result', methods=['POST'])
+@application.route('/api/v1/provenance-checker-result', methods=['POST'])
 def post_provenance_result():  # Ignore PyDocStyleBear
     adapter = ProvenanceResultsStore()
     adapter.connect()
