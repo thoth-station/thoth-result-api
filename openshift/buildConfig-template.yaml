@@ -59,6 +59,10 @@ objects:
         - type: ConfigChange
         - type: ImageChange
           imageChange: {}
+        - type: Generic
+          generic:
+            secretReference:
+              name: zuul-incoming-webhook
 
   - apiVersion: v1
     kind: ImageStream
