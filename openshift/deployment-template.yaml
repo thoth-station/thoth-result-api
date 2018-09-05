@@ -5,7 +5,7 @@ metadata:
   annotations:
     description: This is Thoth Core - Results API
     openshift.io/display-name: Thoth Core
-    version: 0.4.0
+    version: 0.5.0
     tags: poc,thoth,result-api,ai-stacks
     template.openshift.io/documentation-url: https://github.com/Thoth-Station/
     template.openshift.io/long-description: >
@@ -135,4 +135,11 @@ objects:
               - result-api
             from:
               kind: ImageStreamTag
-              name: 'result-api:latest'
+              name: 'result-api:${IMAGE_STREAM_TAG}'
+
+parameters:
+  - description: Tag of the output ImageStream the resulting container image should go to
+    displayName: ImageStream Tag
+    required: true
+    name: IMAGE_STREAM_TAG
+    value: 'latest'
