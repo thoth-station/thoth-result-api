@@ -33,7 +33,8 @@ from thoth.storages import SolverResultsStore
 from thoth.storages import __version__ as thoth_storages_version
 
 
-__version__ = thoth_storages_version + '-results_api+dev'
+__version__ = '0.6.0' + '+thoth_storage.' + thoth_storages_version
+
 
 init_logging()
 application = Flask(__name__)
@@ -95,5 +96,5 @@ def get_liveness():  # Ignore PyDocStyleBear
 
 
 if __name__ == '__main__':
-    _LOGGER.info(f"Results API v{__version__} starting...")
+    _LOGGER.info(f"Result API v{__version__} starting...")
     application.run(port=8080)
