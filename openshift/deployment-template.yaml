@@ -3,19 +3,28 @@ kind: Template
 metadata:
   name: result-api-deployment
   annotations:
-    description: This is Thoth Core - Results API
-    openshift.io/display-name: Thoth Core
-    version: 0.5.0
-    tags: poc,thoth,result-api,ai-stacks
+    description: >
+      This is Thoth Result API Deployment, this template is meant to be used by
+      Bots, but could also be used by humans...
+    openshift.io/display-name: "Thoth Result API Deployment"
+    version: 0.6.0
+    tags: thoth,result-api,ai-stacks,aistacks
     template.openshift.io/documentation-url: https://github.com/Thoth-Station/
     template.openshift.io/long-description: >
-      This template defines resources needed to deploy Thoth Core Services
-      as a Proof-of-Concept to OpenShift.
+      This is Thoth Result API Deployment, this template is meant to be used
+      by Bots, but could also be used by humans...
     template.openshift.io/provider-display-name: Red Hat, Inc.
   labels:
     template: result-api-deployment
     app: thoth
     component: result-api
+
+parameters:
+  - description: Tag of the output ImageStream the resulting container image should go to
+    displayName: ImageStream Tag
+    required: true
+    name: IMAGE_STREAM_TAG
+    value: 'latest'
 
 objects:
   - apiVersion: v1
@@ -99,6 +108,11 @@ objects:
                   configMapKeyRef:
                     key: rsyslog-port
                     name: thoth
+                - name: SENTRY_DSN
+                  valueFrom:
+                    secretKeyRef:
+                      name: thoth
+                      key: sentry-dsn
               ports:
                 - containerPort: 8080
                   protocol: TCP
@@ -136,10 +150,3 @@ objects:
             from:
               kind: ImageStreamTag
               name: 'result-api:${IMAGE_STREAM_TAG}'
-
-parameters:
-  - description: Tag of the output ImageStream the resulting container image should go to
-    displayName: ImageStream Tag
-    required: true
-    name: IMAGE_STREAM_TAG
-    value: 'latest'

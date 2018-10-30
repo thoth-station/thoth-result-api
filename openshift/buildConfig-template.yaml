@@ -3,19 +3,40 @@ kind: Template
 metadata:
   name: result-api-buildconfig
   annotations:
-    description: This is Thoth Core - Results API BuildConfig
-    openshift.io/display-name: 'Thoth Core: Result API BuildConfig'
-    version: 0.4.0
-    tags: poc,thoth,result-api,ai-stacks
+    description: >
+      This is Thoth Result API BuildConfig, this template is meant to be used by
+      Bots, but could also be used by humans...
+    openshift.io/display-name: "Thoth Result API BuildConfig"
+    version: 0.6.0
+    tags: thoth,result-api,ai-stacks,aistacks
     template.openshift.io/documentation-url: https://github.com/Thoth-Station/
     template.openshift.io/long-description: >
-      This is Thoth Result API BuildConfig, this template is meant to be used by Bots,
-      but could also be used by humans...
+      This is Thoth Result API BuildConfig, this template is meant to be used
+      by Bots, but could also be used by humans...
     template.openshift.io/provider-display-name: Red Hat, Inc.
   labels:
     template: result-api-buildconfig
     app: thoth
     component: result-api
+
+parameters:
+  - description: Name of the github repository for Thoth's Result API
+    displayName: Git Repository
+    required: true
+    name: GITHUB_URL
+    value: 'https://github.com/thoth-station/result-api'
+
+  - description: Git reference to be used for Thoth's Result API
+    displayName: Git Reference
+    required: true
+    name: GITHUB_REF
+    value: 'master'
+
+  - description: Tag of the output ImageStream the resulting container image should go to
+    displayName: ImageStream Tag
+    required: true
+    name: IMAGE_STREAM_TAG
+    value: 'latest'
 
 objects:
   - kind: BuildConfig
@@ -72,22 +93,3 @@ objects:
       name: result-api
     spec:
       name: latest
-
-parameters:
-  - description: Name of the github repository for Thoth's Result API
-    displayName: Git Repository
-    required: true
-    name: GITHUB_URL
-    value: 'https://github.com/thoth-station/result-api'
-
-  - description: Git reference to be used for Thoth's Result API
-    displayName: Git Reference
-    required: true
-    name: GITHUB_REF
-    value: 'master'
-
-  - description: Tag of the output ImageStream the resulting container image should go to
-    displayName: ImageStream Tag
-    required: true
-    name: IMAGE_STREAM_TAG
-    value: 'latest'
