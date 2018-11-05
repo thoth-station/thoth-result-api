@@ -28,6 +28,7 @@ from thoth.common import init_logging
 from thoth.common import logger_setup
 from thoth.storages import AdvisersResultsStore
 from thoth.storages import AnalysisResultsStore
+from thoth.storages import DependencyMonkeyReportsStore
 from thoth.storages import ProvenanceResultsStore
 from thoth.storages import SolverResultsStore
 from thoth.storages import __version__ as thoth_storages_version
@@ -66,6 +67,15 @@ def post_adviser_result():  # Ignore PyDocStyleBear
     adapter.connect()
     document_id = adapter.store_document(request.json)
     _LOGGER.info("Adviser result stored with document_id %r", document_id)
+    return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
+
+
+@application.route('/api/v1/dependency-monkey-report', methods=['POST'])
+def post_adviser_result():  # Ignore PyDocStyleBear
+    adapter = DependencyMonkeyReportsStore()
+    adapter.connect()
+    document_id = adapter.store_document(request.json)
+    _LOGGER.info("Dependency Monkey report stored with document_id %r", document_id)
     return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
 
 
