@@ -71,7 +71,7 @@ def post_adviser_result():  # Ignore PyDocStyleBear
 
 
 @application.route('/api/v1/dependency-monkey-report', methods=['POST'])
-def post_adviser_result():  # Ignore PyDocStyleBear
+def post_dependency_monkey_report():  # Ignore PyDocStyleBear
     adapter = DependencyMonkeyReportsStore()
     adapter.connect()
     document_id = adapter.store_document(request.json)
