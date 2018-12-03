@@ -29,6 +29,7 @@ from thoth.common import logger_setup
 from thoth.storages import AdvisersResultsStore
 from thoth.storages import AnalysisResultsStore
 from thoth.storages import DependencyMonkeyReportsStore
+from thoth.storages import GraphDatabase
 from thoth.storages import ProvenanceResultsStore
 from thoth.storages import SolverResultsStore
 from thoth.storages import __version__ as thoth_storages_version
@@ -86,6 +87,21 @@ def post_provenance_result():  # Ignore PyDocStyleBear
     document_id = adapter.store_document(request.json)
     _LOGGER.info("Provenance result stored with document_id %r", document_id)
     return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
+
+
+@application.route('/api/v1/subgraph-check', methods=['GET'])
+def get_subgraph_check():  # Ignore PyDocStyleBear
+    package_name = request.args.get('package_name')
+    package_version = request.args.get('package_version')
+    index_url = request.args.get('index_url')
+
+    graph = GraphDatabase()
+    graph.connect()
+
+    if graph.python_package_version_exists(package_name, package_version, index_url):
+        return jsonify({}), 208, {'ContentType': 'application/json'}
+    else:
+        return jsonify({}), 200, {'ContentType': 'application/json'}
 
 
 @logger_setup('werkzeug', logging.WARNING)
