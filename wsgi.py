@@ -95,6 +95,13 @@ def get_subgraph_check():  # Ignore PyDocStyleBear
     package_version = request.args.get('package_version')
     index_url = request.args.get('index_url')
 
+    if package_name in ('six', 'setuptools', 'pip'):
+        # These packages are solved using init-job as they are core components
+        # of the Python world. We immidiately say we don't need to have them
+        # analysed as analysing these package can break solver environment
+        # causing gathering false observations.
+        return jsonify({}), 208, {'ContentType': 'application/json'}
+
     graph = GraphDatabase()
     graph.connect()
 
