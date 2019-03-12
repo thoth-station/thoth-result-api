@@ -7,33 +7,44 @@ metadata:
       This is Thoth Result API Deployment, this template is meant to be used by
       Bots, but could also be used by humans...
     openshift.io/display-name: "Thoth Result API Deployment"
-    version: 0.6.0
+    version: 0.7.0
     tags: thoth,result-api,ai-stacks,aistacks
     template.openshift.io/documentation-url: https://github.com/Thoth-Station/
     template.openshift.io/long-description: >
       This is Thoth Result API Deployment, this template is meant to be used
       by Bots, but could also be used by humans...
-    template.openshift.io/provider-display-name: Red Hat, Inc.
+    template.openshift.io/provider-display-name: "Red Hat, Inc."
   labels:
     template: result-api-deployment
     app: thoth
     component: result-api
 
 parameters:
-  - description: Tag of the output ImageStream the resulting container image should go to
+  - description: Project the ImageStream to be use lives in
+    displayName: ImageStream Project
+    required: true
+    name: IMAGE_STREAM_PROJECT_NAME
+
+  - description: Tag of the ImageStream to be use
     displayName: ImageStream Tag
     required: true
     name: IMAGE_STREAM_TAG
-    value: 'latest'
+    value: "latest"
+
+  - description: Service account to be used.
+    displayName: Service account name.
+    required: true
+    name: SERVICE_ACCOUNT_NAME
+    value: "result-api"
 
 objects:
   - apiVersion: v1
     kind: Service
     metadata:
       labels:
-        service: result-api
         app: thoth
         component: result-api
+        service: result-api
       name: result-api
     spec:
       ports:
@@ -47,9 +58,9 @@ objects:
     kind: DeploymentConfig
     metadata:
       labels:
-        service: result-api
         app: thoth
         component: result-api
+        service: result-api
       name: result-api
     spec:
       replicas: 1
@@ -62,6 +73,7 @@ objects:
         spec:
           containers:
             - name: result-api
+              serviceAccountName: "${SERVICE_ACCOUNT_NAME}"
               env:
                 - name: THOTH_DEPLOYMENT_NAME
                   valueFrom:
@@ -125,7 +137,7 @@ objects:
                   memory: 512Mi
               readinessProbe:
                 httpGet:
-                  path: '/readiness'
+                  path: "/readiness"
                   port: 8080
                   scheme: HTTP
                 initialDelaySeconds: 5
@@ -133,7 +145,7 @@ objects:
                 timeoutSeconds: 10
               livenessProbe:
                 httpGet:
-                  path: '/liveness'
+                  path: "/liveness"
                   port: 8080
                   scheme: HTTP
                 initialDelaySeconds: 5
@@ -149,4 +161,5 @@ objects:
               - result-api
             from:
               kind: ImageStreamTag
-              name: 'result-api:${IMAGE_STREAM_TAG}'
+              namespace: "${IMAGE_STREAM_PROJECT_NAME}"
+              name: "result-api:${IMAGE_STREAM_TAG}"
