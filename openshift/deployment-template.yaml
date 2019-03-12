@@ -71,9 +71,9 @@ objects:
           labels:
             service: result-api
         spec:
+          serviceAccountName: "${SERVICE_ACCOUNT_NAME}"
           containers:
             - name: result-api
-              serviceAccountName: "${SERVICE_ACCOUNT_NAME}"
               env:
                 - name: THOTH_DEPLOYMENT_NAME
                   valueFrom:
