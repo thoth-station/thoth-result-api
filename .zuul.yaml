@@ -14,4 +14,4 @@
       jobs:
         - trigger-build:
             vars:
-              webhook_url: https://paas.upshift.redhat.com/oapi/v1/namespaces/thoth-test-core/buildconfigs/result-api/webhooks/
+              webhook_url: https://paas.upshift.redhat.com/oapi/v1/namespaces/thoth-test-core/buildconfigs/result-api/
