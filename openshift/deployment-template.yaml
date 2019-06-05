@@ -125,6 +125,18 @@ objects:
                     secretKeyRef:
                       name: thoth
                       key: sentry-dsn
+                - name: GRAPH_SERVICE_HOST
+                  valueFrom:
+                    configMapKeyRef:
+                      key: graph-service-host
+                      name: thoth
+                - name: GRAPH_TLS_PATH
+                  value: /var/run/secrets/dgraph
+              volumes:
+                - name: dgraph-tls-secrets
+                  secret:
+                    defaultMode: 420
+                    secretName: dgraph-tls
               ports:
                 - containerPort: 8080
                   protocol: TCP
@@ -151,6 +163,10 @@ objects:
                 initialDelaySeconds: 5
                 periodSeconds: 60
                 timeoutSeconds: 10
+      volumeMounts:
+        - mountPath: /var/run/secrets/dgraph
+          name: dgraph-tls-secrets
+          readOnly: true
       test: false
       triggers:
         - type: ConfigChange
