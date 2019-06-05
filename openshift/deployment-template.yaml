@@ -132,11 +132,10 @@ objects:
                       name: thoth
                 - name: GRAPH_TLS_PATH
                   value: /var/run/secrets/dgraph
-              volumes:
-                - name: dgraph-tls-secrets
-                  secret:
-                    defaultMode: 420
-                    secretName: dgraph-tls
+              volumeMounts:
+                - mountPath: /var/run/secrets/dgraph
+                  name: dgraph-tls
+                  readOnly: true
               ports:
                 - containerPort: 8080
                   protocol: TCP
@@ -163,10 +162,11 @@ objects:
                 initialDelaySeconds: 5
                 periodSeconds: 60
                 timeoutSeconds: 10
-      volumeMounts:
-        - mountPath: /var/run/secrets/dgraph
-          name: dgraph-tls-secrets
-          readOnly: true
+          volumes:
+            - name: dgraph-tls
+              secret:
+                defaultMode: 420
+                secretName: dgraph-tls
       test: false
       triggers:
         - type: ConfigChange
