@@ -93,6 +93,7 @@ def get_subgraph_check():  # Ignore PyDocStyleBear
     package_name = request.args.get('package_name')
     package_version = request.args.get('package_version')
     index_url = request.args.get('index_url')
+    solver_name = request.get('solver_name')
 
     if package_name in ('six', 'setuptools', 'pip'):
         # These packages are solved using init-job as they are core components
@@ -104,7 +105,7 @@ def get_subgraph_check():  # Ignore PyDocStyleBear
     graph = GraphDatabase()
     graph.connect()
 
-    if graph.python_package_version_exists(package_name, package_version, index_url):
+    if graph.python_package_version_exists(package_name, package_version, index_url, solver_name=solver_name):
         return jsonify({}), 208, {'ContentType': 'application/json'}
     else:
         return jsonify({}), 200, {'ContentType': 'application/json'}
