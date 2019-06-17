@@ -83,7 +83,7 @@ objects:
         - type: Generic
           generic:
             secretReference:
-              name: zuul-incoming-webhook
+              name: generic-webhook-secret
 
   - apiVersion: v1
     kind: ImageStream
