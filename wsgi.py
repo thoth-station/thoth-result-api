@@ -93,7 +93,7 @@ def get_subgraph_check():  # Ignore PyDocStyleBear
     package_name = request.args.get('package_name')
     package_version = request.args.get('package_version')
     index_url = request.args.get('index_url')
-    solver_name = request.get('solver_name')
+    solver_name = request.args.get('solver_name')
 
     if package_name in ('six', 'setuptools', 'pip'):
         # These packages are solved using init-job as they are core components
