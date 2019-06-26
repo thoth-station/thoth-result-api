@@ -31,6 +31,7 @@ from thoth.storages import DependencyMonkeyReportsStore
 from thoth.storages import GraphDatabase
 from thoth.storages import ProvenanceResultsStore
 from thoth.storages import SolverResultsStore
+from thoth.storages import PackageAnalysisResultsStore
 from thoth.storages import __version__ as thoth_storages_version
 
 
@@ -41,6 +42,15 @@ init_logging()
 application = Flask(__name__)
 
 _LOGGER = logging.getLogger('thoth.result_api')
+
+
+@application.route('/api/v1/package-analysis-result', methods=['POST'])
+def post_package_analysis_result():  # Ignore PyDocStyleBear
+    adapter = PackageAnalysisResultsStore()
+    adapter.connect()
+    document_id = adapter.store_document(request.json)
+    _LOGGER.info("Package Analyzer result stored with document_id %r", document_id)
+    return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
 
 
 @application.route('/api/v1/analysis-result', methods=['POST'])
