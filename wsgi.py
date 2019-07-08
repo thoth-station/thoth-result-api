@@ -25,6 +25,7 @@ from flask import request
 
 from thoth.common import init_logging
 from thoth.common import logger_setup
+from thoth.common import OpenShift
 from thoth.storages import AdvisersResultsStore
 from thoth.storages import AnalysisResultsStore
 from thoth.storages import DependencyMonkeyReportsStore
@@ -66,6 +67,15 @@ def post_adviser_result():  # Ignore PyDocStyleBear
     adapter = AdvisersResultsStore()
     adapter.connect()
     document_id = adapter.store_document(request.json)
+    if(request.form.get("origin")):
+        url = request.form.get("origin")
+        service = url.split("/")[2].split(".")[0]
+        OpenShift.schedule_kebechet(
+            url=url,
+            service=service,
+            subcommand="run-results",
+            analysis_id=document_id,
+        )
     _LOGGER.info("Adviser result stored with document_id %r", document_id)
     return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
 
@@ -84,6 +94,15 @@ def post_provenance_result():  # Ignore PyDocStyleBear
     adapter = ProvenanceResultsStore()
     adapter.connect()
     document_id = adapter.store_document(request.json)
+    if(request.form.get("origin")):
+        url = request.form.get("origin")
+        service = url.split("/")[2].split(".")[0]
+        OpenShift.schedule_kebechet(
+            url=url,
+            service=service,
+            subcommand="run-results",
+            analysis_id=document_id,
+        )
     _LOGGER.info("Provenance result stored with document_id %r", document_id)
     return jsonify({'document_id': document_id}), 201, {'ContentType': 'application/json'}
 
