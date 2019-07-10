@@ -43,17 +43,17 @@ init_logging()
 application = Flask(__name__)
 
 _LOGGER = logging.getLogger("thoth.result_api")
-
+_OPENSHIFT = OpenShift()
 
 @application.route("/api/v1/adviser-result", methods=["POST"])
 def post_adviser_result():  # Ignore PyDocStyleBear
     adapter = AdvisersResultsStore()
     adapter.connect()
     document_id = adapter.store_document(request.json)
-    if(request.form.get("origin")):
+    if request.form.get("origin"):
         url = request.form.get("origin")
-        service = url.split("/")[2].split(".")[0]
-        OpenShift.schedule_kebechet(
+        service = _get_service_from_url(url)
+        _OPENSHIFT.schedule_kebechet(
             url=url,
             service=service,
             subcommand="run-results",
@@ -95,10 +95,10 @@ def post_provenance_result():  # Ignore PyDocStyleBear
     adapter = ProvenanceResultsStore()
     adapter.connect()
     document_id = adapter.store_document(request.json)
-    if(request.form.get("origin")):
+    if request.form.get("origin"):
         url = request.form.get("origin")
-        service = url.split("/")[2].split(".")[0]
-        OpenShift.schedule_kebechet(
+        service = _get_service_from_url(url)
+        _OPENSHIFT.schedule_kebechet(
             url=url,
             service=service,
             subcommand="run-results",
@@ -155,6 +155,10 @@ def get_liveness():  # Ignore PyDocStyleBear
 @application.route("/readiness")
 def get_readiness():  # Ignore PyDocStyleBear
     return jsonify({"status": "ready", "version": __version__}), 200, {"ContentType": "application/json"}
+
+
+def _get_service_from_url(url: str):
+    return url.split("/")[2].split(".")[0]
 
 
 if __name__ == "__main__":

@@ -6,7 +6,7 @@ name = "pypi"
 [packages]
 flask = "*"
 thoth-storages = "*"
-thoth-common = "*"
+thoth-common = {extras = ["openshift"],version = "*"}
 gunicorn = "*"
 
 [dev-packages]
