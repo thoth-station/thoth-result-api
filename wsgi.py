@@ -46,6 +46,7 @@ application = Flask(__name__)
 _LOGGER = logging.getLogger("thoth.result_api")
 _OPENSHIFT = OpenShift()
 
+
 @application.route("/api/v1/adviser-result", methods=["POST"])
 def post_adviser_result():  # Ignore PyDocStyleBear
     adapter = AdvisersResultsStore()
