@@ -55,10 +55,9 @@ def post_adviser_result():  # Ignore PyDocStyleBear
     if request.form.get("origin"):
         url = request.form.get("origin")
         service = _get_service_from_url(url)
-        _OPENSHIFT.schedule_kebechet(
+        _OPENSHIFT.schedule_kebechet_run_results(
             url=url,
             service=service,
-            subcommand="run-results",
             analysis_id=document_id,
         )
     _LOGGER.info("Adviser result stored with document_id %r", document_id)
@@ -109,10 +108,9 @@ def post_provenance_result():  # Ignore PyDocStyleBear
     if request.form.get("origin"):
         url = request.form.get("origin")
         service = _get_service_from_url(url)
-        _OPENSHIFT.schedule_kebechet(
+        _OPENSHIFT.schedule_kebechet_run_results(
             url=url,
             service=service,
-            subcommand="run-results",
             analysis_id=document_id,
         )
     _LOGGER.info("Provenance result stored with document_id %r", document_id)
