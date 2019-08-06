@@ -25,6 +25,7 @@ from flask import request
 
 from thoth.common import init_logging
 from thoth.common import logger_setup
+from thoth.common import OpenShift
 from thoth.storages import AdvisersResultsStore
 from thoth.storages import AnalysisResultsStore
 from thoth.storages import BuildLogsAnalysisResultsStore
@@ -43,6 +44,7 @@ init_logging()
 application = Flask(__name__)
 
 _LOGGER = logging.getLogger("thoth.result_api")
+_OPENSHIFT = OpenShift()
 
 
 @application.route("/api/v1/adviser-result", methods=["POST"])
@@ -50,6 +52,14 @@ def post_adviser_result():  # Ignore PyDocStyleBear
     adapter = AdvisersResultsStore()
     adapter.connect()
     document_id = adapter.store_document(request.json)
+    if request.form.get("origin"):
+        url = request.form.get("origin")
+        service = _get_service_from_url(url)
+        _OPENSHIFT.schedule_kebechet_run_results(
+            url=url,
+            service=service,
+            analysis_id=document_id,
+        )
     _LOGGER.info("Adviser result stored with document_id %r", document_id)
     return jsonify({"document_id": document_id}), 201, {"ContentType": "application/json"}
 
@@ -95,6 +105,14 @@ def post_provenance_result():  # Ignore PyDocStyleBear
     adapter = ProvenanceResultsStore()
     adapter.connect()
     document_id = adapter.store_document(request.json)
+    if request.form.get("origin"):
+        url = request.form.get("origin")
+        service = _get_service_from_url(url)
+        _OPENSHIFT.schedule_kebechet_run_results(
+            url=url,
+            service=service,
+            analysis_id=document_id,
+        )
     _LOGGER.info("Provenance result stored with document_id %r", document_id)
     return jsonify({"document_id": document_id}), 201, {"ContentType": "application/json"}
 
@@ -146,6 +164,10 @@ def get_liveness():  # Ignore PyDocStyleBear
 @application.route("/readiness")
 def get_readiness():  # Ignore PyDocStyleBear
     return jsonify({"status": "ready", "version": __version__}), 200, {"ContentType": "application/json"}
+
+
+def _get_service_from_url(url: str):
+    return url.split("/")[2].split(".")[0]
 
 
 if __name__ == "__main__":
