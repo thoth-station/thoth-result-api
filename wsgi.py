@@ -126,29 +126,6 @@ def post_solver_result():  # Ignore PyDocStyleBear
     return jsonify({"document_id": document_id}), 201, {"ContentType": "application/json"}
 
 
-@application.route("/api/v1/subgraph-check", methods=["GET"])
-def get_subgraph_check():  # Ignore PyDocStyleBear
-    package_name = request.args.get("package_name")
-    package_version = request.args.get("package_version")
-    index_url = request.args.get("index_url")
-    solver_name = request.args.get("solver_name")
-
-    if package_name in ("six", "setuptools", "pip"):
-        # These packages are solved using init-job as they are core components
-        # of the Python world. We immidiately say we don't need to have them
-        # analysed as analysing these package can break solver environment
-        # causing gathering false observations.
-        return jsonify({}), 208, {"ContentType": "application/json"}
-
-    graph = GraphDatabase()
-    graph.connect()
-
-    if graph.python_package_version_exists(package_name, package_version, index_url, solver_name=solver_name):
-        return jsonify({}), 208, {"ContentType": "application/json"}
-    else:
-        return jsonify({}), 200, {"ContentType": "application/json"}
-
-
 @logger_setup("werkzeug", logging.WARNING)
 @logger_setup("botocore.vendored.requests.packages.urllib3.connectionpool", logging.WARNING)
 @application.route("/liveness")
