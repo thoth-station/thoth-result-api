@@ -154,11 +154,11 @@ objects:
                   protocol: TCP
               resources:
                 limits:
-                  cpu: 500m
-                  memory: 512Mi
+                  cpu: 750m
+                  memory: 768Mi
                 requests:
-                  cpu: 500m
-                  memory: 512Mi
+                  cpu: 750m
+                  memory: 768Mi
               readinessProbe:
                 httpGet:
                   path: "/readiness"
