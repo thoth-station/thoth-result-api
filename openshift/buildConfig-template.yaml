@@ -7,13 +7,14 @@ metadata:
       This is Thoth Result API BuildConfig, this template is meant to be used by
       Bots, but could also be used by humans...
     openshift.io/display-name: "Thoth Result API BuildConfig"
-    version: 0.6.0
+    version: 0.7.0
     tags: thoth,result-api,ai-stacks,aistacks
     template.openshift.io/documentation-url: https://github.com/Thoth-Station/
     template.openshift.io/long-description: >
       This is Thoth Result API BuildConfig, this template is meant to be used
       by Bots, but could also be used by humans...
     template.openshift.io/provider-display-name: Red Hat, Inc.
+    thoth-station.ninja/template-version: 0.7.0
   labels:
     template: result-api-buildconfig
     app: thoth
@@ -38,11 +39,19 @@ parameters:
     name: IMAGE_STREAM_TAG
     value: 'latest'
 
+  - description: Thamos Advise setup tag value
+    displayName: THOTH_ADVISE
+    required: true
+    name: THOTH_ADVISE
+    value: "1"
+
 objects:
   - kind: BuildConfig
     apiVersion: v1
     metadata:
       name: result-api
+      annotations:
+        thoth-station.ninja/template-version: 0.7.0
       labels:
         app: thoth
         component: result-api
@@ -79,7 +88,7 @@ objects:
             - name: "THOTH_DRY_RUN"
               value: "1"
             - name: "THOTH_ADVISE"
-              value: "1"
+              value: ${THOTH_ADVISE}
             - name: "THAMOS_VERBOSE"
               value: "1"
             - name: "THAMOS_DEBUG"
@@ -100,6 +109,8 @@ objects:
   - apiVersion: v1
     kind: ImageStream
     metadata:
+      annotations:
+        thoth-station.ninja/template-version: 0.7.0
       labels:
         app: thoth
       name: result-api
