@@ -14,6 +14,7 @@ metadata:
       This is Thoth Result API Deployment, this template is meant to be used
       by Bots, but could also be used by humans...
     template.openshift.io/provider-display-name: "Red Hat, Inc."
+    thoth-station.ninja/template-version: 0.7.0
   labels:
     template: result-api-deployment
     app: thoth
@@ -45,6 +46,8 @@ objects:
         app: thoth
         component: result-api
         service: result-api
+      annotations:
+        thoth-station.ninja/template-version: 0.7.0
       name: result-api
     spec:
       ports:
@@ -57,6 +60,8 @@ objects:
   - apiVersion: v1
     kind: DeploymentConfig
     metadata:
+      annotations:
+        thoth-station.ninja/template-version: 0.7.0
       labels:
         app: thoth
         component: result-api
