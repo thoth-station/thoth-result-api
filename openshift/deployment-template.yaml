@@ -7,7 +7,7 @@ metadata:
       This is Thoth Result API Deployment, this template is meant to be used by
       Bots, but could also be used by humans...
     openshift.io/display-name: "Thoth Result API Deployment"
-    version: 0.7.0
+    version: 0.7.1
     tags: thoth,result-api,ai-stacks,aistacks
     template.openshift.io/documentation-url: https://github.com/Thoth-Station/
     template.openshift.io/long-description: >
@@ -49,6 +49,8 @@ objects:
       annotations:
         thoth-station.ninja/template-version: 0.7.0
       name: result-api
+      annotations:
+        thoth-station.ninja/template-version: 0.7.1
     spec:
       ports:
         - port: 80
@@ -57,7 +59,7 @@ objects:
       selector:
         service: result-api
 
-  - apiVersion: v1
+  - apiVersion: apps.openshift.io/v1
     kind: DeploymentConfig
     metadata:
       annotations:
@@ -67,6 +69,8 @@ objects:
         component: result-api
         service: result-api
       name: result-api
+      annotations:
+        thoth-station.ninja/template-version: 0.7.1
     spec:
       replicas: 1
       selector:
