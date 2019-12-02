@@ -10,9 +10,9 @@ gunicorn = "*"
 flask = "*"
 flask-cors = "*"
 sentry-sdk = {extras = ["flask"],version = "*"}
+aiocontextvars = "*"
 
 [dev-packages]
-"autopep8" = "*"
 pytest = "*"
 pytest-timeout = "*"
 pytest-cov = "*"
@@ -20,3 +20,6 @@ coala-bears = "*"
 
 [requires]
 python_version = "3.6"
+
+[pipenv]
+allow_prereleases = false
