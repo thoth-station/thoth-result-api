@@ -46,8 +46,8 @@ __version__ = (
 )
 
 
-init_logging(logging_env_var_start="THOTH_RESULT_API_LOG_")
-application = Flask(__name__)
+init_logging()
+application = Flask("thoth.result_api")
 
 _LOGGER = logging.getLogger("thoth.result_api")
 _OPENSHIFT = OpenShift()
