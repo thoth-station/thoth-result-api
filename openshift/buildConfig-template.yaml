@@ -7,14 +7,13 @@ metadata:
       This is Thoth Result API BuildConfig, this template is meant to be used by
       Bots, but could also be used by humans...
     openshift.io/display-name: "Thoth Result API BuildConfig"
-    version: 0.7.0
+    version: 0.7.1
     tags: thoth,result-api,ai-stacks,aistacks
     template.openshift.io/documentation-url: https://github.com/Thoth-Station/
     template.openshift.io/long-description: >
       This is Thoth Result API BuildConfig, this template is meant to be used
       by Bots, but could also be used by humans...
     template.openshift.io/provider-display-name: Red Hat, Inc.
-    thoth-station.ninja/template-version: 0.7.0
   labels:
     template: result-api-buildconfig
     app: thoth
@@ -25,19 +24,19 @@ parameters:
     displayName: Git Repository
     required: true
     name: GITHUB_URL
-    value: 'https://github.com/thoth-station/result-api'
+    value: "https://github.com/thoth-station/result-api"
 
   - description: Git reference to be used for Thoth's Result API
     displayName: Git Reference
     required: true
     name: GITHUB_REF
-    value: 'master'
+    value: "master"
 
   - description: Tag of the output ImageStream the resulting container image should go to
     displayName: ImageStream Tag
     required: true
     name: IMAGE_STREAM_TAG
-    value: 'latest'
+    value: "latest"
 
   - description: Thamos Advise setup tag value
     displayName: THOTH_ADVISE
@@ -51,7 +50,7 @@ objects:
     metadata:
       name: result-api
       annotations:
-        thoth-station.ninja/template-version: 0.7.0
+        thoth-station.ninja/template-version: 0.7.1
       labels:
         app: thoth
         component: result-api
@@ -66,12 +65,12 @@ objects:
       output:
         to:
           kind: ImageStreamTag
-          name: 'result-api:${IMAGE_STREAM_TAG}'
+          name: "result-api:${IMAGE_STREAM_TAG}"
       source:
         type: Git
         git:
-          uri: '${GITHUB_URL}'
-          ref: '${GITHUB_REF}'
+          uri: "${GITHUB_URL}"
+          ref: "${GITHUB_REF}"
       strategy:
         type: Source
         sourceStrategy:
@@ -80,11 +79,11 @@ objects:
             name: s2i-thoth-ubi8-py36:latest
           env:
             - name: ENABLE_PIPENV
-              value: '1'
+              value: "1"
             - name: UPGRADE_PIP_TO_LATEST
-              value: ''
+              value: ""
             - name: WEB_CONCURRENCY
-              value: '4'
+              value: "4"
             - name: "THOTH_DRY_RUN"
               value: "1"
             - name: "THOTH_ADVISE"
@@ -110,7 +109,7 @@ objects:
     kind: ImageStream
     metadata:
       annotations:
-        thoth-station.ninja/template-version: 0.7.0
+        thoth-station.ninja/template-version: 0.7.1
       labels:
         app: thoth
       name: result-api

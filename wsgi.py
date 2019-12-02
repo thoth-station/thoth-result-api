@@ -26,6 +26,7 @@ from flask import request
 from thoth.common import init_logging
 from thoth.common import logger_setup
 from thoth.common import OpenShift
+from thoth.storages import __version__ as thoth_common_version
 from thoth.storages import AdvisersResultsStore
 from thoth.storages import AnalysisResultsStore
 from thoth.storages import BuildLogsAnalysisResultsStore
@@ -37,10 +38,10 @@ from thoth.storages import SolverResultsStore
 from thoth.storages import __version__ as thoth_storages_version
 
 
-__version__ = "0.6.1" + "+thoth_storage." + thoth_storages_version
+__version__ = "0.7.1" + "+thoth_storage." + thoth_storages_version + "+thoth_common." + thoth_common_version
 
 
-init_logging()
+init_logging(logging_env_var_start="THOTH_RESULT_API_LOG_")
 application = Flask(__name__)
 
 _LOGGER = logging.getLogger("thoth.result_api")
@@ -56,12 +57,14 @@ def post_adviser_result():  # Ignore PyDocStyleBear
         url = request.form.get("origin")
         service = _get_service_from_url(url)
         _OPENSHIFT.schedule_kebechet_run_results(
-            url=url,
-            service=service,
-            analysis_id=document_id,
+            url=url, service=service, analysis_id=document_id,
         )
     _LOGGER.info("Adviser result stored with document_id %r", document_id)
-    return jsonify({"document_id": document_id}), 201, {"ContentType": "application/json"}
+    return (
+        jsonify({"document_id": document_id}),
+        201,
+        {"ContentType": "application/json"},
+    )
 
 
 @application.route("/api/v1/analysis-result", methods=["POST"])
@@ -70,7 +73,11 @@ def post_analysis_result():  # Ignore PyDocStyleBear
     adapter.connect()
     document_id = adapter.store_document(request.json)
     _LOGGER.info("Analyzer result stored with document_id %r", document_id)
-    return jsonify({"document_id": document_id}), 201, {"ContentType": "application/json"}
+    return (
+        jsonify({"document_id": document_id}),
+        201,
+        {"ContentType": "application/json"},
+    )
 
 
 @application.route("/api/v1/buildlogs-analysis-result", methods=["POST"])
@@ -79,7 +86,11 @@ def post_buildlogs_analysis_result():  # Ignore PyDocStyleBear
     adapter.connect()
     document_id = adapter.store_document(request.json)
     _LOGGER.info("Build Logs Analyzer result stored with document_id %r", document_id)
-    return jsonify({"document_id": document_id}), 201, {"ContentType": "application/json"}
+    return (
+        jsonify({"document_id": document_id}),
+        201,
+        {"ContentType": "application/json"},
+    )
 
 
 @application.route("/api/v1/dependency-monkey-report", methods=["POST"])
@@ -88,7 +99,11 @@ def post_dependency_monkey_report():  # Ignore PyDocStyleBear
     adapter.connect()
     document_id = adapter.store_document(request.json)
     _LOGGER.info("Dependency Monkey report stored with document_id %r", document_id)
-    return jsonify({"document_id": document_id}), 201, {"ContentType": "application/json"}
+    return (
+        jsonify({"document_id": document_id}),
+        201,
+        {"ContentType": "application/json"},
+    )
 
 
 @application.route("/api/v1/package-analysis-result", methods=["POST"])
@@ -97,7 +112,11 @@ def post_package_analysis_result():  # Ignore PyDocStyleBear
     adapter.connect()
     document_id = adapter.store_document(request.json)
     _LOGGER.info("Package Analyzer result stored with document_id %r", document_id)
-    return jsonify({"document_id": document_id}), 201, {"ContentType": "application/json"}
+    return (
+        jsonify({"document_id": document_id}),
+        201,
+        {"ContentType": "application/json"},
+    )
 
 
 @application.route("/api/v1/provenance-checker-result", methods=["POST"])
@@ -109,12 +128,14 @@ def post_provenance_result():  # Ignore PyDocStyleBear
         url = request.form.get("origin")
         service = _get_service_from_url(url)
         _OPENSHIFT.schedule_kebechet_run_results(
-            url=url,
-            service=service,
-            analysis_id=document_id,
+            url=url, service=service, analysis_id=document_id,
         )
     _LOGGER.info("Provenance result stored with document_id %r", document_id)
-    return jsonify({"document_id": document_id}), 201, {"ContentType": "application/json"}
+    return (
+        jsonify({"document_id": document_id}),
+        201,
+        {"ContentType": "application/json"},
+    )
 
 
 @application.route("/api/v1/solver-result", methods=["POST"])
@@ -123,24 +144,47 @@ def post_solver_result():  # Ignore PyDocStyleBear
     adapter.connect()
     document_id = adapter.store_document(request.json)
     _LOGGER.info("Solver result stored with document_id %r", document_id)
-    return jsonify({"document_id": document_id}), 201, {"ContentType": "application/json"}
+    return (
+        jsonify({"document_id": document_id}),
+        201,
+        {"ContentType": "application/json"},
+    )
 
 
 @logger_setup("werkzeug", logging.WARNING)
-@logger_setup("botocore.vendored.requests.packages.urllib3.connectionpool", logging.WARNING)
+@logger_setup(
+    "botocore.vendored.requests.packages.urllib3.connectionpool", logging.WARNING
+)
 @application.route("/liveness")
 def get_liveness():  # Ignore PyDocStyleBear
     adapter = SolverResultsStore()
     adapter.connect()
     adapter.ceph.check_connection()
-    return jsonify({"status": "ready", "version": __version__}), 200, {"ContentType": "application/json"}
+    return (
+        jsonify({"status": "ready", "version": __version__}),
+        200,
+        {"ContentType": "application/json"},
+    )
 
 
 @logger_setup("werkzeug", logging.WARNING)
-@logger_setup("botocore.vendored.requests.packages.urllib3.connectionpool", logging.WARNING)
+@logger_setup(
+    "botocore.vendored.requests.packages.urllib3.connectionpool", logging.WARNING
+)
 @application.route("/readiness")
 def get_readiness():  # Ignore PyDocStyleBear
-    return jsonify({"status": "ready", "version": __version__}), 200, {"ContentType": "application/json"}
+    return (
+        jsonify({"status": "ready", "version": __version__}),
+        200,
+        {"ContentType": "application/json"},
+    )
+
+
+@application.after_request
+def apply_headers(response):
+    """Add headers to each response."""
+    response.headers["X-Thoth-Version"] = "v0.6.0-dev"
+    return response
 
 
 def _get_service_from_url(url: str):

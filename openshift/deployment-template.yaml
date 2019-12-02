@@ -7,14 +7,13 @@ metadata:
       This is Thoth Result API Deployment, this template is meant to be used by
       Bots, but could also be used by humans...
     openshift.io/display-name: "Thoth Result API Deployment"
-    version: 0.7.0
+    version: 0.7.1
     tags: thoth,result-api,ai-stacks,aistacks
     template.openshift.io/documentation-url: https://github.com/Thoth-Station/
     template.openshift.io/long-description: >
       This is Thoth Result API Deployment, this template is meant to be used
       by Bots, but could also be used by humans...
     template.openshift.io/provider-display-name: "Red Hat, Inc."
-    thoth-station.ninja/template-version: 0.7.0
   labels:
     template: result-api-deployment
     app: thoth
@@ -47,7 +46,7 @@ objects:
         component: result-api
         service: result-api
       annotations:
-        thoth-station.ninja/template-version: 0.7.0
+        thoth-station.ninja/template-version: 0.7.1
       name: result-api
     spec:
       ports:
@@ -61,7 +60,7 @@ objects:
     kind: DeploymentConfig
     metadata:
       annotations:
-        thoth-station.ninja/template-version: 0.7.0
+        thoth-station.ninja/template-version: 0.7.1
       labels:
         app: thoth
         component: result-api
@@ -130,6 +129,11 @@ objects:
                     secretKeyRef:
                       name: thoth
                       key: sentry-dsn
+                - name: THOTH_DEPLOYMENT_NAME
+                  valueFrom:
+                    configMapKeyRef:
+                      name: thoth
+                      key: storage-bucket-name
                 - name: KNOWLEDGE_GRAPH_HOST
                   valueFrom:
                     configMapKeyRef:
