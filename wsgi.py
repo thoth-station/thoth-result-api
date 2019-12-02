@@ -24,7 +24,6 @@ from flask import jsonify
 from flask import request
 
 from thoth.common import init_logging
-from thoth.common import logger_setup
 from thoth.common import OpenShift
 from thoth.storages import __version__ as thoth_common_version
 from thoth.storages import AdvisersResultsStore
@@ -38,7 +37,13 @@ from thoth.storages import SolverResultsStore
 from thoth.storages import __version__ as thoth_storages_version
 
 
-__version__ = "0.7.1" + "+thoth_storage." + thoth_storages_version + "+thoth_common." + thoth_common_version
+__version__ = (
+    "0.7.1"
+    + "+thoth_storage."
+    + thoth_storages_version
+    + "+thoth_common."
+    + thoth_common_version
+)
 
 
 init_logging(logging_env_var_start="THOTH_RESULT_API_LOG_")
@@ -151,10 +156,6 @@ def post_solver_result():  # Ignore PyDocStyleBear
     )
 
 
-@logger_setup("werkzeug", logging.WARNING)
-@logger_setup(
-    "botocore.vendored.requests.packages.urllib3.connectionpool", logging.WARNING
-)
 @application.route("/liveness")
 def get_liveness():  # Ignore PyDocStyleBear
     adapter = SolverResultsStore()
@@ -167,10 +168,6 @@ def get_liveness():  # Ignore PyDocStyleBear
     )
 
 
-@logger_setup("werkzeug", logging.WARNING)
-@logger_setup(
-    "botocore.vendored.requests.packages.urllib3.connectionpool", logging.WARNING
-)
 @application.route("/readiness")
 def get_readiness():  # Ignore PyDocStyleBear
     return (
