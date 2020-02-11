@@ -7,7 +7,7 @@ metadata:
       This is Thoth Result API BuildConfig, this template is meant to be used by
       Bots, but could also be used by humans...
     openshift.io/display-name: "Thoth Result API BuildConfig"
-    version: 0.7.1
+    version: 0.7.2
     tags: thoth,result-api,ai-stacks,aistacks
     template.openshift.io/documentation-url: https://github.com/Thoth-Station/
     template.openshift.io/long-description: >
@@ -50,7 +50,7 @@ objects:
     metadata:
       name: result-api
       annotations:
-        thoth-station.ninja/template-version: 0.7.1
+        thoth-station.ninja/template-version: 0.7.2
       labels:
         app: thoth
         component: result-api
@@ -96,6 +96,8 @@ objects:
               value: ".thoth.yaml"
             - name: "THAMOS_CONFIG_EXPAND_ENV"
               value: "1"
+            - name: "THOTH_ERROR_FALLBACK"
+              value: "1"
       triggers:
         - type: ConfigChange
         - type: ImageChange
@@ -109,7 +111,7 @@ objects:
     kind: ImageStream
     metadata:
       annotations:
-        thoth-station.ninja/template-version: 0.7.1
+        thoth-station.ninja/template-version: 0.7.2
       labels:
         app: thoth
       name: result-api
