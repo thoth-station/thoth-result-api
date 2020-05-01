@@ -37,8 +37,8 @@ from thoth.storages import SolverResultsStore
 from thoth.storages import __version__ as thoth_storages_version
 
 
-__version__ = (
-    "0.7.1"
+__service_version__ = (
+    ___version__
     + "+thoth_storage."
     + thoth_storages_version
     + "+thoth_common."
@@ -162,7 +162,7 @@ def get_liveness():  # Ignore PyDocStyleBear
     adapter.connect()
     adapter.ceph.check_connection()
     return (
-        jsonify({"status": "ready", "version": __version__}),
+        jsonify({"status": "ready", "version": __service_version__}),
         200,
         {"ContentType": "application/json"},
     )
@@ -171,7 +171,7 @@ def get_liveness():  # Ignore PyDocStyleBear
 @application.route("/readiness")
 def get_readiness():  # Ignore PyDocStyleBear
     return (
-        jsonify({"status": "ready", "version": __version__}),
+        jsonify({"status": "ready", "version": __service_version__}),
         200,
         {"ContentType": "application/json"},
     )
@@ -189,5 +189,5 @@ def _get_service_from_url(url: str):
 
 
 if __name__ == "__main__":
-    _LOGGER.info(f"Result API v{__version__} starting...")
+    _LOGGER.info(f"Result API v{__service_version__} starting...")
     application.run(port=8080)
