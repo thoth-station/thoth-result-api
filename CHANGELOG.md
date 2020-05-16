@@ -432,3 +432,9 @@ Starting with this release we have a Zuul-CI pipeline that:
 * Prepare environment for s2i build
 * Add liveness and readiness probes
 * Initial project import
+
+## Release 0.7.3 (2020-05-16T07:39:56)
+* :pushpin: Automatic update of dependency sentry-sdk from 0.14.3 to 0.14.4
+* :pushpin: Automatic update of dependency thoth-storages from 0.22.9 to 0.22.10
+* :pushpin: Automatic update of dependency pytest from 5.4.1 to 5.4.2
+* added a 'tekton trigger tag_release pipeline issue'
