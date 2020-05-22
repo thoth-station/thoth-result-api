@@ -38,7 +38,7 @@ from thoth.storages import __version__ as thoth_storages_version
 
 
 __service_version__ = (
-    ___version__
+    __version__
     + "+thoth_storage."
     + thoth_storages_version
     + "+thoth_common."
