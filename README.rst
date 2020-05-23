@@ -8,4 +8,3 @@ It's main aim is to abstract database type and database details in analyzers and
 The service is built using OpenShift Source-to-Image. See `s2i-python-container README <https://github.com/sclorg/s2i-python-container>`_ for more info.
 
 Python 3.6 is required to run this application.
-
