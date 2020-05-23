@@ -442,3 +442,7 @@ Starting with this release we have a Zuul-CI pipeline that:
 ## Release 0.7.4 (2020-05-22T09:24:30)
 * :fire: :bug: hotfixing ___version__ (one _ too much)
 * :pushpin: Automatic update of dependency thoth-common from 0.13.3 to 0.13.4
+
+## Release 0.7.5 (2020-05-23T07:55:21)
+* :fire: :bug: now I really fixed the version thing! :(
+* added pre-commit config file, and get a little reformatting via pre-commit
