@@ -25,7 +25,7 @@ from flask import request
 
 from thoth.common import init_logging
 from thoth.common import OpenShift
-from thoth.storages import __version__ as thoth_common_version
+from thoth.common import __version__ as thoth_common_version
 from thoth.storages import AdvisersResultsStore
 from thoth.storages import AnalysisResultsStore
 from thoth.storages import BuildLogsAnalysisResultsStore
@@ -35,7 +35,7 @@ from thoth.storages import PackageAnalysisResultsStore
 from thoth.storages import ProvenanceResultsStore
 from thoth.storages import SolverResultsStore
 from thoth.storages import __version__ as thoth_storages_version
-
+from version import __version__
 
 __service_version__ = (
     __version__
