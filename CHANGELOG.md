@@ -438,3 +438,7 @@ Starting with this release we have a Zuul-CI pipeline that:
 * :pushpin: Automatic update of dependency thoth-storages from 0.22.9 to 0.22.10
 * :pushpin: Automatic update of dependency pytest from 5.4.1 to 5.4.2
 * added a 'tekton trigger tag_release pipeline issue'
+
+## Release 0.7.4 (2020-05-22T09:24:30)
+* :fire: :bug: hotfixing ___version__ (one _ too much)
+* :pushpin: Automatic update of dependency thoth-common from 0.13.3 to 0.13.4
